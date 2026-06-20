@@ -1,9 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHero from "@components/PageHero.astro";
-import { getPage } from "@lib/content";
 
-const page = await getPage("book");
 const retailers = [
   {
     name: "Amazon",
@@ -36,25 +34,44 @@ const retailers = [
     href: "https://www.walmart.com/search?q=State%20Change%20Robin%20Berzin",
   },
 ];
-const bookContentHtml = (page?.data.contentHtml ?? "")
-  .replaceAll("https://robinberzinmd.com/wp-content/uploads/2021/09/amazon.svg", "/images/book-retail/amazon.svg")
-  .replaceAll("https://robinberzinmd.com/wp-content/uploads/2021/09/barnes.svg", "/images/book-retail/barnes.svg")
-  .replaceAll("https://robinberzinmd.com/wp-content/uploads/2021/09/bookshop.svg", "/images/book-retail/bookshop.svg")
-  .replaceAll("https://robinberzinmd.com/wp-content/uploads/2021/09/bam.svg", "/images/book-retail/bam.svg")
-  .replaceAll("https://robinberzinmd.com/wp-content/uploads/2021/09/indie.svg", "/images/book-retail/indie.svg")
-  .replaceAll("https://robinberzinmd.com/wp-content/uploads/2021/09/State-Change-Cover.png", "/images/book/state-change-cover.png")
-  .replaceAll("https://robinberzinmd.com/wp-content/uploads/2021/09/State-Change-Cover-300x253.png", "/images/book/state-change-cover.png");
+
+const endorsements = [
+  {
+    quote:
+      "Innovative, strategic, and wise, Dr. Berzin has created a gentle toolkit for reaching new levels of energy, clarity, and ease. Let her be your guide to a new baseline of well-being.",
+    name: "Erica Chidi",
+    role: "Co-founder & CEO of LOOM",
+  },
+  {
+    quote:
+      "Our world is experiencing anxiety and burnout like never before, and it's imperative that we make a change. Robin breaks down the exciting science and gives us a guide on creating the best energy flow for our life.",
+    name: "Dr. Will Cole",
+    role: "Leading functional medicine expert, New York Times bestselling author, Intuitive Fasting",
+  },
+  {
+    quote:
+      "State Change will shift the way you think about your body and your health. If you're ready to boost your energy and live with clarity, then this is the book for you.",
+    name: "Gabrielle Bernstein",
+    role: "#1 New York Times bestselling author of The Universe Has Your Back and Super Attractor",
+  },
+];
 ---
-<BaseLayout title="Book - Robin Berzin MD" description="State Change by Robin Berzin MD. Start with the body and heal your mind.">
-  <PageHero title="State Change" description="Start with the body and heal your mind." />
+<BaseLayout
+  title="Book - Robin Berzin MD"
+  description="State Change by Robin Berzin MD. Start with the body and heal your mind — end anxiety, beat burnout, and ignite a new baseline of energy and flow."
+  canonical="https://robinberzinmd.com/book/"
+  ogImage="/images/book/state-change-cover.png"
+>
+  <PageHero eyebrow="Book" title="State Change" description="Start with the body and heal your mind." />
+
   <section class="section">
     <div class="shell two-column book-feature">
       <div>
-        <span class="eyebrow">Book</span>
+        <span class="eyebrow">The book</span>
         <h2>End anxiety, beat burnout, and ignite a new baseline of energy and flow.</h2>
         <p>
-          Robin's book is not the main focus of the new site, but it remains a
-          useful resource for readers who want the State Change framework.
+          The ultimate gateway to a positive mental state and peak physical health.
+          Available online and at leading retailers.
         </p>
         <div class="retailer-grid" aria-label="Buy State Change">
           {retailers.map((retailer) => (
@@ -72,9 +89,55 @@ const bookContentHtml = (page?.data.contentHtml ?? "")
       </div>
     </div>
   </section>
+
   <section class="section section-subtle">
+    <div class="shell book-about">
+      <blockquote class="pull-quote">
+        <p>"Ninety-nine percent of our health happens to us outside a doctor's office."</p>
+        <cite>
+          <span class="pull-quote-name">Robin Berzin, MD</span>
+          <span class="pull-quote-role">State Change, Chapter 1</span>
+        </cite>
+      </blockquote>
+      <div class="book-about-copy">
+        <p>
+          <em>State Change: End Anxiety, Beat Burnout, and Ignite a New Baseline of Energy
+          and Flow</em> is filled with science-backed, actionable guidance on how you can
+          achieve your very own state change.
+        </p>
+        <p>
+          But what is a state change? It is a metamorphosis of your emotional and mental
+          health triggered by a change in your physical health. All too often our mental
+          and physical health are seen as separate — the former treated by a psychiatrist,
+          the latter by your regular doctor. Robin presents a different approach, one that
+          acknowledges the intricate relationship between our bodies and our minds, and
+          asks us to first take care of our bodies and understand our physical triggers so
+          we may rejuvenate and energize our minds. It delivers a data-backed, step-by-step
+          way to rethink your health and take back control of your life.
+        </p>
+        <p>
+          State Change is a book for all of us, right now — a way of sharing that a more
+          impassioned, empowered, energetic, and healthier life is possible, especially
+          when so many of us feel burned out, fatigued, low energy, anxious, and unwell.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="shell">
-      <div class="legacy-content book-legacy" set:html={bookContentHtml} />
+      <span class="eyebrow">Praise for State Change</span>
+      <div class="endorsement-grid">
+        {endorsements.map((item) => (
+          <blockquote class="endorsement">
+            <p>"{item.quote}"</p>
+            <cite>
+              <span class="pull-quote-name">{item.name}</span>
+              <span class="pull-quote-role">{item.role}</span>
+            </cite>
+          </blockquote>
+        ))}
+      </div>
     </div>
   </section>
 </BaseLayout>

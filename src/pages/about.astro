@@ -1,16 +1,128 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHero from "@components/PageHero.astro";
-import { getPage } from "@lib/content";
 
-const page = await getPage("about");
+const pressLogos = [
+  { name: "Fast Company", src: "/images/press/BerzinMedia-01.svg" },
+  { name: "Vogue", src: "/images/press/BerzinMedia-02.svg" },
+  { name: "Women's Health", src: "/images/press/BerzinMedia-03.svg" },
+  { name: "The New York Times", src: "/images/press/BerzinMedia-04.svg" },
+  { name: "Goop", src: "/images/press/BerzinMedia-05.svg" },
+];
+
+const credentials = [
+  { label: "Founder & CEO", detail: "Parsley Health" },
+  { label: "MD", detail: "Columbia University" },
+  { label: "Residency", detail: "Internal Medicine, Mount Sinai" },
+  { label: "Tech Pioneer", detail: "World Economic Forum" },
+  { label: "100 Most Innovative Women", detail: "Inc. Magazine" },
+  { label: "Author", detail: "State Change (Simon Element)" },
+];
 ---
-<BaseLayout title="About - Robin Berzin MD" description="Learn about Robin Berzin MD, founder of Parsley Health and author of State Change.">
-  <PageHero title="Robin Berzin, MD" description="Leading voice in women's functional medicine, longevity, and root-cause healthcare." />
+<BaseLayout
+  title="About - Robin Berzin MD"
+  description="Robin Berzin, MD is the founder and CEO of Parsley Health, a Columbia-trained physician, and a leading voice in women's functional medicine and longevity."
+  canonical="https://robinberzinmd.com/about/"
+>
+  <PageHero
+    eyebrow="About"
+    title="Robin Berzin, MD"
+    description="A leading voice in women's functional medicine, longevity, and root-cause healthcare."
+  />
+
   <section class="section">
     <div class="shell two-column">
-      <div class="legacy-content" set:html={page?.data.contentHtml ?? ""} />
-      <img src="/images/robin/portrait-cream.jpg" alt="Robin Berzin MD" />
+      <div class="bio-copy">
+        <p>
+          Dr. Robin Berzin is the Founder and CEO of
+          <a href="https://www.parsleyhealth.com/">Parsley Health</a>, the nation's
+          leading holistic medical practice designed to help people overcome chronic
+          conditions. She founded Parsley to address the rising tide of chronic disease
+          in America through personalized holistic medicine that puts food, lifestyle,
+          and proactive diagnostic testing on the prescription pad next to medications.
+          Since founding Parsley in 2016, Dr. Berzin has seen 80% of patients improve or
+          resolve their chronic conditions within their first year of care, demonstrating
+          the life-changing value of making modern holistic medicine accessible to
+          everyone, anywhere. Parsley is available online nationwide.
+        </p>
+        <p>
+          Dr. Berzin attended medical school at Columbia University and trained in
+          Internal Medicine at Mount Sinai Hospital in New York City. She has been
+          recognized by the World Economic Forum as a Tech Pioneer, named one of the 100
+          most innovative women in business by <em>Inc. Magazine</em>, and praised by
+          <em>Fast Company</em> for founding one of the World's Most Innovative Companies.
+          Her book, <a href="/book/"><em>State Change</em></a>, is published by Simon Element.
+        </p>
+      </div>
+      <div class="bio-portrait">
+        <img src="/images/robin/portrait-cream.jpg" alt="Robin Berzin MD" loading="eager" decoding="async" />
+      </div>
+    </div>
+  </section>
+
+  <section class="proof-strip" aria-label="Press">
+    <div class="shell">
+      <span class="proof-label">Featured in</span>
+      <div class="press-logo-list">
+        {pressLogos.map((logo) => (
+          <span class="press-logo">
+            <img src={logo.src} alt={logo.name} loading="lazy" decoding="async" />
+          </span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <span class="eyebrow">Background</span>
+      <h2>Credentials &amp; recognition</h2>
+      <div class="cred-grid">
+        {credentials.map((item) => (
+          <div class="cred-item">
+            <span class="cred-label">{item.label}</span>
+            <span class="cred-detail">{item.detail}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-subtle">
+    <div class="shell">
+      <blockquote class="pull-quote">
+        <p>
+          "Innovative, strategic, and wise, Dr. Berzin has created a gentle toolkit for
+          reaching new levels of energy, clarity, and ease. Let her be your guide to a new
+          baseline of well-being."
+        </p>
+        <cite>
+          <span class="pull-quote-name">Erica Chidi</span>
+          <span class="pull-quote-role">Co-founder &amp; CEO of LOOM</span>
+        </cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell cta-band">
+      <div>
+        <span class="eyebrow">Work with Robin</span>
+        <h2>Ready for root-cause care?</h2>
+        <p>
+          Robin sees patients through Parsley Health, where 80% of members improve or
+          resolve a chronic condition in their first year. Care is online and available
+          nationwide.
+        </p>
+      </div>
+      <a
+        class="btn btn-cta btn-lg"
+        href="https://www.parsleyhealth.com/contact/free-consultation/?utm_source=robinberzinmd&utm_medium=about&utm_campaign=work_with_robin"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Start with Parsley Health
+      </a>
     </div>
   </section>
 </BaseLayout>

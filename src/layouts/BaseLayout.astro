@@ -1,12 +1,17 @@
 ---
 import "../styles/global.css";
 
+type JsonLd = Record<string, unknown>;
+
 type Props = {
   title?: string;
   description?: string;
   canonical?: string;
   noindex?: boolean;
   bodyClass?: string;
+  ogImage?: string;
+  ogType?: string;
+  jsonLd?: JsonLd | JsonLd[];
 };
 
 const {
@@ -15,9 +20,43 @@ const {
   canonical,
   noindex = false,
   bodyClass = "",
+  ogImage = "/images/robin/home.jpg",
+  ogType = "website",
+  jsonLd,
 } = Astro.props;
 
-const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site ?? "https://robinberzinmd.com").toString();
+const siteOrigin = Astro.site?.toString().replace(/\/$/, "") ?? "https://robinberzinmd.com";
+const canonicalUrl = canonical ?? new URL(Astro.url.pathname, `${siteOrigin}/`).toString();
+const ogImageUrl = new URL(ogImage, `${siteOrigin}/`).toString();
+
+const personSchema: JsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Robin Berzin, MD",
+  honorificSuffix: "MD",
+  jobTitle: "Founder & CEO, Parsley Health",
+  url: `${siteOrigin}/`,
+  image: new URL("/images/robin/home.jpg", `${siteOrigin}/`).toString(),
+  gender: "Female",
+  description:
+    "Columbia-trained physician and leading voice in women's functional medicine, longevity, and root-cause health.",
+  alumniOf: [
+    { "@type": "CollegeOrUniversity", name: "Columbia University" },
+    { "@type": "Hospital", name: "Mount Sinai Hospital" },
+  ],
+  worksFor: { "@type": "Organization", name: "Parsley Health", url: "https://www.parsleyhealth.com/" },
+  sameAs: ["https://www.parsleyhealth.com/"],
+};
+
+const websiteSchema: JsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Robin Berzin MD",
+  url: `${siteOrigin}/`,
+};
+
+const pageSchemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+const schemas = [personSchema, websiteSchema, ...pageSchemas];
 ---
 <!doctype html>
 <html lang="en">
@@ -30,10 +69,18 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site ?? "htt
     {noindex && <meta name="robots" content="noindex,nofollow" />}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:image" content="/images/robin/home.jpg" />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:site_name" content="Robin Berzin MD" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
     <link rel="icon" href="/logo/RobinBerzin-Logo-Terracotta.png" />
+    {schemas.map((schema) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
   </head>
   <body class={bodyClass}>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -49,7 +96,7 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site ?? "htt
           <a href="/courses/">Courses</a>
           <a href="/book/">Book</a>
         </nav>
-        <a class="btn btn-cta nav-cta" href="/contact/">Work with Robin</a>
+        <a class="btn btn-cta nav-cta" href="https://www.parsleyhealth.com/contact/free-consultation/?utm_source=robinberzinmd&utm_medium=nav&utm_campaign=work_with_robin" target="_blank" rel="noopener noreferrer">Work with Robin</a>
         <button
           class="mobile-nav-toggle"
           type="button"
@@ -68,7 +115,7 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site ?? "htt
         <a href="/media/">Media</a>
         <a href="/courses/">Courses</a>
         <a href="/book/">Book</a>
-        <a class="btn btn-cta" href="/contact/">Work with Robin</a>
+        <a class="btn btn-cta" href="https://www.parsleyhealth.com/contact/free-consultation/?utm_source=robinberzinmd&utm_medium=nav&utm_campaign=work_with_robin" target="_blank" rel="noopener noreferrer">Work with Robin</a>
       </nav>
     </header>
     <main id="main">

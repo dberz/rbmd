@@ -24,11 +24,83 @@ const articleLeadMagnetId = article.data.slug === "can-processed-deli-meats-be-h
   ? "clean-meat-cheat-sheet"
   : "female-longevity-supplement-stack";
 const articleLeadMagnet = await getEntry("leadMagnets", articleLeadMagnetId);
+
+const siteOrigin = Astro.site?.toString().replace(/\/$/, "") ?? "https://robinberzinmd.com";
+const pageUrl = `${siteOrigin}${articleUrl(article.data.slug)}`;
+const ogImage = article.data.image?.src;
+const ogImageAbsolute = ogImage ? new URL(ogImage, `${siteOrigin}/`).toString() : undefined;
+
+// Extract FAQ pairs from the article body for FAQPage schema (defensive).
+function extractFaq(html: string) {
+  const marker = /frequently asked questions/i;
+  const markerMatch = html.search(marker);
+  if (markerMatch === -1) return [] as { q: string; a: string }[];
+  const tail = html.slice(markerMatch);
+  const pairs: { q: string; a: string }[] = [];
+  const re = /<h[34][^>]*>([\s\S]*?)<\/h[34]>\s*<p[^>]*>([\s\S]*?)<\/p>/gi;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(tail)) !== null) {
+    const q = plainText(m[1]);
+    const a = plainText(m[2]);
+    if (q && a && q.includes("?")) pairs.push({ q, a });
+  }
+  return pairs;
+}
+const faqPairs = extractFaq(article.data.contentHtml);
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: article.data.title,
+  description,
+  datePublished: article.data.date.toISOString(),
+  dateModified: (article.data.modified ?? article.data.date).toISOString(),
+  author: { "@type": "Person", name: article.data.author, url: `${siteOrigin}/about/` },
+  publisher: {
+    "@type": "Organization",
+    name: "Robin Berzin MD",
+    logo: { "@type": "ImageObject", url: `${siteOrigin}/logo/RobinBerzin-Logo-DarkBrown.png` },
+  },
+  mainEntityOfPage: pageUrl,
+  ...(ogImageAbsolute ? { image: ogImageAbsolute } : {}),
+  ...(category ? { articleSection: category.name } : {}),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: `${siteOrigin}/` },
+    { "@type": "ListItem", position: 2, name: "Articles", item: `${siteOrigin}/articles/` },
+    ...(category
+      ? [{ "@type": "ListItem", position: 3, name: category.name, item: `${siteOrigin}${categoryUrl(category.slug)}` }]
+      : []),
+    { "@type": "ListItem", position: category ? 4 : 3, name: article.data.title, item: pageUrl },
+  ],
+};
+
+const faqSchema =
+  faqPairs.length >= 2
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqPairs.map((pair) => ({
+          "@type": "Question",
+          name: pair.q,
+          acceptedAnswer: { "@type": "Answer", text: pair.a },
+        })),
+      }
+    : null;
+
+const jsonLd = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [])];
 ---
 <BaseLayout
   title={`${article.data.title} | Robin Berzin MD`}
   description={description}
   canonical={`https://robinberzinmd.com${articleUrl(article.data.slug)}`}
+  ogType="article"
+  ogImage={ogImageAbsolute ?? "/images/robin/home.jpg"}
+  jsonLd={jsonLd}
 >
   <article>
     <header class="article-hero">
