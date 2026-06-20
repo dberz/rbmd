@@ -1,0 +1,45 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import ArticleCard from "@components/ArticleCard.astro";
+import PageHero from "@components/PageHero.astro";
+import SubscribeBlock from "@components/SubscribeBlock.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const categories = await getCollection("categories");
+  const articles = await getCollection("articles");
+  return categories.map((category) => ({
+    params: { slug: category.data.slug },
+    props: {
+      category,
+      articles: articles
+        .filter((article) => article.data.categories.some((item) => item.slug === category.data.slug))
+        .sort((a, b) => b.data.date.getTime() - a.data.date.getTime()),
+    },
+  }));
+}
+
+type Props = {
+  category: CollectionEntry<"categories">;
+  articles: CollectionEntry<"articles">[];
+};
+
+const { category, articles } = Astro.props;
+---
+<BaseLayout
+  title={`${category.data.name} Articles | Robin Berzin MD`}
+  description={category.data.description || `Articles from Robin Berzin MD on ${category.data.name}.`}
+>
+  <PageHero title={category.data.name} description={category.data.description || `${articles.length} articles`} />
+  <section class="section section-subtle">
+    <div class="shell article-grid">
+      {articles.map((article) => <ArticleCard article={article} />)}
+    </div>
+  </section>
+  <section class="section">
+    <div class="shell">
+      <SubscribeBlock placement={`category-${category.data.slug}`} category={category.data.slug} />
+    </div>
+  </section>
+</BaseLayout>

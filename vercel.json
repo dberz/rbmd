@@ -1,0 +1,70 @@
+{
+  "framework": "astro",
+  "redirects": [
+    {
+      "source": "/subscribe",
+      "destination": "/newsletter/",
+      "permanent": true
+    },
+    {
+      "source": "/subscribe/",
+      "destination": "/newsletter/",
+      "permanent": true
+    },
+    {
+      "source": "/book/state-change",
+      "destination": "/book/",
+      "permanent": true
+    },
+    {
+      "source": "/book/state-change/",
+      "destination": "/book/",
+      "permanent": true
+    },
+    {
+      "source": "/can-you-really-eat-your-way-to-a-better-mood",
+      "destination": "/metabolism-mental-health-protocol/",
+      "permanent": true
+    },
+    {
+      "source": "/can-you-really-eat-your-way-to-a-better-mood/",
+      "destination": "/metabolism-mental-health-protocol/",
+      "permanent": true
+    },
+    {
+      "source": "/full-body-mri-worth-it",
+      "destination": "/should-i-get-a-full-body-mri/",
+      "permanent": true
+    },
+    {
+      "source": "/full-body-mri-worth-it/",
+      "destination": "/should-i-get-a-full-body-mri/",
+      "permanent": true
+    },
+    {
+      "source": "/p/every-woman-should-start-vaginal-estrogen-by-50-here-s-the-case",
+      "destination": "/vaginal-estrogen-prevention-longevity/",
+      "permanent": true
+    },
+    {
+      "source": "/p/your-labs-came-back-normal-so-why-are-you-exhausted",
+      "destination": "/normal-labs-fatigue-root-causes/",
+      "permanent": true
+    },
+    {
+      "source": "/p/not-all-protein-powders-are-created-equal-here-s-how-to-choose",
+      "destination": "/protein-powder-guide-complete-protein/",
+      "permanent": true
+    },
+    {
+      "source": "/p/fertility-after-35-8-levers-that-actually-work",
+      "destination": "/fertility-over-35-protocol/",
+      "permanent": true
+    },
+    {
+      "source": "/p/:path*",
+      "destination": "https://newsletter.robinberzinmd.com/p/:path*",
+      "permanent": true
+    }
+  ]
+}

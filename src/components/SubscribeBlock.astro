@@ -1,0 +1,40 @@
+---
+type Props = {
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  buttonText?: string;
+  placement: string;
+  leadMagnet?: string;
+  articleSlug?: string;
+  category?: string;
+};
+
+const {
+  eyebrow = "Free protocol",
+  title = "Get My Ultimate Female Longevity Supplement Stack",
+  description = "A practical, evidence-based starting point for women who want to improve energy, metabolic health, and long-term resilience.",
+  buttonText = "Get the free protocol",
+  placement,
+  leadMagnet = "female-longevity-supplement-stack",
+  articleSlug = "",
+  category = "",
+} = Astro.props;
+---
+<aside class="cta-block" aria-label={title}>
+  <span class="eyebrow">{eyebrow}</span>
+  <h2>{title}</h2>
+  <p>{description}</p>
+  <form class="subscribe-form" data-subscribe-form>
+    <input type="hidden" name="placement" value={placement} />
+    <input type="hidden" name="leadMagnet" value={leadMagnet} />
+    <input type="hidden" name="articleSlug" value={articleSlug} />
+    <input type="hidden" name="category" value={category} />
+    <label>
+      <span>Email</span>
+      <input type="email" name="email" autocomplete="email" required />
+    </label>
+    <button class="btn btn-primary" type="submit">{buttonText}</button>
+    <p class="form-status" data-form-status aria-live="polite"></p>
+  </form>
+</aside>

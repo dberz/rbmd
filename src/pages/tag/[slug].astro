@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import ArticleCard from "@components/ArticleCard.astro";
+import PageHero from "@components/PageHero.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const tags = await getCollection("tags");
+  const articles = await getCollection("articles");
+  return tags.map((tag) => ({
+    params: { slug: tag.data.slug },
+    props: {
+      tag,
+      articles: articles
+        .filter((article) => article.data.tags.some((item) => item.slug === tag.data.slug))
+        .sort((a, b) => b.data.date.getTime() - a.data.date.getTime()),
+    },
+  }));
+}
+
+type Props = {
+  tag: CollectionEntry<"tags">;
+  articles: CollectionEntry<"articles">[];
+};
+
+const { tag, articles } = Astro.props;
+---
+<BaseLayout title={`${tag.data.name} Articles | Robin Berzin MD`}>
+  <PageHero title={tag.data.name} description={`${articles.length} articles`} />
+  <section class="section section-subtle">
+    <div class="shell article-grid">
+      {articles.map((article) => <ArticleCard article={article} />)}
+    </div>
+  </section>
+</BaseLayout>

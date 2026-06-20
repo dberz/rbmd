@@ -1,0 +1,93 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import PageHero from "@components/PageHero.astro";
+
+const podcasts = (await getCollection("podcasts")).sort((a, b) => Number(b.data.featured) - Number(a.data.featured));
+---
+<BaseLayout title="Media, Podcasts & Speaking - Robin Berzin MD" description="Book Robin Berzin MD for podcasts, media, speaking, and advisory opportunities.">
+  <PageHero
+    eyebrow="Media & speaking"
+    title="Book Robin for serious health, wellness, and longevity conversations."
+    description="Robin speaks on women's functional medicine, longevity, hormones, GLP-1s, root-cause medicine, and the future of healthcare."
+  />
+  <section class="section">
+    <div class="shell two-column">
+      <div>
+        <span class="eyebrow">Featured appearance</span>
+        <h2>The Rich Roll Podcast</h2>
+        <p>
+          A two-hour conversation on Robin's Brains, Bones, and Booty protocol
+          for women's longevity, plus GLP-1s, hormone therapy, and root-cause
+          medicine.
+        </p>
+      </div>
+      <div class="embed-frame">
+        <iframe
+          src="https://www.youtube.com/embed/P28Pqr9BSWw"
+          title="Robin Berzin on The Rich Roll Podcast"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+  <section class="section section-subtle">
+    <div class="shell">
+      <span class="eyebrow">Selected appearances</span>
+      <div class="media-list">
+        {podcasts.map((item) => (
+          <article class="media-item">
+            <span class="tag">{item.data.outlet}</span>
+            <h3>{item.data.title}</h3>
+            <p>{item.data.summary}</p>
+            <a href={item.data.url}>Listen or watch -></a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="shell two-column">
+      <div>
+        <span class="eyebrow">Booking</span>
+        <h2>Invite Robin to your podcast, stage, or advisory conversation.</h2>
+        <p>
+          Use this form for serious media, podcast, speaking, and advisory
+          inquiries. For medical care, contact Parsley Health directly.
+        </p>
+      </div>
+      <form class="inquiry-form" method="post" action="/api/inquiry/" data-inquiry-form>
+        <input type="text" name="company" tabindex="-1" autocomplete="off" hidden />
+        <input type="hidden" name="sourcePage" value="/media/" />
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" autocomplete="name" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+        <label>
+          <span>Organization / show</span>
+          <input type="text" name="organization" />
+        </label>
+        <label>
+          <span>Inquiry type</span>
+          <select name="inquiryType" required>
+            <option>Podcast Booking</option>
+            <option>Media</option>
+            <option>Speaking</option>
+            <option>Advisory</option>
+          </select>
+        </label>
+        <label>
+          <span>Details</span>
+          <textarea name="message" required></textarea>
+        </label>
+        <button class="btn btn-cta" type="submit">Request booking information</button>
+        <p class="form-status" data-form-status></p>
+      </form>
+    </div>
+  </section>
+</BaseLayout>

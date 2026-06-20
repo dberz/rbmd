@@ -1,0 +1,79 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getCollection, getEntry } from "astro:content";
+import SubscribeBlock from "@components/SubscribeBlock.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { articleUrl, categoryUrl, formatDate, plainText, tagUrl } from "@lib/content";
+
+export async function getStaticPaths() {
+  const articles = await getCollection("articles");
+  return articles.map((article) => ({
+    params: { slug: article.data.slug },
+    props: { article },
+  }));
+}
+
+type Props = {
+  article: CollectionEntry<"articles">;
+};
+
+const { article } = Astro.props;
+const description = article.data.seo?.description || article.data.excerpt || plainText(article.data.contentHtml).slice(0, 155);
+const category = article.data.categories[0];
+const articleLeadMagnetId = article.data.slug === "can-processed-deli-meats-be-healthy"
+  ? "clean-meat-cheat-sheet"
+  : "female-longevity-supplement-stack";
+const articleLeadMagnet = await getEntry("leadMagnets", articleLeadMagnetId);
+---
+<BaseLayout
+  title={`${article.data.title} | Robin Berzin MD`}
+  description={description}
+  canonical={`https://robinberzinmd.com${articleUrl(article.data.slug)}`}
+>
+  <article>
+    <header class="article-hero">
+      <div class="shell article-header">
+        {category && <a class="tag" href={categoryUrl(category.slug)}>{category.name}</a>}
+        <h1>{article.data.title}</h1>
+        <p class="meta">By {article.data.author} · {formatDate(article.data.date)}</p>
+        {article.data.excerpt && <p>{article.data.excerpt}</p>}
+      </div>
+      {article.data.image && (
+        <div class="shell article-featured-image">
+          <img src={article.data.image.src} alt={article.data.image.alt ?? article.data.title} />
+        </div>
+      )}
+    </header>
+    <div class="article-shell">
+      <div>
+        <div class="article-body" set:html={article.data.contentHtml} />
+        <SubscribeBlock
+          placement="article-bottom"
+          leadMagnet={articleLeadMagnet?.data.slug ?? articleLeadMagnetId}
+          articleSlug={article.data.slug}
+          category={category?.slug ?? ""}
+          eyebrow={articleLeadMagnet?.data.eyebrow ?? "Free protocol"}
+          title={articleLeadMagnet?.data.title ?? "Get the protocol behind Robin's weekly health decisions"}
+          description={articleLeadMagnet?.data.description ?? "Join the newsletter for evidence-based guidance on women's functional medicine and longevity."}
+          buttonText={articleLeadMagnet?.data.buttonText ?? "Subscribe for free"}
+        />
+      </div>
+      <aside class="article-aside">
+        <div class="side-panel">
+          <span class="eyebrow">Topics</span>
+          <div class="topic-row">
+            {article.data.tags.map((tag) => <a class="tag tag-muted" href={tagUrl(tag.slug)}>{tag.name}</a>)}
+          </div>
+        </div>
+        <SubscribeBlock
+          placement="article-sidebar"
+          articleSlug={article.data.slug}
+          category={category?.slug ?? ""}
+          title="Get Robin's free newsletter"
+          description="Weekly protocols for hormones, metabolism, longevity, and root-cause health."
+          buttonText="Subscribe"
+        />
+      </aside>
+    </div>
+  </article>
+</BaseLayout>

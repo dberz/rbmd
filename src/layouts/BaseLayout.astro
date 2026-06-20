@@ -1,0 +1,140 @@
+---
+import "../styles/global.css";
+
+type Props = {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  noindex?: boolean;
+  bodyClass?: string;
+};
+
+const {
+  title = "Robin Berzin MD",
+  description = "Evidence-based guidance on women's functional medicine, longevity, hormones, metabolism, fertility, nutrition, and root-cause health.",
+  canonical,
+  noindex = false,
+  bodyClass = "",
+} = Astro.props;
+
+const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site ?? "https://robinberzinmd.com").toString();
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    {noindex && <meta name="robots" content="noindex,nofollow" />}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content="/images/robin/home.jpg" />
+    <link rel="icon" href="/logo/RobinBerzin-Logo-Terracotta.png" />
+  </head>
+  <body class={bodyClass}>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="shell nav-shell">
+        <a class="brand" href="/" aria-label="Robin Berzin MD home">
+          <img src="/logo/RobinBerzin-Logo-DarkBrown.png" alt="Robin Berzin MD" />
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="/about/">About</a>
+          <a href="/articles/">Articles</a>
+          <a href="/media/">Media</a>
+          <a href="/courses/">Courses</a>
+          <a href="/book/">Book</a>
+        </nav>
+        <a class="btn btn-cta nav-cta" href="/contact/">Work with Robin</a>
+        <button
+          class="mobile-nav-toggle"
+          type="button"
+          aria-controls="mobile-nav"
+          aria-expanded="false"
+          aria-label="Open menu"
+          data-mobile-nav-toggle
+        >
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="mobile-nav-panel" id="mobile-nav" aria-label="Mobile navigation" hidden data-mobile-nav>
+        <a href="/about/">About</a>
+        <a href="/articles/">Articles</a>
+        <a href="/media/">Media</a>
+        <a href="/courses/">Courses</a>
+        <a href="/book/">Book</a>
+        <a class="btn btn-cta" href="/contact/">Work with Robin</a>
+      </nav>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div>
+          <img class="footer-logo" src="/logo/RobinBerzin-Logo-OffWhite.png" alt="Robin Berzin MD" />
+          <p>Functional medicine, longevity, and root-cause health for women.</p>
+        </div>
+        <div>
+          <h3>About</h3>
+          <a href="/about/">Robin Berzin, MD</a>
+          <a href="https://www.parsleyhealth.com/">Parsley Health</a>
+          <a href="/media/">Media & speaking</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div>
+          <h3>Resources</h3>
+          <a href="/articles/">Articles</a>
+          <a href="/courses/">Courses</a>
+          <a href="/book/">State Change</a>
+          <a href="/newsletter/">Newsletter</a>
+        </div>
+        <div>
+          <h3>Newsletter</h3>
+          <p>Get evidence-based protocols for women's longevity and functional medicine.</p>
+          <form class="mini-form" data-subscribe-form>
+            <input type="hidden" name="placement" value="footer" />
+            <input type="hidden" name="leadMagnet" value="newsletter" />
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+            <p class="form-status" data-form-status aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+      <div class="shell footer-bottom">
+        <span>&copy; {new Date().getFullYear()} Robin Berzin MD</span>
+        <a href="/terms-of-use/">Terms of Use</a>
+        <a href="/disclaimer/">Disclaimer</a>
+      </div>
+    </footer>
+    <script>
+      import "../scripts/forms";
+    </script>
+    <script is:inline>
+      const mobileToggle = document.querySelector("[data-mobile-nav-toggle]");
+      const mobileNav = document.querySelector("[data-mobile-nav]");
+
+      mobileToggle?.addEventListener("click", () => {
+        const isOpen = mobileToggle.getAttribute("aria-expanded") === "true";
+        mobileToggle.setAttribute("aria-expanded", String(!isOpen));
+        mobileToggle.setAttribute("aria-label", isOpen ? "Open menu" : "Close menu");
+        if (mobileNav) mobileNav.hidden = isOpen;
+      });
+
+      mobileNav?.addEventListener("click", (event) => {
+        if (!(event.target instanceof HTMLAnchorElement)) return;
+        mobileToggle?.setAttribute("aria-expanded", "false");
+        mobileToggle?.setAttribute("aria-label", "Open menu");
+        mobileNav.hidden = true;
+      });
+    </script>
+  </body>
+</html>

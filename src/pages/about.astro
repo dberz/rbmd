@@ -1,0 +1,16 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import PageHero from "@components/PageHero.astro";
+import { getPage } from "@lib/content";
+
+const page = await getPage("about");
+---
+<BaseLayout title="About - Robin Berzin MD" description="Learn about Robin Berzin MD, founder of Parsley Health and author of State Change.">
+  <PageHero title="Robin Berzin, MD" description="Leading voice in women's functional medicine, longevity, and root-cause healthcare." />
+  <section class="section">
+    <div class="shell two-column">
+      <div class="legacy-content" set:html={page?.data.contentHtml ?? ""} />
+      <img src="/images/robin/portrait-cream.jpg" alt="Robin Berzin MD" />
+    </div>
+  </section>
+</BaseLayout>

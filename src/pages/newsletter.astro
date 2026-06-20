@@ -1,0 +1,48 @@
+---
+import ArticleCard from "@components/ArticleCard.astro";
+import PageHero from "@components/PageHero.astro";
+import SubscribeBlock from "@components/SubscribeBlock.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { getFeaturedArticles } from "@lib/content";
+
+const articles = await getFeaturedArticles(3);
+---
+<BaseLayout
+  title="Newsletter | Robin Berzin MD"
+  description="Join Robin Berzin MD's newsletter for evidence-based functional medicine, women's longevity, hormones, metabolism, and root-cause health guidance."
+  canonical="https://robinberzinmd.com/newsletter/"
+>
+  <PageHero
+    eyebrow="Newsletter"
+    title="Join 50,000+ readers for weekly functional medicine insights."
+    description="Evidence-based protocols and frameworks for women's longevity, hormones, metabolism, fertility, nutrition, toxins, and nervous system health."
+  />
+  <section class="section">
+    <div class="shell two-column">
+      <div>
+        <span class="eyebrow">Off Script</span>
+        <h2>Root-cause medicine, translated for real life.</h2>
+        <p>
+          Get Robin's weekly guidance on the health decisions women are actually
+          making: what to test, what to track, what to supplement, and what to
+          ignore.
+        </p>
+      </div>
+      <SubscribeBlock placement="newsletter-page-primary" />
+    </div>
+  </section>
+  <section class="section section-subtle">
+    <div class="shell">
+      <div class="archive-tools">
+        <div>
+          <span class="eyebrow">Recent articles</span>
+          <h2>Start with the latest</h2>
+        </div>
+        <a class="btn btn-secondary" href="/articles/">View all articles</a>
+      </div>
+      <div class="article-grid">
+        {articles.map((article) => <ArticleCard article={article} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

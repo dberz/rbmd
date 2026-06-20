@@ -1,0 +1,40 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import PageHero from "@components/PageHero.astro";
+---
+<BaseLayout title="Contact - Robin Berzin MD" description="Contact Robin Berzin MD for general, media, speaking, and Parsley Health inquiries.">
+  <PageHero title="Contact Me" description="For media, speaking, advisory, general inquiries, and Parsley Health routing." />
+  <section class="section">
+    <div class="shell two-column">
+      <form class="inquiry-form" method="post" action="/api/inquiry/" data-inquiry-form>
+        <input type="text" name="company" tabindex="-1" autocomplete="off" hidden />
+        <label>
+          <span>Your name</span>
+          <input type="text" name="name" autocomplete="name" required />
+        </label>
+        <label>
+          <span>Your email</span>
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+        <label>
+          <span>Subject</span>
+          <select name="inquiryType" required>
+            <option value="">Select Message Subject</option>
+            <option>General Inquiries</option>
+            <option>Media & Speaking</option>
+            <option>Podcast Booking</option>
+            <option>Advisory</option>
+            <option>Parsley Health</option>
+          </select>
+        </label>
+        <label>
+          <span>Your message</span>
+          <textarea name="message" required></textarea>
+        </label>
+        <button class="btn btn-cta" type="submit">Send inquiry</button>
+        <p class="form-status" data-form-status></p>
+      </form>
+      <img src="/images/robin/portrait-standing.jpg" alt="Robin Berzin MD" />
+    </div>
+  </section>
+</BaseLayout>

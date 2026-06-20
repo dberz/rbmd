@@ -1,0 +1,13 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import PageHero from "@components/PageHero.astro";
+import { getPage } from "@lib/content";
+
+const page = await getPage("disclaimer");
+---
+<BaseLayout title="Disclaimer - Robin Berzin MD">
+  <PageHero title="Disclaimer" />
+  <section class="section">
+    <div class="shell legacy-content" set:html={page?.data.contentHtml ?? ""} />
+  </section>
+</BaseLayout>

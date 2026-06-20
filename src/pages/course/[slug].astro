@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import PageHero from "@components/PageHero.astro";
+
+export async function getStaticPaths() {
+  const courses = await getCollection("courses");
+  return courses.map((course) => ({
+    params: { slug: course.data.slug },
+    props: { course },
+  }));
+}
+
+type Props = {
+  course: CollectionEntry<"courses">;
+};
+
+const { course } = Astro.props;
+---
+<BaseLayout title={`${course.data.title} | Robin Berzin MD`} description={course.data.excerpt}>
+  <PageHero title={course.data.title} description={course.data.excerpt} />
+  <section class="section">
+    <div class="shell two-column">
+      {course.data.image && <img src={course.data.image.src} alt={course.data.image.alt ?? course.data.title} />}
+      <div>
+        <div class="topic-row">
+          {course.data.partner && <span class="tag">{course.data.partner}</span>}
+          {course.data.price && <span class="tag tag-muted">{course.data.price}</span>}
+          {course.data.status && <span class="tag tag-muted">{course.data.status}</span>}
+        </div>
+        <div class="legacy-content" set:html={course.data.contentHtml} />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

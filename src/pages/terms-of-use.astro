@@ -1,0 +1,13 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import PageHero from "@components/PageHero.astro";
+import { getPage } from "@lib/content";
+
+const page = await getPage("terms-of-use");
+---
+<BaseLayout title="Terms of Use - Robin Berzin MD">
+  <PageHero title="Terms of Use" />
+  <section class="section">
+    <div class="shell legacy-content" set:html={page?.data.contentHtml ?? ""} />
+  </section>
+</BaseLayout>

@@ -1,0 +1,5 @@
+{
+  "source": "/newsletter",
+  "destination": "/articles/",
+  "permanent": true
+}

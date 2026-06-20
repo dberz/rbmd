@@ -1,0 +1,80 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import PageHero from "@components/PageHero.astro";
+import { getPage } from "@lib/content";
+
+const page = await getPage("book");
+const retailers = [
+  {
+    name: "Amazon",
+    logo: "/images/book-retail/amazon.svg",
+    href: "https://www.amazon.com/State-Change-Anxiety-Burnout-Baseline-ebook/dp/B098439PSD",
+  },
+  {
+    name: "Barnes & Noble",
+    logo: "/images/book-retail/barnes.svg",
+    href: "https://www.barnesandnoble.com/w/state-change-robin-berzin/1139747189",
+  },
+  {
+    name: "Bookshop",
+    logo: "/images/book-retail/bookshop.svg",
+    href: "https://bookshop.org/books/state-change-end-anxiety-beat-burnout-and-ignite-a-new-baseline-of-energy-and-flow/9781982176808",
+  },
+  {
+    name: "Books-A-Million",
+    logo: "/images/book-retail/bam.svg",
+    href: "https://www.booksamillion.com/p/State-Change/Robin-Berzin/9781982176808?id=8336853875009",
+  },
+  {
+    name: "IndieBound",
+    logo: "/images/book-retail/indie.svg",
+    href: "https://www.indiebound.org/book/9781982176808",
+  },
+  {
+    name: "Walmart",
+    logo: "/images/book-retail/walmart.svg",
+    href: "https://www.walmart.com/search?q=State%20Change%20Robin%20Berzin",
+  },
+];
+const bookContentHtml = (page?.data.contentHtml ?? "")
+  .replaceAll("https://robinberzinmd.com/wp-content/uploads/2021/09/amazon.svg", "/images/book-retail/amazon.svg")
+  .replaceAll("https://robinberzinmd.com/wp-content/uploads/2021/09/barnes.svg", "/images/book-retail/barnes.svg")
+  .replaceAll("https://robinberzinmd.com/wp-content/uploads/2021/09/bookshop.svg", "/images/book-retail/bookshop.svg")
+  .replaceAll("https://robinberzinmd.com/wp-content/uploads/2021/09/bam.svg", "/images/book-retail/bam.svg")
+  .replaceAll("https://robinberzinmd.com/wp-content/uploads/2021/09/indie.svg", "/images/book-retail/indie.svg")
+  .replaceAll("https://robinberzinmd.com/wp-content/uploads/2021/09/State-Change-Cover.png", "/images/book/state-change-cover.png")
+  .replaceAll("https://robinberzinmd.com/wp-content/uploads/2021/09/State-Change-Cover-300x253.png", "/images/book/state-change-cover.png");
+---
+<BaseLayout title="Book - Robin Berzin MD" description="State Change by Robin Berzin MD. Start with the body and heal your mind.">
+  <PageHero title="State Change" description="Start with the body and heal your mind." />
+  <section class="section">
+    <div class="shell two-column book-feature">
+      <div>
+        <span class="eyebrow">Book</span>
+        <h2>End anxiety, beat burnout, and ignite a new baseline of energy and flow.</h2>
+        <p>
+          Robin's book is not the main focus of the new site, but it remains a
+          useful resource for readers who want the State Change framework.
+        </p>
+        <div class="retailer-grid" aria-label="Buy State Change">
+          {retailers.map((retailer) => (
+            <a class="retailer-link" href={retailer.href} target="_blank" rel="noopener noreferrer" aria-label={`Buy State Change at ${retailer.name}`}>
+              <img src={retailer.logo} alt={retailer.name} loading="lazy" decoding="async" />
+            </a>
+          ))}
+        </div>
+        <a class="publisher-link" href="https://www.simonandschuster.com/books/State-Change/Robin-Berzin/9781982176808" target="_blank" rel="noopener noreferrer">
+          View publisher details
+        </a>
+      </div>
+      <div class="book-cover-frame">
+        <img src="/images/book/state-change-cover.png" alt="State Change book cover" loading="eager" decoding="async" />
+      </div>
+    </div>
+  </section>
+  <section class="section section-subtle">
+    <div class="shell">
+      <div class="legacy-content book-legacy" set:html={bookContentHtml} />
+    </div>
+  </section>
+</BaseLayout>

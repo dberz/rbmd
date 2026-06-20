@@ -1,0 +1,128 @@
+---
+import ArticleCard from "@components/ArticleCard.astro";
+import SubscribeBlock from "@components/SubscribeBlock.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { getFeaturedArticles, getPrimaryCategories } from "@lib/content";
+
+const articles = await getFeaturedArticles(6);
+const categories = await getPrimaryCategories();
+const pressLogos = [
+  { name: "Fast Company", src: "/images/press/BerzinMedia-01.svg" },
+  { name: "Vogue", src: "/images/press/BerzinMedia-02.svg" },
+  { name: "Women's Health", src: "/images/press/BerzinMedia-03.svg" },
+  { name: "The New York Times", src: "/images/press/BerzinMedia-04.svg" },
+  { name: "Goop", src: "/images/press/BerzinMedia-05.svg" },
+];
+---
+<BaseLayout
+  title="Robin Berzin - Health optimization + Chronic disease resolution"
+  description="Robin Berzin MD is a leading voice in women's functional medicine, longevity, and root-cause health."
+>
+  <section class="hero">
+    <div class="shell two-column">
+      <div class="hero-copy">
+        <span class="eyebrow">Robin Berzin MD</span>
+        <h1>Get My Ultimate Female Longevity Supplement Stack</h1>
+        <p>
+          Evidence-based guidance on hormones, metabolism, longevity, fertility,
+          nutrition, toxins, and nervous system health.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#newsletter">Download the free protocol</a>
+          <a class="btn btn-secondary btn-lg" href="/articles/">Read the articles</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/images/robin/portrait-chair.jpg" alt="Robin Berzin MD" />
+      </div>
+    </div>
+  </section>
+
+  <section class="proof-strip" aria-label="Press">
+    <div class="shell">
+      <span class="proof-label">Featured in</span>
+      <div class="press-logo-list">
+        {pressLogos.map((logo) => (
+          <span class="press-logo">
+            <img src={logo.src} alt={logo.name} loading="lazy" decoding="async" />
+          </span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell cards-grid">
+      <div class="feature-panel">
+        <span class="eyebrow">Medical Practice</span>
+        <h2>Parsley Health</h2>
+        <p>
+          Robin founded Parsley Health to bring root-cause medicine into modern
+          healthcare.
+        </p>
+        <a href="https://www.parsleyhealth.com/">Visit Parsley Health -></a>
+      </div>
+      <div class="feature-panel">
+        <span class="eyebrow">Book</span>
+        <h2>State Change</h2>
+        <p>
+          Start with the body and heal your mind with Robin's framework for a new
+          baseline of energy and flow.
+        </p>
+        <a href="/book/">Get the book -></a>
+      </div>
+      <div class="feature-panel">
+        <span class="eyebrow">Courses</span>
+        <h2>My Courses</h2>
+        <p>
+          Explore Robin's current courses on mental health, gut health, and
+          whole-body resilience.
+        </p>
+        <a href="/courses/">View courses -></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-subtle" id="newsletter">
+    <div class="shell two-column">
+      <div>
+        <span class="eyebrow">Newsletter</span>
+        <h2>Root-cause medicine, translated for real life.</h2>
+        <p>
+          Get evidence-based protocols and frameworks for women's longevity,
+          hormones, metabolism, and everyday health decisions.
+        </p>
+      </div>
+      <SubscribeBlock placement="homepage-newsletter" />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="archive-tools">
+        <div>
+          <span class="eyebrow">Recent Articles</span>
+          <h2>Functional Medicine Articles</h2>
+        </div>
+        <a class="btn btn-secondary" href="/articles/">View all articles</a>
+      </div>
+      <div class="article-grid">
+        {articles.map((article) => <ArticleCard article={article} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-subtle">
+    <div class="shell two-column">
+      <div>
+        <span class="eyebrow">Explore by topic</span>
+        <h2>Find the protocol that matches what you are working on.</h2>
+      </div>
+      <div class="topic-row">
+        {categories.map((category) => (
+          <a class="tag" href={`/category/${category.data.slug}/`}>{category.data.name}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

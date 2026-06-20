@@ -1,0 +1,75 @@
+---
+import ArticleCard from "@components/ArticleCard.astro";
+import PageHero from "@components/PageHero.astro";
+import SubscribeBlock from "@components/SubscribeBlock.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { getArticles, getPrimaryCategories } from "@lib/content";
+
+const articles = await getArticles();
+const categories = await getPrimaryCategories();
+const startHere = articles.filter((article) =>
+  [
+    "normal-labs-fatigue-root-causes",
+    "glp-1-hrt-hormone-connection",
+    "perimenopause-symptoms-research",
+  ].includes(article.data.slug)
+);
+---
+<BaseLayout
+  title="Functional Medicine Articles | Robin Berzin MD"
+  description="Evidence-based guidance on hormones, metabolism, longevity, fertility, nutrition, toxins, and nervous system health."
+>
+  <PageHero
+    title="Functional Medicine Articles"
+    description="Evidence-based guidance on hormones, metabolism, longevity, fertility, nutrition, toxins, and nervous system health."
+  />
+
+  {startHere.length > 0 && (
+    <section class="section section-subtle">
+      <div class="shell">
+        <span class="eyebrow">Start Here</span>
+        <div class="article-grid">
+          {startHere.map((article) => <ArticleCard article={article} />)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="section">
+    <div class="shell">
+      <div class="archive-tools">
+        <div>
+          <span class="eyebrow">Explore by topic</span>
+          <h2>Category Hubs</h2>
+        </div>
+      </div>
+      <div class="topic-row">
+        {categories.map((category) => (
+          <a class="tag" href={`/category/${category.data.slug}/`}>
+            {category.data.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-subtle">
+    <div class="shell">
+      <div class="archive-tools">
+        <div>
+          <span class="eyebrow">Latest Articles</span>
+          <h2>All Articles</h2>
+        </div>
+      </div>
+      <div class="article-grid">
+        {articles.map((article) => <ArticleCard article={article} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <SubscribeBlock placement="articles-hub-inline" />
+    </div>
+  </section>
+</BaseLayout>

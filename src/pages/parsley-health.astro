@@ -1,0 +1,46 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import PageHero from "@components/PageHero.astro";
+---
+<BaseLayout
+  title="Parsley Health | Robin Berzin MD"
+  description="Parsley Health is the nation's leading holistic medical practice, designed to help people overcome chronic conditions."
+  canonical="https://robinberzinmd.com/parsley-health/"
+>
+  <PageHero
+    eyebrow="Medical Practice"
+    title="Parsley Health"
+    description="Parsley Health is the nation's leading holistic medical practice, designed to help people overcome chronic conditions."
+  />
+  <section class="section">
+    <div class="shell two-column">
+      <div>
+        <span class="eyebrow">Medical Practice</span>
+        <h2>Modern holistic care, all online.</h2>
+        <p>
+          80% of Parsley patients feel better within their first year of care,
+          improving or resolving gastrointestinal, autoimmune, hormone,
+          fertility, metabolic, and mental health conditions.
+        </p>
+        <p>
+          At Parsley patients see the whole picture of their health, identify
+          and address the root drivers of illness and experience accessible and
+          supportive care from providers who listen. Parsley combines advanced
+          diagnostic testing, personalized medications and nutritional guidance
+          to provide best-in-class modern holistic care, all online.
+        </p>
+        <a class="btn btn-cta btn-lg" href="https://www.parsleyhealth.com/">Visit Parsley Now</a>
+      </div>
+      <img src="/images/parsley/lobby.webp" alt="Parsley Health practice space" />
+    </div>
+  </section>
+  <section class="section section-subtle">
+    <div class="shell">
+      <div class="legacy-content">
+        <h2>"After years of battling a myriad of symptoms, Parsley finally helped me get to their root, rather than attempting band-aid solutions."</h2>
+        <p>Dana B.</p>
+        <p>Parsley Health Patient</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
