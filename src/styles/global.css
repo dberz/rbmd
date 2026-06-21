@@ -1484,6 +1484,108 @@ h3 {
   max-width: 460px;
 }
 
+/* Article email gate */
+.article-gate {
+  margin: var(--space-xl) 0;
+}
+
+.gated-content {
+  display: none;
+}
+
+.article-gate.is-unlocked .gated-content {
+  display: block;
+}
+
+.article-gate.is-unlocked .gate-card {
+  display: none;
+}
+
+.gate-card {
+  background: color-mix(in srgb, var(--color-lilac) 18%, var(--color-off-white));
+  border: 1px solid color-mix(in srgb, var(--color-lilac) 55%, transparent);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: var(--space-lg);
+}
+
+.gate-card h2 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-sm);
+}
+
+.gate-card > p {
+  color: var(--text-muted);
+  max-width: 52ch;
+}
+
+.gate-form {
+  margin-top: var(--space-md);
+  max-width: 480px;
+}
+
+.gate-note {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  margin-bottom: 0;
+  margin-top: var(--space-sm);
+}
+
+.gate-reveal {
+  background: none;
+  border: 0;
+  color: var(--color-dark-terracotta);
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+/* Related row — one framed row of three on desktop */
+.related-head {
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+
+.related-grid {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.related-grid .article-card {
+  background: var(--bg);
+  border: 1px solid color-mix(in srgb, var(--color-beige) 40%, transparent);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.related-grid .card-media {
+  aspect-ratio: 16 / 10;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.related-grid .article-card .tag {
+  margin: var(--space-sm) var(--space-md) 0;
+}
+
+.related-grid .article-card h3 {
+  font-size: var(--text-md);
+  margin: var(--space-xs) var(--space-md) 0;
+}
+
+.related-grid .article-card .meta {
+  margin: var(--space-xs) var(--space-md) var(--space-md);
+}
+
+.related-foot {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-lg);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -1536,6 +1638,7 @@ h3 {
   .cred-grid,
   .endorsement-grid,
   .article-grid,
+  .related-grid,
   .media-list,
   .footer-grid,
   .article-shell,

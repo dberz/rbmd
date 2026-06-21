@@ -42,8 +42,37 @@ async function submitForm(form: SubscribeForm) {
     placement: String(formData.get("placement") || ""),
     lead_magnet: String(formData.get("leadMagnet") || ""),
   });
+  const gate = form.closest("[data-article-gate]");
+  if (gate) unlockGate(gate);
   form.reset();
   setStatus(form, result.message || "You're subscribed.");
+}
+
+function unlockGate(gate: Element) {
+  gate.classList.add("is-unlocked");
+  const key = gate.getAttribute("data-storage-key");
+  if (key) {
+    try {
+      localStorage.setItem(`rbmd-gate:${key}`, "1");
+    } catch {
+      /* storage unavailable */
+    }
+  }
+}
+
+function initGates() {
+  for (const gate of document.querySelectorAll("[data-article-gate]")) {
+    const key = gate.getAttribute("data-storage-key");
+    if (key) {
+      try {
+        if (localStorage.getItem(`rbmd-gate:${key}`)) gate.classList.add("is-unlocked");
+      } catch {
+        /* storage unavailable */
+      }
+    }
+    const reveal = gate.querySelector("[data-gate-reveal]");
+    reveal?.addEventListener("click", () => unlockGate(gate));
+  }
 }
 
 async function submitInquiry(form: InquiryForm) {
@@ -86,6 +115,8 @@ function initForms() {
       submitInquiry(form).catch(() => setStatus(form, "Something went wrong. Please try again."));
     });
   }
+
+  initGates();
 }
 
 if (document.readyState === "loading") {

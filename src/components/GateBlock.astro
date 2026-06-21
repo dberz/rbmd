@@ -1,0 +1,47 @@
+---
+type Props = {
+  slug: string;
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  buttonText?: string;
+  leadMagnet?: string;
+  category?: string;
+  lockedHtml: string;
+};
+
+const {
+  slug,
+  eyebrow = "Read the full protocol",
+  title = "Enter your email to keep reading",
+  description = "Unlock the rest of this article instantly — plus Robin's weekly root-cause guidance.",
+  buttonText = "Unlock the article",
+  leadMagnet = "female-longevity-supplement-stack",
+  category = "",
+  lockedHtml,
+} = Astro.props;
+---
+<div class="article-gate" data-article-gate data-storage-key={slug}>
+  <div class="gate-card">
+    <span class="eyebrow">{eyebrow}</span>
+    <h2>{title}</h2>
+    <p>{description}</p>
+    <form class="subscribe-form gate-form" data-subscribe-form data-gate-form>
+      <input type="hidden" name="placement" value="article-gate" />
+      <input type="hidden" name="leadMagnet" value={leadMagnet} />
+      <input type="hidden" name="articleSlug" value={slug} />
+      <input type="hidden" name="category" value={category} />
+      <label>
+        <span>Email</span>
+        <input type="email" name="email" autocomplete="email" required placeholder="you@email.com" />
+      </label>
+      <button class="btn btn-primary" type="submit">{buttonText}</button>
+      <p class="form-status" data-form-status aria-live="polite"></p>
+    </form>
+    <p class="gate-note">
+      Already subscribed?
+      <button type="button" class="gate-reveal" data-gate-reveal>Unlock without re-entering.</button>
+    </p>
+  </div>
+  <div class="gated-content article-body" set:html={lockedHtml} />
+</div>
