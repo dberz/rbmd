@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import { getCollection, getEntry } from "astro:content";
 import SubscribeBlock from "@components/SubscribeBlock.astro";
+import ArticleCard from "@components/ArticleCard.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { articleUrl, categoryUrl, formatDate, plainText, tagUrl } from "@lib/content";
 
@@ -24,6 +25,22 @@ const articleLeadMagnetId = article.data.slug === "can-processed-deli-meats-be-h
   ? "clean-meat-cheat-sheet"
   : "female-longevity-supplement-stack";
 const articleLeadMagnet = await getEntry("leadMagnets", articleLeadMagnetId);
+
+const readingMinutes = Math.max(
+  1,
+  Math.round(plainText(article.data.contentHtml).split(/\s+/).filter(Boolean).length / 200)
+);
+
+const allArticles = await getCollection("articles");
+const related = allArticles
+  .filter(
+    (a) =>
+      a.data.slug !== article.data.slug &&
+      category &&
+      a.data.categories.some((c) => c.slug === category.slug)
+  )
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 3);
 
 const siteOrigin = Astro.site?.toString().replace(/\/$/, "") ?? "https://robinberzinmd.com";
 const pageUrl = `${siteOrigin}${articleUrl(article.data.slug)}`;
@@ -107,8 +124,11 @@ const jsonLd = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [
       <div class="shell article-header">
         {category && <a class="tag" href={categoryUrl(category.slug)}>{category.name}</a>}
         <h1>{article.data.title}</h1>
-        <p class="meta">By {article.data.author} · {formatDate(article.data.date)}</p>
-        {article.data.excerpt && <p>{article.data.excerpt}</p>}
+        <div class="article-byline">
+          <img class="byline-avatar" src="/images/robin/home.jpg" alt="Robin Berzin MD" width="44" height="44" loading="eager" />
+          <span class="byline-text">By {article.data.author}<span class="byline-sep">·</span>{formatDate(article.data.date)}<span class="byline-sep">·</span>{readingMinutes} min read</span>
+        </div>
+        {article.data.excerpt && <p class="article-dek">{article.data.excerpt}</p>}
       </div>
       {article.data.image && (
         <div class="shell article-featured-image">
@@ -148,4 +168,21 @@ const jsonLd = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [
       </aside>
     </div>
   </article>
+
+  {related.length > 0 && (
+    <section class="section section-subtle">
+      <div class="shell">
+        <div class="archive-tools">
+          <div>
+            <span class="eyebrow">Keep reading</span>
+            <h2>More on {category?.name ?? "functional medicine"}</h2>
+          </div>
+          <a class="btn btn-secondary" href="/articles/">View all articles</a>
+        </div>
+        <div class="article-grid related-grid">
+          {related.map((item) => <ArticleCard article={item} />)}
+        </div>
+      </div>
+    </section>
+  )}
 </BaseLayout>

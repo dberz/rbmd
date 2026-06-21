@@ -21,15 +21,19 @@ const { course } = Astro.props;
 <BaseLayout title={`${course.data.title} | Robin Berzin MD`} description={course.data.excerpt}>
   <PageHero title={course.data.title} description={course.data.excerpt} />
   <section class="section">
-    <div class="shell two-column">
-      {course.data.image && <img src={course.data.image.src} alt={course.data.image.alt ?? course.data.title} />}
+    <div class="shell two-column course-detail">
+      {course.data.image && (
+        <div class="course-detail-media">
+          <img class="rounded-media" src={course.data.image.src} alt={course.data.image.alt ?? course.data.title} onerror="this.style.opacity=0" />
+        </div>
+      )}
       <div>
         <div class="topic-row">
           {course.data.partner && <span class="tag">{course.data.partner}</span>}
           {course.data.price && <span class="tag tag-muted">{course.data.price}</span>}
           {course.data.status && <span class="tag tag-muted">{course.data.status}</span>}
         </div>
-        <div class="legacy-content" set:html={course.data.contentHtml} />
+        <div class="article-body" set:html={course.data.contentHtml} />
       </div>
     </div>
   </section>

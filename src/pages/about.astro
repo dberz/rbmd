@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHero from "@components/PageHero.astro";
+import SubscribeBlock from "@components/SubscribeBlock.astro";
 
 const pressLogos = [
   { name: "Fast Company", src: "/images/press/BerzinMedia-01.svg" },
@@ -105,24 +106,26 @@ const credentials = [
   </section>
 
   <section class="section">
-    <div class="shell cta-band">
+    <div class="shell two-column">
       <div>
-        <span class="eyebrow">Work with Robin</span>
-        <h2>Ready for root-cause care?</h2>
+        <span class="eyebrow">Newsletter</span>
+        <h2>Get Robin's weekly protocols.</h2>
         <p>
-          Robin sees patients through Parsley Health, where 80% of members improve or
-          resolve a chronic condition in their first year. Care is online and available
-          nationwide.
+          Join 50,000+ readers for evidence-based guidance on women's longevity,
+          hormones, metabolism, and the everyday health decisions that matter most.
+        </p>
+        <p>
+          Robin is the founder of <a href="/parsley-health/">Parsley Health</a>, a
+          root-cause medical practice with care available online, nationwide.
         </p>
       </div>
-      <a
-        class="btn btn-cta btn-lg"
-        href="https://www.parsleyhealth.com/contact/free-consultation/?utm_source=robinberzinmd&utm_medium=about&utm_campaign=work_with_robin"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Start with Parsley Health
-      </a>
+      <SubscribeBlock
+        placement="about-bottom"
+        eyebrow="Free protocol"
+        title="Get My Ultimate Female Longevity Supplement Stack"
+        description="A practical, evidence-based starting point for women who want to improve energy, metabolic health, and long-term resilience."
+        buttonText="Get the free protocol"
+      />
     </div>
   </section>
 </BaseLayout>

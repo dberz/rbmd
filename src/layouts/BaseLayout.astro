@@ -25,6 +25,7 @@ const {
   jsonLd,
 } = Astro.props;
 
+const ga4Id = import.meta.env.PUBLIC_GA4_MEASUREMENT_ID;
 const siteOrigin = Astro.site?.toString().replace(/\/$/, "") ?? "https://robinberzinmd.com";
 const canonicalUrl = canonical ?? new URL(Astro.url.pathname, `${siteOrigin}/`).toString();
 const ogImageUrl = new URL(ogImage, `${siteOrigin}/`).toString();
@@ -57,6 +58,16 @@ const websiteSchema: JsonLd = {
 
 const pageSchemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 const schemas = [personSchema, websiteSchema, ...pageSchemas];
+
+const navItems = [
+  { href: "/about/", label: "About" },
+  { href: "/articles/", label: "Articles" },
+  { href: "/media/", label: "Media" },
+  { href: "/courses/", label: "Courses" },
+];
+const currentPath = Astro.url.pathname;
+const isActive = (href: string) =>
+  href === "/" ? currentPath === "/" : currentPath === href || currentPath.startsWith(href);
 ---
 <!doctype html>
 <html lang="en">
@@ -81,22 +92,26 @@ const schemas = [personSchema, websiteSchema, ...pageSchemas];
     {schemas.map((schema) => (
       <script type="application/ld+json" set:html={JSON.stringify(schema)} />
     ))}
+    {ga4Id && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`} is:inline></script>
+        <script is:inline set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${ga4Id}');`} />
+      </>
+    )}
   </head>
   <body class={bodyClass}>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="shell nav-shell">
         <a class="brand" href="/" aria-label="Robin Berzin MD home">
-          <img src="/logo/RobinBerzin-Logo-DarkBrown.png" alt="Robin Berzin MD" />
+          <img src="/logo/RobinBerzin-Logo-DarkBrown-T.png" alt="Robin Berzin MD" />
         </a>
         <nav class="desktop-nav" aria-label="Primary navigation">
-          <a href="/about/">About</a>
-          <a href="/articles/">Articles</a>
-          <a href="/media/">Media</a>
-          <a href="/courses/">Courses</a>
-          <a href="/book/">Book</a>
+          {navItems.map((item) => (
+            <a href={item.href} class={isActive(item.href) ? "is-active" : undefined} aria-current={isActive(item.href) ? "page" : undefined}>{item.label}</a>
+          ))}
         </nav>
-        <a class="btn btn-cta nav-cta" href="https://www.parsleyhealth.com/contact/free-consultation/?utm_source=robinberzinmd&utm_medium=nav&utm_campaign=work_with_robin" target="_blank" rel="noopener noreferrer">Work with Robin</a>
+        <a class="btn btn-primary nav-cta" href="/newsletter/">Get the newsletter</a>
         <button
           class="mobile-nav-toggle"
           type="button"
@@ -110,12 +125,11 @@ const schemas = [personSchema, websiteSchema, ...pageSchemas];
         </button>
       </div>
       <nav class="mobile-nav-panel" id="mobile-nav" aria-label="Mobile navigation" hidden data-mobile-nav>
-        <a href="/about/">About</a>
-        <a href="/articles/">Articles</a>
-        <a href="/media/">Media</a>
-        <a href="/courses/">Courses</a>
+        {navItems.map((item) => (
+          <a href={item.href} aria-current={isActive(item.href) ? "page" : undefined}>{item.label}</a>
+        ))}
         <a href="/book/">Book</a>
-        <a class="btn btn-cta" href="https://www.parsleyhealth.com/contact/free-consultation/?utm_source=robinberzinmd&utm_medium=nav&utm_campaign=work_with_robin" target="_blank" rel="noopener noreferrer">Work with Robin</a>
+        <a class="btn btn-primary" href="/newsletter/">Get the newsletter</a>
       </nav>
     </header>
     <main id="main">
@@ -124,8 +138,13 @@ const schemas = [personSchema, websiteSchema, ...pageSchemas];
     <footer class="site-footer">
       <div class="shell footer-grid">
         <div>
-          <img class="footer-logo" src="/logo/RobinBerzin-Logo-OffWhite.png" alt="Robin Berzin MD" />
+          <img class="footer-logo" src="/logo/RobinBerzin-Logo-OffWhite-T.png" alt="Robin Berzin MD" />
           <p>Functional medicine, longevity, and root-cause health for women.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/robinberzinmd" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+            <a href="https://www.linkedin.com/in/robin-berzin-md" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://www.facebook.com/RobinBerzinMD" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+          </div>
         </div>
         <div>
           <h3>About</h3>
@@ -156,6 +175,9 @@ const schemas = [personSchema, websiteSchema, ...pageSchemas];
           </form>
         </div>
       </div>
+      <div class="shell footer-disclaimer">
+        <p>The content on this site is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider with questions about your health.</p>
+      </div>
       <div class="shell footer-bottom">
         <span>&copy; {new Date().getFullYear()} Robin Berzin MD</span>
         <a href="/terms-of-use/">Terms of Use</a>
@@ -182,6 +204,14 @@ const schemas = [personSchema, websiteSchema, ...pageSchemas];
         mobileToggle?.setAttribute("aria-label", "Open menu");
         mobileNav.hidden = true;
       });
+
+      const siteHeader = document.querySelector(".site-header");
+      const onScroll = () => {
+        if (!siteHeader) return;
+        siteHeader.classList.toggle("is-scrolled", window.scrollY > 8);
+      };
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
     </script>
   </body>
 </html>

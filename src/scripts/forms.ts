@@ -11,6 +11,11 @@ function getUtm(name: string) {
   return params.get(name) ?? "";
 }
 
+function trackEvent(name: string, params: Record<string, string>) {
+  const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
+  if (typeof gtag === "function") gtag("event", name, params);
+}
+
 function setStatus(form: HTMLFormElement, message: string) {
   const status = form.querySelector<HTMLElement>("[data-form-status]");
   if (status) status.textContent = message;
@@ -32,6 +37,11 @@ async function submitForm(form: SubscribeForm) {
     setStatus(form, result.message || "Something went wrong. Please try again.");
     return;
   }
+  trackEvent("generate_lead", {
+    method: "newsletter",
+    placement: String(formData.get("placement") || ""),
+    lead_magnet: String(formData.get("leadMagnet") || ""),
+  });
   form.reset();
   setStatus(form, result.message || "You're subscribed.");
 }
@@ -51,6 +61,9 @@ async function submitInquiry(form: InquiryForm) {
     setStatus(form, result.message || "Something went wrong. Please try again.");
     return;
   }
+  trackEvent("contact_submit", {
+    inquiry_type: String(formData.get("inquiryType") || ""),
+  });
   form.reset();
   setStatus(form, result.message || "Thank you. Your inquiry was sent.");
 }

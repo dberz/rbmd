@@ -14,6 +14,26 @@ const startHere = articles.filter((article) =>
     "perimenopause-symptoms-research",
   ].includes(article.data.slug)
 );
+
+const hubGradients: Record<string, string> = {
+  "brain-mood-nervous-system": "linear-gradient(135deg, var(--color-lilac), var(--color-cream))",
+  "fertility-parenting-robin-berzin-md": "linear-gradient(135deg, var(--color-beige), var(--color-off-white))",
+  "longevity-metabolic-health": "linear-gradient(135deg, var(--color-dark-terracotta), var(--color-medium-brown))",
+  "toxins-nutrition-modern-exposures": "linear-gradient(135deg, var(--color-medium-brown), var(--color-beige))",
+  "womens-health-hormones": "linear-gradient(135deg, var(--color-lilac), var(--color-beige))",
+};
+
+const categoryHubs = categories.map((category) => {
+  const inCategory = articles.filter((article) =>
+    article.data.categories.some((c) => c.slug === category.data.slug)
+  );
+  return {
+    slug: category.data.slug,
+    name: category.data.name,
+    count: inCategory.length,
+    gradient: hubGradients[category.data.slug] ?? "linear-gradient(135deg, var(--color-lilac), var(--color-cream))",
+  };
+});
 ---
 <BaseLayout
   title="Functional Medicine Articles | Robin Berzin MD"
@@ -40,13 +60,15 @@ const startHere = articles.filter((article) =>
       <div class="archive-tools">
         <div>
           <span class="eyebrow">Explore by topic</span>
-          <h2>Category Hubs</h2>
+          <h2>Category hubs</h2>
         </div>
       </div>
-      <div class="topic-row">
-        {categories.map((category) => (
-          <a class="tag" href={`/category/${category.data.slug}/`}>
-            {category.data.name}
+      <div class="hub-grid">
+        {categoryHubs.map((hub) => (
+          <a class="hub-card" href={`/category/${hub.slug}/`}>
+            <span class="hub-illustration" style={`background:${hub.gradient}`} aria-hidden="true"></span>
+            <h3>{hub.name}</h3>
+            <p class="meta">{hub.count} {hub.count === 1 ? "article" : "articles"}</p>
           </a>
         ))}
       </div>
@@ -58,11 +80,21 @@ const startHere = articles.filter((article) =>
       <div class="archive-tools">
         <div>
           <span class="eyebrow">Latest Articles</span>
-          <h2>All Articles</h2>
+          <h2>All articles</h2>
         </div>
       </div>
-      <div class="article-grid">
+      <div class="filter-tabs" role="tablist" aria-label="Filter articles by topic">
+        <button class="filter-tab is-active" data-filter="all" type="button">All</button>
+        {categories.map((category) => (
+          <button class="filter-tab" data-filter={category.data.slug} type="button">{category.data.name}</button>
+        ))}
+      </div>
+      <div class="article-grid" id="articleGrid">
         {articles.map((article) => <ArticleCard article={article} />)}
+      </div>
+      <p class="filter-empty" id="filterEmpty" hidden>No articles in this topic yet.</p>
+      <div class="load-more-row">
+        <button class="btn btn-secondary" id="loadMore" type="button">Load more articles</button>
       </div>
     </div>
   </section>
@@ -72,4 +104,54 @@ const startHere = articles.filter((article) =>
       <SubscribeBlock placement="articles-hub-inline" />
     </div>
   </section>
+
+  <script is:inline>
+    (function () {
+      const grid = document.getElementById("articleGrid");
+      if (!grid) return;
+      const cards = Array.from(grid.children);
+      const tabs = Array.from(document.querySelectorAll(".filter-tab"));
+      const loadMore = document.getElementById("loadMore");
+      const empty = document.getElementById("filterEmpty");
+      const PAGE = 12;
+      let filter = "all";
+      let shown = PAGE;
+
+      const matches = (card) => filter === "all" || card.getAttribute("data-category") === filter;
+
+      function render() {
+        let count = 0;
+        cards.forEach((card) => {
+          if (matches(card) && count < shown) {
+            card.style.display = "";
+            count++;
+          } else {
+            card.style.display = "none";
+          }
+        });
+        const total = cards.filter(matches).length;
+        if (loadMore) loadMore.style.display = shown < total ? "" : "none";
+        if (empty) empty.hidden = total !== 0;
+      }
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          tabs.forEach((t) => t.classList.remove("is-active"));
+          tab.classList.add("is-active");
+          filter = tab.getAttribute("data-filter");
+          shown = PAGE;
+          render();
+        });
+      });
+
+      if (loadMore) {
+        loadMore.addEventListener("click", () => {
+          shown += PAGE;
+          render();
+        });
+      }
+
+      render();
+    })();
+  </script>
 </BaseLayout>

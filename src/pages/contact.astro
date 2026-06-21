@@ -3,9 +3,9 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHero from "@components/PageHero.astro";
 ---
 <BaseLayout title="Contact - Robin Berzin MD" description="Contact Robin Berzin MD for general, media, speaking, and Parsley Health inquiries.">
-  <PageHero title="Contact Me" description="For media, speaking, advisory, general inquiries, and Parsley Health routing." />
+  <PageHero eyebrow="Contact" title="Get in touch" description="For media, speaking, advisory, and general inquiries. For medical care, visit Parsley Health." />
   <section class="section">
-    <div class="shell two-column">
+    <div class="shell two-column contact-grid">
       <form class="inquiry-form" method="post" action="/api/inquiry/" data-inquiry-form>
         <input type="text" name="company" tabindex="-1" autocomplete="off" hidden />
         <label>
@@ -34,7 +34,7 @@ import PageHero from "@components/PageHero.astro";
         <button class="btn btn-cta" type="submit">Send inquiry</button>
         <p class="form-status" data-form-status></p>
       </form>
-      <img src="/images/robin/portrait-standing.jpg" alt="Robin Berzin MD" />
+      <img class="rounded-media" src="/images/robin/portrait-standing.jpg" alt="Robin Berzin MD" />
     </div>
   </section>
 </BaseLayout>

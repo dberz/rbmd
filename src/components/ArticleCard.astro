@@ -10,8 +10,18 @@ const { article } = Astro.props;
 const category = article.data.categories[0];
 const image = article.data.image;
 ---
-<a class="article-card" href={articleUrl(article.data.slug)}>
-  {image && <img src={image.src} alt={image.alt ?? article.data.title} loading="lazy" />}
+<a class="article-card" href={articleUrl(article.data.slug)} data-category={category?.slug ?? "uncategorized"}>
+  <span class="card-media">
+    {image && (
+      <img
+        src={image.src}
+        alt={image.alt ?? article.data.title}
+        loading="lazy"
+        decoding="async"
+        onerror="this.style.opacity=0"
+      />
+    )}
+  </span>
   {category && <span class="tag">{category.name}</span>}
   <h3>{article.data.title}</h3>
   <p class="meta">{formatDate(article.data.date)}</p>

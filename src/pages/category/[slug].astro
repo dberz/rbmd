@@ -26,15 +26,29 @@ type Props = {
 };
 
 const { category, articles } = Astro.props;
+const intro =
+  category.data.description ||
+  `Evidence-based guidance from Robin Berzin, MD on ${category.data.name.toLowerCase()}.`;
 ---
 <BaseLayout
   title={`${category.data.name} Articles | Robin Berzin MD`}
   description={category.data.description || `Articles from Robin Berzin MD on ${category.data.name}.`}
 >
-  <PageHero title={category.data.name} description={category.data.description || `${articles.length} articles`} />
+  <PageHero
+    eyebrow={`${articles.length} ${articles.length === 1 ? "article" : "articles"}`}
+    title={category.data.name}
+    description={intro}
+  />
   <section class="section section-subtle">
-    <div class="shell article-grid">
-      {articles.map((article) => <ArticleCard article={article} />)}
+    <div class="shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/articles/">Articles</a>
+        <span aria-hidden="true">/</span>
+        <span>{category.data.name}</span>
+      </nav>
+      <div class="article-grid">
+        {articles.map((article) => <ArticleCard article={article} />)}
+      </div>
     </div>
   </section>
   <section class="section">

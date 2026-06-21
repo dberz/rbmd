@@ -1,0 +1,16 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+<BaseLayout title="Page not found | Robin Berzin MD" description="The page you were looking for could not be found." noindex={true}>
+  <section class="section">
+    <div class="shell notfound">
+      <span class="eyebrow">404</span>
+      <h1>We couldn't find that page.</h1>
+      <p>The page may have moved. Explore the articles or head back home — there's plenty of root-cause guidance to dig into.</p>
+      <div class="button-row">
+        <a class="btn btn-primary btn-lg" href="/articles/">Browse articles</a>
+        <a class="btn btn-secondary btn-lg" href="/">Back home</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

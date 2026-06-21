@@ -8,18 +8,22 @@ const courses = await getCourses();
 <BaseLayout title="Courses - Robin Berzin MD" description="Courses from Robin Berzin MD.">
   <PageHero title="Courses" description="Current courses from Robin Berzin MD." />
   <section class="section section-subtle">
-    <div class="shell cards-grid">
+    <div class="shell course-grid">
       {courses.map((course) => (
-        <a class="article-card" href={`/course/${course.data.slug}/`}>
-          {course.data.image && <img src={course.data.image.src} alt={course.data.image.alt ?? course.data.title} />}
-          <div class="topic-row">
-            {course.data.partner && <span class="tag">{course.data.partner}</span>}
-            {course.data.price && <span class="tag tag-muted">{course.data.price}</span>}
-            {course.data.status && <span class="tag tag-muted">{course.data.status}</span>}
+        <a class="course-card" href={`/course/${course.data.slug}/`}>
+          <span class="card-media">
+            {course.data.image && <img src={course.data.image.src} alt={course.data.image.alt ?? course.data.title} loading="lazy" decoding="async" onerror="this.style.opacity=0" />}
+          </span>
+          <div class="course-card-body">
+            <div class="topic-row">
+              {course.data.partner && <span class="tag">{course.data.partner}</span>}
+              {course.data.price && <span class="tag tag-muted">{course.data.price}</span>}
+              {course.data.status && <span class="tag tag-muted">{course.data.status}</span>}
+            </div>
+            <h3>{course.data.title}</h3>
+            <p class="course-excerpt">{course.data.excerpt}</p>
+            <span class="course-link">Learn more -></span>
           </div>
-          <h2>{course.data.title}</h2>
-          <p>{course.data.excerpt}</p>
-          <span>Learn more -></span>
         </a>
       ))}
     </div>
