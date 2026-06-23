@@ -1,0 +1,19 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image, generated at 1536x1024 for both 4:3 cards and 3:2 article hero cropping
+Article title: What is your vaginal microbiome telling you?
+Article excerpt: The vaginal microbiome is a dynamic ecosystem and a key driver of gynecological, urogenital, and reproductive health.
+Category: Women’s Health & Hormones
+Tags: Gut Health, Hormones, Women's Health
+Article body signals: Robin’s Short Version | The research says | The optimal vaginal ecosystem | The vaginal microbiome out of balance | What I’m doing for my own body | What I recommend for you | Keep Reading | I’ll never forget when I worked for Dr. Oz back in 2005 and he got a question on his radio show from a caller on douching (which, I would realize years later, was really a question about the vaginal microbiome). What he said would bring him attention for decades to come. Don’t douche! The vagina is a self-cleaning oven. Robin’s Short Version Diversity Is Bad: Unlike the gut, a healthy vaginal microbiome is dominated by L. crispatus—more bacterial diversity signals worse outcomes. pH Is Defense: L. crispatus produces lactic acid to hold vaginal pH between 3.8–5, actively blocking the growth of harmful organisms. Check Your Lube: Lubricants with chlorhexidine gluconate harm healthy lactobacillus—choose one formulated to match vaginal pH. He was right. Don’t douche. But what we didn’t fully understand then is the role the microbiome plays in overall vaginal health, defining exactly why the vagina is in fact a self-cleaning oven. The medical community has spent a ton of time talking about the gut microbiome but lately I’ve been super interested in how our health is impacted and supported by the other microbiomes that get less airtime. Think: the skin microbiome (which I’ll cover in a future newsletter) and yes, the vaginal microbiome. I thought of this self-cleaning oven moment recently when I attended a launch event for my friends at Seed (who I’m partnering with on content this fall, including this newsletter) which just launched a new probiotic designed to support the vaginal microbiom...
+Visual brief: Build the image around hormone cycle rings, endocrine signal dots, moon-phase arcs, and soft botanical seed forms; gut-loop ribbons, microbiome dots, fiber strands, and inflammation sparks softened into paper shapes.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:3 article card thumbnail and refined enough for a 3:2 article hero.
+Use one central visual metaphor supported by 3-6 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, text, letters, words, numbers, logos, and watermarks.
+Composition: one bold central topic metaphor, asymmetric balance, strong thumbnail readability, generous margins, quiet lower-right signature zone, no important detail in the bottom-right 20% x 14% area.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

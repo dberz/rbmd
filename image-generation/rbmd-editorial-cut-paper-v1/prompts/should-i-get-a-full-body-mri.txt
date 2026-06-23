@@ -1,0 +1,19 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image, generated at 1536x1024 for both 4:3 cards and 3:2 article hero cropping
+Article title: Is it worth $2,500 to catch disease before it starts?
+Article excerpt: My MRI found a kidney tumor. Here’s what I’m doing next and what I recommend for you to get the most out of your health data.
+Category: Longevity & Metabolic Health
+Tags: Lab Testing, Longevity, Women's Health
+Article body signals: Robin’s Short Version | Would you pay $2,500 to know what’s really going on inside your body? | What to know: Full-body MRI used to be fringe. Not anymore. | What the actual scan is like | What my scan found | Informational (no action needed right now) | ️ Actionable (I’m monitoring over time) | What to do: Consider a full-body MRI every 1-2 years. | Answers to your most-asked MRI questions | Quick hits | My MRI found a kidney tumor. Here’s what I’m doing next. Robin’s Short Version No Radiation Risk: MRI uses magnets instead of X-rays, making it safe to repeat every one to two years to build a trackable health baseline. Dense Breasts Gap: When breast tissue is more than 50% glandular, standard mammograms lose sensitivity — adding ultrasound or MRI to your protocol closes that gap. Benign Doesn’t Mean Ignore: A small kidney angiomyolipoma needs no treatment now, but can impair kidney function if it grows, making ongoing monitoring essential. Would you pay $2,500 to know what’s really going on inside your body? Ten years ago, if you’d told me I’d voluntarily climb into a loud metal tube for an informational MRI I’d have laughed in your face. And yet, here we are. I’ve done two full-body MRIs, most recently with Prenuvo . Not only did I survive (I watched Sex and the City reruns the whole time and can confirm: Samantha Jones is still iconic), I found out about a benign kidney tumor. I’m all about proactive findings like this. The reactive model of medicine, which has us waiting in the dark until something goes wrong, is just as crazy to me as bloodletting with leaches. Let’s break down what full-body MRIs do , what they don’t , and whether they’re worth it. What to know: Fu...
+Visual brief: Build the image around lab-vial silhouettes, diagnostic rings, scan-window shapes, and precise measurement ticks without numbers; cellular age rings, mitochondria, renewal arrows, immune-cell dots, and longevity tree-ring forms; glucose bead paths, metabolic curves, mitochondria ovals, and appetite-signal rings.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:3 article card thumbnail and refined enough for a 3:2 article hero.
+Use one central visual metaphor supported by 3-6 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, text, letters, words, numbers, logos, and watermarks.
+Composition: one bold central topic metaphor, asymmetric balance, strong thumbnail readability, generous margins, quiet lower-right signature zone, no important detail in the bottom-right 20% x 14% area.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

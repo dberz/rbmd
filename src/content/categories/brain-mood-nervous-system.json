@@ -3,5 +3,11 @@
   "slug": "brain-mood-nervous-system",
   "description": "Brain health is deeply connected to metabolism, hormones, and inflammation. In this collection, Dr. Robin Berzin examines cognitive decline, brain aging, metabolic psychiatry, vagus nerve science, sleep architecture, and mood regulation. These articles blend neuroscience with clinical experience to support mental clarity and long-term cognitive resilience.",
   "count": 9,
-  "sourceUrl": "https://robinberzinmd.com/category/brain-mood-nervous-system/"
+  "sourceUrl": "https://robinberzinmd.com/category/brain-mood-nervous-system/",
+  "image": {
+    "src": "/images/categories/rbmd-simple-v1/brain-mood-nervous-system.webp",
+    "alt": "Brain, Mood & Nervous System simplified cut-paper illustration",
+    "width": 1536,
+    "height": 1024
+  }
 }

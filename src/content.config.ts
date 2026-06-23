@@ -57,6 +57,7 @@ const categories = defineCollection({
     slug: z.string(),
     description: z.string().default(""),
     count: z.number().default(0),
+    image,
     sourceUrl: z.url().optional(),
   }),
 });

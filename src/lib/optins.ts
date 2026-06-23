@@ -76,3 +76,10 @@ export function stripKeepReading(html: string) {
   if (match && match.index > html.length * 0.5) return html.slice(0, match.index);
   return html;
 }
+
+// Strip a decorative leading emoji from headings (e.g. "🤓 What to know" → "What to know").
+// Meaningful inline emoji in body paragraphs are left untouched.
+export function stripHeadingEmoji(html: string) {
+  const re = /(<h[2-4][^>]*>(?:\s|<[^>]+>)*)(?:\p{Extended_Pictographic}(?:️|‍\p{Extended_Pictographic})*\s*)+/gu;
+  return html.replace(re, "$1");
+}

@@ -1,10 +1,20 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { getCollection } from "astro:content";
+import { getCollection, getEntry } from "astro:content";
 import ArticleCard from "@components/ArticleCard.astro";
 import PageHero from "@components/PageHero.astro";
 import SubscribeBlock from "@components/SubscribeBlock.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
+import { articleUrl, categoryUrl, formatDate, tagUrl } from "@lib/content";
+import { getHubContent } from "@lib/hubs";
+
+const primaryCategorySlugs = new Set([
+  "brain-mood-nervous-system",
+  "fertility-parenting-robin-berzin-md",
+  "longevity-metabolic-health",
+  "toxins-nutrition-modern-exposures",
+  "womens-health-hormones",
+]);
 
 export async function getStaticPaths() {
   const categories = await getCollection("categories");
@@ -26,34 +36,191 @@ type Props = {
 };
 
 const { category, articles } = Astro.props;
-const intro =
-  category.data.description ||
-  `Evidence-based guidance from Robin Berzin, MD on ${category.data.name.toLowerCase()}.`;
+const slug = category.data.slug;
+const hub = getHubContent(slug);
+
+const introHtml = hub?.intro ?? `<p>${category.data.description || `Evidence-based guidance from Robin Berzin, MD on ${category.data.name.toLowerCase()}.`}</p>`;
+const lede = hub?.lede ?? (category.data.description || `${articles.length} articles`);
+const metaTitle = hub?.metaTitle ?? `${category.data.name} Articles | Robin Berzin MD`;
+const metaDescription = hub?.metaDescription ?? `Articles from Robin Berzin MD on ${category.data.name}.`;
+const latest = articles[0]?.data.date;
+
+// Cornerstone (featured) vs. the rest.
+const bySlug = new Map(articles.map((a) => [a.data.slug, a]));
+const featuredArticles = (hub?.featured ?? [])
+  .map((s) => bySlug.get(s))
+  .filter((a): a is CollectionEntry<"articles"> => Boolean(a));
+const featuredSet = new Set(featuredArticles.map((a) => a.data.slug));
+const restArticles = articles.filter((a) => !featuredSet.has(a.data.slug));
+
+// Subtopic chips — most common tags in this category.
+const tagCounts = new Map<string, { slug: string; name: string; n: number }>();
+for (const a of articles) {
+  for (const t of a.data.tags) {
+    const cur = tagCounts.get(t.slug) ?? { slug: t.slug, name: t.name, n: 0 };
+    cur.n += 1;
+    tagCounts.set(t.slug, cur);
+  }
+}
+const topTags = [...tagCounts.values()].sort((a, b) => b.n - a.n).slice(0, 6);
+
+// Lead magnet
+const leadMagnetId = hub?.leadMagnet ?? "female-longevity-supplement-stack";
+const leadMagnet = await getEntry("leadMagnets", leadMagnetId);
+
+// Cross-hub links
+const allCategories = await getCollection("categories");
+const otherHubs = allCategories
+  .filter((c) => primaryCategorySlugs.has(c.data.slug) && c.data.slug !== slug)
+  .map((c) => ({ slug: c.data.slug, name: c.data.name }));
+
+// Structured data
+const siteOrigin = Astro.site?.toString().replace(/\/$/, "") ?? "https://robinberzinmd.com";
+const hubUrl = `${siteOrigin}${categoryUrl(slug)}`;
+const orderedForList = [...featuredArticles, ...restArticles].slice(0, 12);
+const collectionPage = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: category.data.name,
+  headline: hub?.metaTitle ?? `${category.data.name} | Robin Berzin MD`,
+  description: metaDescription,
+  url: hubUrl,
+  about: category.data.name,
+  isPartOf: { "@type": "WebSite", name: "Robin Berzin MD", url: `${siteOrigin}/` },
+  author: { "@type": "Person", name: "Robin Berzin, MD", url: `${siteOrigin}/about/` },
+};
+const itemList = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: orderedForList.map((a, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: `${siteOrigin}${articleUrl(a.data.slug)}`,
+    name: a.data.title,
+  })),
+};
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: `${siteOrigin}/` },
+    { "@type": "ListItem", position: 2, name: "Articles", item: `${siteOrigin}/articles/` },
+    { "@type": "ListItem", position: 3, name: category.data.name, item: hubUrl },
+  ],
+};
+const faqPage = hub
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: hub.faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    }
+  : null;
+const jsonLd = [collectionPage, itemList, breadcrumb, ...(faqPage ? [faqPage] : [])];
 ---
-<BaseLayout
-  title={`${category.data.name} Articles | Robin Berzin MD`}
-  description={category.data.description || `Articles from Robin Berzin MD on ${category.data.name}.`}
->
-  <PageHero
-    eyebrow={`${articles.length} ${articles.length === 1 ? "article" : "articles"}`}
-    title={category.data.name}
-    description={intro}
-  />
-  <section class="section section-subtle">
+<BaseLayout title={metaTitle} description={metaDescription} canonical={hubUrl} jsonLd={jsonLd}>
+  <PageHero eyebrow="Topic hub" title={category.data.name} description={lede} />
+
+  <section class="section hub-top">
     <div class="shell">
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="/articles/">Articles</a>
         <span aria-hidden="true">/</span>
         <span>{category.data.name}</span>
       </nav>
-      <div class="article-grid">
-        {articles.map((article) => <ArticleCard article={article} />)}
+      <div class="hub-overview">
+        <div class="hub-intro" set:html={introHtml} />
+        <aside class="hub-aside">
+          <p class="hub-meta">
+            {articles.length} {articles.length === 1 ? "article" : "articles"}
+            {latest && <> · Updated {formatDate(latest)}</>}
+          </p>
+          {topTags.length > 0 && (
+            <div class="hub-subtopics">
+              <span class="eyebrow">Explore subtopics</span>
+              <div class="topic-row">
+                {topTags.map((t) => <a class="tag tag-muted" href={tagUrl(t.slug)}>{t.name}</a>)}
+              </div>
+            </div>
+          )}
+        </aside>
       </div>
     </div>
   </section>
-  <section class="section">
+
+  {featuredArticles.length > 0 && (
+    <section class="section section-subtle">
+      <div class="shell">
+        <div class="related-head hub-section-head">
+          <span class="eyebrow">Start here</span>
+          <h2>Cornerstone reads</h2>
+        </div>
+        <div class="related-grid">
+          {featuredArticles.map((article) => <ArticleCard article={article} />)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {hub && (
+    <section class="section">
+      <div class="shell hub-faq">
+        <span class="eyebrow">Common questions</span>
+        <h2>{category.data.name}, answered</h2>
+        <div class="faq-list">
+          {hub.faqs.map((f, i) => (
+            <details class="faq-item" open={i === 0}>
+              <summary class="faq-q">{f.q}</summary>
+              <div class="faq-a"><p>{f.a}</p></div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class={hub ? "section section-subtle" : "section"}>
     <div class="shell">
-      <SubscribeBlock placement={`category-${category.data.slug}`} category={category.data.slug} />
+      <div class="archive-tools">
+        <div>
+          <span class="eyebrow">{featuredArticles.length > 0 ? "All articles" : "Latest"}</span>
+          <h2>Everything on {category.data.name}</h2>
+        </div>
+        <a class="btn btn-secondary" href="/articles/">All topics</a>
+      </div>
+      <div class="article-grid">
+        {restArticles.map((article) => <ArticleCard article={article} />)}
+      </div>
     </div>
   </section>
+
+  <section class="section">
+    <div class="shell">
+      <SubscribeBlock
+        placement={`category-${slug}`}
+        leadMagnet={leadMagnet?.data.slug ?? leadMagnetId}
+        category={slug}
+        eyebrow={leadMagnet?.data.eyebrow ?? "Free protocol"}
+        title={leadMagnet?.data.title ?? "Get Robin's free protocol"}
+        description={leadMagnet?.data.description ?? "Evidence-based guidance on women's longevity, hormones, and metabolism — straight to your inbox."}
+        buttonText={leadMagnet?.data.buttonText ?? "Subscribe for free"}
+      />
+    </div>
+  </section>
+
+  {otherHubs.length > 0 && (
+    <section class="section section-subtle">
+      <div class="shell">
+        <span class="eyebrow">Explore other topics</span>
+        <div class="hub-cross">
+          {otherHubs.map((h) => (
+            <a class="hub-cross-link" href={categoryUrl(h.slug)}>{h.name} <span aria-hidden="true">→</span></a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 </BaseLayout>

@@ -1,0 +1,19 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image, generated at 1536x1024 for both 4:3 cards and 3:2 article hero cropping
+Article title: Is NAD+ the key to energy and longevity?
+Article excerpt: Nicotinamide Adenine Dinucleotide (NAD+) plays a key role in cellular energy production and DNA repair. It’s an anti-aging powerhouse.
+Category: Longevity & Metabolic Health
+Tags: Blood Sugar & Metabolism, Longevity, Supplements
+Article body signals: People are talking about NAD+ like it’s the holy grail of longevity. | Robin’s Short Version | The research says | NAD+ Infusions | NAD+ Precursor Supplements | What I’m doing for my own body | What I recommend for you | Keep Reading | People are talking about NAD+ like it’s the holy grail of longevity. Or at least a no-brainer lever we can pull to increase energy and vitality. Robin’s Short Version NAD+ Drops With Age: Declining NAD+ levels impair DNA repair and cell recycling, contributing to Alzheimer’s, type 2 diabetes, and coronary artery disease. Food Comes First: Tryptophan-rich proteins and B3 sources like quinoa, legumes, and leafy greens help your body produce NAD+ before supplements are needed. Injection Gaps Remain: Injected NAD+ bypasses digestion for direct cellular uptake, but how much is absorbed and by which cells is still poorly understood. Lately I’m getting lots of DMs and texts from friends as well as questions from patients on which longevity treatments are legit and which to skip—especially in light of so many high-priced longevity clinics popping up and celebrities touting the treatments they are getting. (See my posts on peptides and calm tech for my take on other types of therapies). Personally, I’m all for anything that falls into the can’t hurt, might help—and has some evidence to support it—bucket. NAD+ falls into that category. Nicotinamide Adenine Dinucleotide (NAD+) is a coenzyme that plays a key role in cellular energy production, DNA repair, and the immune systems’ ability to regulate inflammation . It’s an anti-aging powerhouse. Here’s the good news: The body naturally synthesizes NAD+ from nutrients in your diet. Foods high in tryptopha...
+Visual brief: Build the image around cellular age rings, mitochondria, renewal arrows, immune-cell dots, and longevity tree-ring forms; glucose bead paths, metabolic curves, mitochondria ovals, and appetite-signal rings.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:3 article card thumbnail and refined enough for a 3:2 article hero.
+Use one central visual metaphor supported by 3-6 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, text, letters, words, numbers, logos, and watermarks.
+Composition: one bold central topic metaphor, asymmetric balance, strong thumbnail readability, generous margins, quiet lower-right signature zone, no important detail in the bottom-right 20% x 14% area.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

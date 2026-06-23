@@ -31,6 +31,7 @@ const categoryHubs = categories.map((category) => {
     slug: category.data.slug,
     name: category.data.name,
     count: inCategory.length,
+    image: category.data.image,
     gradient: hubGradients[category.data.slug] ?? "linear-gradient(135deg, var(--color-lilac), var(--color-cream))",
   };
 });
@@ -66,7 +67,9 @@ const categoryHubs = categories.map((category) => {
       <div class="hub-grid">
         {categoryHubs.map((hub) => (
           <a class="hub-card" href={`/category/${hub.slug}/`}>
-            <span class="hub-illustration" style={`background:${hub.gradient}`} aria-hidden="true"></span>
+            <span class="hub-illustration" style={`background:${hub.gradient}`} aria-hidden="true">
+              {hub.image && <img src={hub.image.src} alt="" loading="lazy" decoding="async" />}
+            </span>
             <h3>{hub.name}</h3>
             <p class="meta">{hub.count} {hub.count === 1 ? "article" : "articles"}</p>
           </a>

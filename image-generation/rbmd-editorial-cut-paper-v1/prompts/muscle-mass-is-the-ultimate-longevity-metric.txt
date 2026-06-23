@@ -1,0 +1,19 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image, generated at 1536x1024 for both 4:3 cards and 3:2 article hero cropping
+Article title: Forget Weight—Muscle Mass Is the Real Longevity Metric.
+Article excerpt: We’ve all been trained to chase a lower number on the scale. The truth? Weight is the wrong metric for healthy aging. Build muscle mass.
+Category: Longevity & Metabolic Health
+Tags: Blood Sugar & Metabolism, Exercise, Longevity, Women's Health
+Article body signals: What if the number on your scale is doing more harm than good? | Robin’s Short Version | What to know: Women with >70% lean muscle mass live longer. | Optimal body composition = skeletal muscle + visceral fat | What to do: Lift heavy, time your protein, supplement strategically. | ️ 1. Prioritize 20-30 minutes of heavy resistance training. | 2. Pace your protein | 3. Eat carbs for intense lifting | 4. Evidence-based supplement support | Quick Hits | What if the number on your scale is doing more harm than good? In every longevity conversation I have—whether on stage or in an exam room—someone asks: What’s the one thing I should focus on to live longer? Robin’s Short Version Muscle Predicts Mortality: Adults with low skeletal muscle mass face a 57% higher risk of all-cause mortality—a stronger longevity signal than BMI or weight. Lift With Precision: Training at 60–85% of your one-rep max for 6–12 reps, 2–3 times per week builds muscle; pilates and yoga alone won’t get you there. Hit the Leucine Threshold: Eating 25–35g of high-quality protein per meal triggers muscle protein synthesis—a signal that gets harder to activate as you age. My answer is always the same: build muscle mass. We’ve all been trained to chase a lower number on the scale and to measure our health (and for women, too often our worth) by that number. The truth? Weight is the wrong metric for healthy aging. What actually predicts how long (and well) you’ll live is your body composition—especially lean muscle mass. Adults with low skeletal muscle mass have a 57% higher risk of all-cause mortality ( PLOS One , 2023). Here’s what to know about how muscle mass will protect your future self. What to know: Wome...
+Visual brief: Build the image around protein blocks, muscle-fiber ribbons, strength arcs, and movement lines; cellular age rings, mitochondria, renewal arrows, immune-cell dots, and longevity tree-ring forms; glucose bead paths, metabolic curves, mitochondria ovals, and appetite-signal rings.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:3 article card thumbnail and refined enough for a 3:2 article hero.
+Use one central visual metaphor supported by 3-6 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, text, letters, words, numbers, logos, and watermarks.
+Composition: one bold central topic metaphor, asymmetric balance, strong thumbnail readability, generous margins, quiet lower-right signature zone, no important detail in the bottom-right 20% x 14% area.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

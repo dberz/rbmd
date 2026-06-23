@@ -3,5 +3,11 @@
   "slug": "womens-health-hormones",
   "description": "Women’s health today demands a deeper understanding of hormones, sleep, skin, mood, and metabolic shifts. In this collection, Dr. Robin Berzin explores perimenopause, menopause, hormone replacement therapy, cycle health, and the modern hormonal landscape. These articles combine clinical experience with research to help women understand their bodies with clarity and confidence.",
   "count": 22,
-  "sourceUrl": "https://robinberzinmd.com/category/womens-health-hormones/"
+  "sourceUrl": "https://robinberzinmd.com/category/womens-health-hormones/",
+  "image": {
+    "src": "/images/categories/rbmd-simple-v1/womens-health-hormones.webp",
+    "alt": "Women’s Health & Hormones simplified cut-paper illustration",
+    "width": 1536,
+    "height": 1024
+  }
 }

@@ -1,0 +1,19 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image, generated at 1536x1024 for both 4:3 cards and 3:2 article hero cropping
+Article title: 5 Summer Essentials I Can’t Live Without
+Article excerpt: It’s summer and this means I’m constantly throwing my go-to stack of protection from the elements in my bag or the stroller before I head out the door. I g
+Category: Toxins, Nutrition & Modern Exposures
+Tags: Personal Story, Skin & Beauty, Supplements
+Article body signals: Robin’s Short Version | 1. Sunscreen | 2. UV clothing | 3. Bug Spray | 4. Hydration | 5. Aftersun care | Keep Reading | It’s summer and this means I’m constantly throwing my go-to stack of protection from the elements in my bag or the stroller before I head out the door. I get asked all the time about my summer essentials—which sunscreens, lotions, bug sprays, hydration supplements, and other warm weather strategies I use to keep myself and my kids from ending up fried and bitten out there, so I thought I’d share! Robin’s Short Version Chemical Sunscreen Risk: Oxybenzone and similar filters are hormone disruptors found in breast milk and blood samples. DEET Safety Threshold: Below 30% concentration, DEET shows no links to hormone disruption or cancer, making it a vetted repellent choice. UV Clothing Advantage: Rash guards deliver reapplication-free sun protection—critical when kids are constantly in and out of the water. When I pick my products I look for these criteria: Non-toxic, organic, and clean (whenever possible) High-performance Science-backed I hope this makes your summer a little easier and more fun! See you out there. 1. Sunscreen A lot of people now know that conventional sunscreen contains active ingredients like oxybenzone, avobenzone, octinoxate, and homosalate, that are effective for sun protection, but are also known hormone-disrupting chemicals that are absorbed into the skin. These chemicals have shown up in breast milk and blood samples and have been linked to everything from dermatitis, to blocking testosterone receptors, to potential impacts for fetal development , according to the Environmental Working Group (EWG), which studies the health and envir...
+Visual brief: Build the image around filtered droplet shapes, caution triangles abstracted into soft paper, food-source icons, and detox pathway lines; whole-food silhouettes, ingredient tiles, bowl and scoop forms, and nutrition label motifs without text.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:3 article card thumbnail and refined enough for a 3:2 article hero.
+Use one central visual metaphor supported by 3-6 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, text, letters, words, numbers, logos, and watermarks.
+Composition: one bold central topic metaphor, asymmetric balance, strong thumbnail readability, generous margins, quiet lower-right signature zone, no important detail in the bottom-right 20% x 14% area.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

@@ -3,5 +3,11 @@
   "slug": "toxins-nutrition-modern-exposures",
   "description": "Modern health challenges are shaped by environmental toxins and ultra-processed nutrition. In this collection, Dr. Robin Berzin explores microplastics, heavy metals, seed oils, additives, protein quality, fiber, and supplementation. These articles break down how modern exposures affect hormones, metabolism, and inflammation — and what you can realistically do about it.",
   "count": 18,
-  "sourceUrl": "https://robinberzinmd.com/category/toxins-nutrition-modern-exposures/"
+  "sourceUrl": "https://robinberzinmd.com/category/toxins-nutrition-modern-exposures/",
+  "image": {
+    "src": "/images/categories/rbmd-simple-v1/toxins-nutrition-modern-exposures.webp",
+    "alt": "Toxins, Nutrition & Modern Exposures simplified cut-paper illustration",
+    "width": 1536,
+    "height": 1024
+  }
 }

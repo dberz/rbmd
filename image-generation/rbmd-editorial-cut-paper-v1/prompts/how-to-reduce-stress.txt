@@ -1,0 +1,19 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image, generated at 1536x1024 for both 4:3 cards and 3:2 article hero cropping
+Article title: How to reduce stress in 15-minutes
+Article excerpt: Chronic stress increases risk of diabetes, cardiovascular disease, and Alzheimer’s. But too often we brush it off. Here’s how to reduce stress.
+Category: Brain, Mood & Nervous System
+Tags: Brain Health, Hormones, Mental Health, Sleep
+Article body signals: Robin’s Short Version | The research says | What I’m doing for my own body | Meditation | High Intensity Interval Training (HIIT) | Yoga nidra | Supplements | What I recommend for you | Keep Reading | Just when I think I have it under control, I realize that I’ve overcommitted. I’m in the middle of teaching my live course on improving mind and gut health in real time , still recovering from the craziness of Halloween with three kids—the costumes, the sugar crashes, and the pressing question of how to get the leftover three pounds of candy out of my house—and I also traveled to give a keynote speech on how to take care of your Brain, Bones, and Booty at the Eudemonia Summit last weekend. Robin’s Short Version Chronic Stress Compounds: Chronic stress raises cardiovascular disease risk by 40–60% and makes you 2.5x more likely to develop Alzheimer’s. Stress Shows Physically: Sleep disruption, bloating, skin flares, and headaches are signs your fight-or-flight system is chronically stuck in overdrive. Vagus Nerve Is Key: High vagal tone shifts your body into rest-and-digest mode — the only state where stress-related damage can actually be repaired. Through it all, I’ve also been dealing with election stress, which is no doubt weighing on all of our minds as we find ourselves glued to the news this week. Stress is a vital sign, but too often we brush it off—it’s sometimes easier to keep barreling through our to-do lists and newsfeeds than it is to face the anxiety and burnout head-on. But being under chronic stress is a bit like being the proverbial frog in the boiling water. As humans, we can only tolerate so much heat. When things boil over, our systems start to break: Sleep:...
+Visual brief: Build the image around brain contour shapes, neural pathways, calm signal waves, and sleep-rhythm arcs; hormone cycle rings, endocrine signal dots, moon-phase arcs, and soft botanical seed forms.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:3 article card thumbnail and refined enough for a 3:2 article hero.
+Use one central visual metaphor supported by 3-6 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, text, letters, words, numbers, logos, and watermarks.
+Composition: one bold central topic metaphor, asymmetric balance, strong thumbnail readability, generous margins, quiet lower-right signature zone, no important detail in the bottom-right 20% x 14% area.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

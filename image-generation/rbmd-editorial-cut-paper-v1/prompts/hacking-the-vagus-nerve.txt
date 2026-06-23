@@ -1,0 +1,19 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image, generated at 1536x1024 for both 4:3 cards and 3:2 article hero cropping
+Article title: The best “calm tech” to hack your vagus nerve
+Article excerpt: I’m fascinated with tech that promotes high “vagal tone,” i.e. stimulates the vagus nerve to help improve stress response.
+Category: Brain, Mood & Nervous System
+Tags: Brain Health, Mental Health, Supplements
+Article body signals: Robin’s Short Version | The research says | What I’m doing for my own body | What I recommend for you | Keep Reading | I’m obsessed with technology that helps us feel better by hacking the amazing machine we are as humans. Lately I’ve been really fascinated with tech that promotes high “vagal tone,” i.e. stimulates the vagus nerve to help lower heart rate, reduce blood pressure, and improve stress response. Robin’s Short Version Vagus Nerve Reach: The vagus nerve carries 75% of the body’s parasympathetic fibers, linking your brain, heart, and gut. Low Vagal Tone Costs: Poor vagal tone can trigger bloating, heightened stress sensitivity, and chronic inflammation in the body. Scent Activates Calm: Lavender and frankincense stimulate the vagus nerve via the olfactory system’s direct influence on the limbic system. I went all in on this “calm tech” while speaking at the Eudemonia Summit this fall where I got to have a test session in the Ammortal chamber—the $150,000 full-body therapy on GOOP’s gift list that combines red light with PEMF (pulsed electromagnetic field), vibroacoustic sound, and hydrogen inhalation therapy. I literally felt like I had a new brain after 30 minutes, the relaxation response was that profound. Admittedly, most of us can’t live in an Ammortal chamber. (If you get one, let’s talk!) But there are a few other calm tech options I’ve tried recently that are more accessible. Since this is probably the most stressful week of the year, I thought I’d share. The research says What is the vagus nerve? The vagus nerve, also known as Cranial Nerve 10, is the longest nerve in the body. You actually have two of them, right and left. Together, they contain 75% of t...
+Visual brief: Build the image around brain contour shapes, neural pathways, calm signal waves, and sleep-rhythm arcs.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:3 article card thumbnail and refined enough for a 3:2 article hero.
+Use one central visual metaphor supported by 3-6 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, text, letters, words, numbers, logos, and watermarks.
+Composition: one bold central topic metaphor, asymmetric balance, strong thumbnail readability, generous margins, quiet lower-right signature zone, no important detail in the bottom-right 20% x 14% area.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

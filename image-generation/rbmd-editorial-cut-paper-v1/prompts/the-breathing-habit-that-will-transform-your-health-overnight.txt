@@ -1,0 +1,19 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image, generated at 1536x1024 for both 4:3 cards and 3:2 article hero cropping
+Article title: The breathing habit that will transform your health overnight.
+Article excerpt: Did you know that you have a signature breathing pattern akin to your fingerprint that can be used to identify you with 96.8% accuracy? We are how we breat
+Category: Brain, Mood & Nervous System
+Tags: Brain Health, Mental Health, Sleep
+Article body signals: Robin’s Short Version | So, what can you do? | What’s In My Group Chat | #1 Microneedling for optimal skin health | #2 Type 2 diabetes is reversible | How to Be Healthier Than Ever | Keep Reading | Plus, the reason I stopped getting botox and the best thing you can do for your metabolic health. Robin’s Short Version Your Breath ID: Your nasal airflow pattern can identify you with 96.8% accuracy and predict BMI, anxiety, and cognitive traits. Sleep Apnea Fix: Simply keeping your mouth closed during sleep raised airflow by 28% in apnea patients—no device or prescription needed. Nitric Oxide Effect: Nasal breathing produces nitric oxide in the sinuses, dilating blood vessels and shifting your body into a calming parasympathetic state. Did you know that you have a signature breathing pattern akin to your fingerprint that can be used to identify you with 96.8% accuracy? We are how we breathe, according to a study published this month in Current Biology . Your signature nasal airflow pattern—your “breath print”—can also be used to predict your body mass index, anxiety level, and cognitive traits. I’ve been fascinated with airway medicine since James Nestor came out with his book Breath: The New Science of a Lost Art in 2020. An estimated 50% of us are mouth breathers. It’s an evolutionary change due to: The shift from tough, fibrous foods to processed, soft diets, which has led to underdeveloped facial bones, and smaller mouths and jaws. Chronic nasal blockages due to allergens and pollution. Narrowing of the airway due to chronic inflammation from food and environmental allergens, high-sugar diets, and chronic stress; being in a heightened state of sympathetic tone all the tim...
+Visual brief: Build the image around brain contour shapes, neural pathways, calm signal waves, and sleep-rhythm arcs.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:3 article card thumbnail and refined enough for a 3:2 article hero.
+Use one central visual metaphor supported by 3-6 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, text, letters, words, numbers, logos, and watermarks.
+Composition: one bold central topic metaphor, asymmetric balance, strong thumbnail readability, generous margins, quiet lower-right signature zone, no important detail in the bottom-right 20% x 14% area.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

@@ -6,7 +6,7 @@ import ArticleCard from "@components/ArticleCard.astro";
 import GateBlock from "@components/GateBlock.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { articleUrl, categoryUrl, formatDate, plainText, tagUrl } from "@lib/content";
-import { PINNED_RELATED_SLUG, gatedPosts, postCta, splitAtHeading, stripKeepReading } from "@lib/optins";
+import { PINNED_RELATED_SLUG, gatedPosts, postCta, splitAtHeading, stripHeadingEmoji, stripKeepReading } from "@lib/optins";
 
 export async function getStaticPaths() {
   const articles = await getCollection("articles");
@@ -30,8 +30,9 @@ const cta = postCta[slug];
 const articleLeadMagnetId = cta?.leadMagnet ?? "female-longevity-supplement-stack";
 const articleLeadMagnet = await getEntry("leadMagnets", articleLeadMagnetId);
 
-// Body: strip the legacy "Keep Reading" block (we render our own related row).
-const bodyHtml = stripKeepReading(article.data.contentHtml);
+// Body: strip the legacy "Keep Reading" block (we render our own related row)
+// and the decorative leading emoji from headings.
+const bodyHtml = stripHeadingEmoji(stripKeepReading(article.data.contentHtml));
 
 // Email gate for high-traffic posts.
 const gate = gatedPosts[slug];
@@ -145,23 +146,49 @@ const jsonLd = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [
 >
   <article>
     <header class="article-hero">
-      <div class="shell article-header">
-        {category && <a class="tag" href={categoryUrl(category.slug)}>{category.name}</a>}
+      <div class="article-header">
+        {category && <a class="article-kicker" href={categoryUrl(category.slug)}>{category.name}</a>}
         <h1>{article.data.title}</h1>
+        {article.data.excerpt && <p class="article-standfirst">{article.data.excerpt}</p>}
         <div class="article-byline">
-          <img class="byline-avatar" src="/images/robin/home.jpg" alt="Robin Berzin MD" width="44" height="44" loading="eager" />
+          <img class="byline-avatar" src="/images/robin/home.jpg" alt="Robin Berzin MD" width="40" height="40" loading="eager" />
           <span class="byline-text">By {article.data.author}<span class="byline-sep">·</span>{formatDate(article.data.date)}<span class="byline-sep">·</span>{readingMinutes} min read</span>
         </div>
-        {article.data.excerpt && <p class="article-dek">{article.data.excerpt}</p>}
       </div>
       {article.data.image && (
-        <div class="shell article-featured-image">
-          <img src={article.data.image.src} alt={article.data.image.alt ?? article.data.title} />
+        <div class="article-featured-image">
+          <img
+            src={article.data.image.src}
+            alt={article.data.image.alt ?? article.data.title}
+            loading="eager"
+            decoding="async"
+            onerror="this.closest('.article-featured-image').style.display='none'"
+          />
         </div>
       )}
     </header>
     <div class="article-shell">
-      <div>
+      <aside class="article-aside">
+        <div class="article-rail-inner">
+          <SubscribeBlock
+            placement="article-rail"
+            leadMagnet={articleLeadMagnet?.data.slug ?? articleLeadMagnetId}
+            articleSlug={article.data.slug}
+            category={category?.slug ?? ""}
+            eyebrow={cta?.eyebrow ?? articleLeadMagnet?.data.eyebrow ?? "Free protocol"}
+            title={cta?.title ?? articleLeadMagnet?.data.title ?? "Get Robin's free protocol"}
+            description={cta?.description ?? articleLeadMagnet?.data.description ?? "Evidence-based guidance on women's longevity, hormones, and metabolism — straight to your inbox."}
+            buttonText={cta?.buttonText ?? articleLeadMagnet?.data.buttonText ?? "Subscribe for free"}
+          />
+          <div class="side-panel">
+            <span class="eyebrow">Topics</span>
+            <div class="topic-row">
+              {article.data.tags.map((tag) => <a class="tag tag-muted" href={tagUrl(tag.slug)}>{tag.name}</a>)}
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="article-main">
         <div class="article-body" set:html={teaserHtml} />
         {isGatedHere && gate && (
           <GateBlock
@@ -175,33 +202,7 @@ const jsonLd = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [
             lockedHtml={lockedHtml}
           />
         )}
-        <SubscribeBlock
-          placement="article-bottom"
-          leadMagnet={articleLeadMagnet?.data.slug ?? articleLeadMagnetId}
-          articleSlug={article.data.slug}
-          category={category?.slug ?? ""}
-          eyebrow={cta?.eyebrow ?? articleLeadMagnet?.data.eyebrow ?? "Free protocol"}
-          title={cta?.title ?? articleLeadMagnet?.data.title ?? "Get the protocol behind Robin's weekly health decisions"}
-          description={cta?.description ?? articleLeadMagnet?.data.description ?? "Join the newsletter for evidence-based guidance on women's functional medicine and longevity."}
-          buttonText={cta?.buttonText ?? articleLeadMagnet?.data.buttonText ?? "Subscribe for free"}
-        />
       </div>
-      <aside class="article-aside">
-        <div class="side-panel">
-          <span class="eyebrow">Topics</span>
-          <div class="topic-row">
-            {article.data.tags.map((tag) => <a class="tag tag-muted" href={tagUrl(tag.slug)}>{tag.name}</a>)}
-          </div>
-        </div>
-        <SubscribeBlock
-          placement="article-sidebar"
-          articleSlug={article.data.slug}
-          category={category?.slug ?? ""}
-          title="Get Robin's free newsletter"
-          description="Weekly protocols for hormones, metabolism, longevity, and root-cause health."
-          buttonText="Subscribe"
-        />
-      </aside>
     </div>
   </article>
 

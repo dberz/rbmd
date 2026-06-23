@@ -8,7 +8,13 @@
     "build": "astro build",
     "preview": "astro preview --host 127.0.0.1",
     "check": "astro check",
-    "migrate:wp": "node scripts/migrate-current-site.mjs"
+    "migrate:wp": "node scripts/migrate-current-site.mjs",
+    "images:plan": "node scripts/rbmd-article-images.mjs plan",
+    "images:generate": "node scripts/rbmd-article-images.mjs generate",
+    "images:process": "node scripts/rbmd-article-images.mjs process",
+    "images:sheet": "node scripts/rbmd-article-images.mjs sheet",
+    "images:approve": "node scripts/rbmd-article-images.mjs approve",
+    "images:apply": "node scripts/rbmd-article-images.mjs apply"
   },
   "dependencies": {
     "@astrojs/vercel": "^10.0.8",
@@ -17,7 +23,8 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.9"
+    "@astrojs/check": "^0.9.9",
+    "sharp": "^0.34.5"
   },
   "overrides": {
     "path-to-regexp": "6.3.0"
