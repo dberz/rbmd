@@ -11,10 +11,13 @@ const WORKFLOW_DIR = path.join(ROOT, "image-generation/rbmd-editorial-cut-paper-
 const PROMPTS_DIR = path.join(WORKFLOW_DIR, "prompts");
 const RAW_DIR = path.join(WORKFLOW_DIR, "raw");
 const DEFAULT_MANIFEST = path.join(WORKFLOW_DIR, "manifest.json");
-const DEFAULT_OUT_DIR = path.join(ROOT, "public/images/articles/generated-preview/rbmd-cut-paper-v1");
-const DEFAULT_WEB_DIR = "/images/articles/generated-preview/rbmd-cut-paper-v1";
-const WIDTH = 1536;
-const HEIGHT = 1024;
+const DEFAULT_OUT_DIR = path.join(ROOT, "public/images/articles/rbmd-instagram-cut-paper-v1");
+const DEFAULT_WEB_DIR = "/images/articles/rbmd-instagram-cut-paper-v1";
+const WIDTH = 1080;
+const HEIGHT = 1350;
+const LOGO_WIDTH = 220;
+const LOGO_RIGHT_MARGIN = 54;
+const LOGO_BOTTOM_SAFE_MARGIN = 118;
 
 const SAMPLE_SLUGS = [
   "protein-powder-guide-complete-protein",
@@ -35,11 +38,12 @@ const STYLE_PROMPT = `RBMD Editorial Cut-Paper Collage v1.
 Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
 The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
 Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
-Keep the composition bold enough for a 4:3 article card thumbnail and refined enough for a 3:2 article hero.
-Use one central visual metaphor supported by 3-6 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
 Use generous negative space and keep the lower-right signature zone visually quiet.
 Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
-Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, text, letters, words, numbers, logos, and watermarks.`;
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.`;
 
 function usage() {
   console.log(`Usage:
@@ -53,7 +57,7 @@ function usage() {
 Environment for generate:
   OPENAI_API_KEY required
   OPENAI_IMAGE_MODEL optional, default gpt-image-2
-  OPENAI_IMAGE_SIZE optional, default 1536x1024
+  OPENAI_IMAGE_SIZE optional, default 1080x1350
 `);
 }
 
@@ -226,7 +230,7 @@ function buildPrompt(article) {
   const tags = (article.tags || []).map((tag) => tag.name);
   const visualBrief = buildVisualBrief(article, headings, bodyText);
   const prompt = `Use case: stylized-concept
-Asset type: Robin Berzin MD article image, generated at 1536x1024 for both 4:3 cards and 3:2 article hero cropping
+Asset type: Robin Berzin MD article image, generated at 1080x1350 for 4:5 Instagram posts, mobile article cards, and article hero display
 Article title: ${article.title}
 Article excerpt: ${article.excerpt || ""}
 Category: ${category}
@@ -234,7 +238,7 @@ Tags: ${tags.join(", ")}
 Article body signals: ${compactText([...headings, bodyText].join(" | "), 1700)}
 Visual brief: Build the image around ${visualBrief}.
 Style system: ${STYLE_PROMPT}
-Composition: one bold central topic metaphor, asymmetric balance, strong thumbnail readability, generous margins, quiet lower-right signature zone, no important detail in the bottom-right 20% x 14% area.
+Composition: one bold central topic metaphor, asymmetric balance, strong thumbnail readability, generous margins, quiet lower-right signature zone, no important detail in the bottom-right 22% x 12% area. Avoid generic repeated medical patterning; make the main shape unmistakably tied to this article.
 Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.`;
 
   return {
@@ -406,7 +410,7 @@ async function loadSharp() {
   }
 }
 
-async function logoBuffer(sharp, width = 220) {
+async function logoBuffer(sharp, width = LOGO_WIDTH) {
   const logoPath = path.join(ROOT, "public/logo/RobinBerzin-Logo-DarkBrown-T.png");
   return sharp(logoPath).resize({ width }).png().toBuffer();
 }
@@ -422,12 +426,13 @@ async function processImage({ inputPath, outputPath, withLogo = true }) {
 
   if (withLogo) {
     const logo = await logoBuffer(sharp);
+    const logoMeta = await sharp(logo).metadata();
     image = image.composite([
       {
         input: logo,
         gravity: "southeast",
-        left: WIDTH - 220 - 54,
-        top: HEIGHT - 70,
+        left: WIDTH - LOGO_WIDTH - LOGO_RIGHT_MARGIN,
+        top: HEIGHT - (logoMeta.height || 0) - LOGO_BOTTOM_SAFE_MARGIN,
       },
     ]);
   }
@@ -537,7 +542,7 @@ async function contactSheet(args) {
   h1 { font-family: Georgia, serif; font-size: 34px; font-weight: 400; margin: 0 0 24px; }
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
   article { background: #EEE8E7; padding: 12px; }
-  .media { aspect-ratio: 4 / 3; background: #BE9F90; overflow: hidden; margin-bottom: 12px; }
+  .media { aspect-ratio: 4 / 5; background: #BE9F90; overflow: hidden; margin-bottom: 12px; }
   .media img { width: 100%; height: 100%; object-fit: cover; display: block; }
   span { display: inline-block; background: #DBC7F1; border-radius: 999px; font-size: 11px; padding: 4px 8px; text-transform: uppercase; }
   h2 { font-family: Georgia, serif; font-size: 19px; font-weight: 400; line-height: 1.2; margin: 10px 0 6px; }

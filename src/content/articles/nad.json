@@ -31,5 +31,11 @@
     "title": "Is NAD+ the key to energy and longevity?",
     "description": "Nicotinamide Adenine Dinucleotide (NAD+) plays a key role in cellular energy production and DNA repair. It’s an anti-aging powerhouse.",
     "canonical": "https://robinberzinmd.com/nad/"
+  },
+  "image": {
+    "src": "/images/articles/rbmd-instagram-cut-paper-v1/nad.webp",
+    "alt": "Is NAD+ the key to energy and longevity? editorial cut-paper collage illustration",
+    "width": 1080,
+    "height": 1350
   }
 }

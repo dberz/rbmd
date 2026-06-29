@@ -35,5 +35,11 @@
     "title": "How to reduce stress in 15-minutes",
     "description": "Chronic stress increases risk of diabetes, cardiovascular disease, and Alzheimer’s. But too often we brush it off. Here’s how to reduce stress.",
     "canonical": "https://robinberzinmd.com/how-to-reduce-stress/"
+  },
+  "image": {
+    "src": "/images/articles/rbmd-instagram-cut-paper-v1/how-to-reduce-stress.webp",
+    "alt": "How to reduce stress in 15-minutes editorial cut-paper collage illustration",
+    "width": 1080,
+    "height": 1350
   }
 }

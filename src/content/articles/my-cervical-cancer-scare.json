@@ -31,5 +31,11 @@
     "title": "My cervical cancer scare",
     "description": "Does the cure for UTIs, HPV, and BV lie in the microbiome? In my 20s, a routine pap test diagnosed abnormal cells. That led to a biopsy of my cervix called",
     "canonical": "https://robinberzinmd.com/my-cervical-cancer-scare/"
+  },
+  "image": {
+    "src": "/images/articles/rbmd-instagram-cut-paper-v1/my-cervical-cancer-scare.webp",
+    "alt": "My cervical cancer scare editorial cut-paper collage illustration",
+    "width": 1080,
+    "height": 1350
   }
 }

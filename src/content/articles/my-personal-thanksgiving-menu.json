@@ -31,5 +31,11 @@
     "title": "My personal Thanksgiving menu",
     "description": "I don’t buy into the idea that you have to choose between enjoyment and health — especially at Thanksgiving. Here’s my actual menu and how I make it work",
     "canonical": "https://robinberzinmd.com/my-personal-thanksgiving-menu/"
+  },
+  "image": {
+    "src": "/images/articles/rbmd-instagram-cut-paper-v1/my-personal-thanksgiving-menu.webp",
+    "alt": "My personal Thanksgiving menu editorial cut-paper collage illustration",
+    "width": 1080,
+    "height": 1350
   }
 }

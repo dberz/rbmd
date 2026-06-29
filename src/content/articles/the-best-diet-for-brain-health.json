@@ -35,5 +35,11 @@
     "title": "The best diet for brain health?",
     "description": "To have the healthiest mind, growing evidence shows the best diet for brain health is the Mediterranean diet.",
     "canonical": "https://robinberzinmd.com/the-best-diet-for-brain-health/"
+  },
+  "image": {
+    "src": "/images/articles/rbmd-instagram-cut-paper-v1/the-best-diet-for-brain-health.webp",
+    "alt": "The best diet for brain health? editorial cut-paper collage illustration",
+    "width": 1080,
+    "height": 1350
   }
 }

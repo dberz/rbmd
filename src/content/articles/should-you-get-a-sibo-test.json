@@ -31,5 +31,11 @@
     "title": "Should you get a SIBO test?",
     "description": "SIBO is responsible for everything from bloating to brain fog to skin rashes. And it’s wildly under-diagnosed.",
     "canonical": "https://robinberzinmd.com/should-you-get-a-sibo-test/"
+  },
+  "image": {
+    "src": "/images/articles/rbmd-instagram-cut-paper-v1/should-you-get-a-sibo-test.webp",
+    "alt": "Should you get a SIBO test? editorial cut-paper collage illustration",
+    "width": 1080,
+    "height": 1350
   }
 }

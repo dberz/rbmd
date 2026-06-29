@@ -31,5 +31,11 @@
     "title": "Should you get a full body MRI?",
     "description": "Ever since I mentioned my MRI experience on Instagram, people have been asking if it’s worth it. My answer is that it’s a highly personal decision. It de",
     "canonical": "https://robinberzinmd.com/is-getting-an-elective-mri-worth-it/"
+  },
+  "image": {
+    "src": "/images/articles/rbmd-instagram-cut-paper-v1/is-getting-an-elective-mri-worth-it.webp",
+    "alt": "Should you get a full body MRI? editorial cut-paper collage illustration",
+    "width": 1080,
+    "height": 1350
   }
 }

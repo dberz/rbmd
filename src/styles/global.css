@@ -487,7 +487,7 @@ button {
 }
 
 .card-media {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 5;
   background-color: var(--bg-subtle);
   background-image: url("/logo/RobinBerzin-Logo-Terracotta.png");
   background-position: center;
@@ -699,12 +699,12 @@ button {
 
 .article-featured-image {
   margin: var(--space-xl) auto 0;
-  max-width: 1160px;
+  max-width: 760px;
   padding: 0 var(--space-md);
 }
 
 .article-featured-image img {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 5;
   border-radius: var(--radius-lg);
   object-fit: cover;
   width: 100%;
@@ -1470,7 +1470,7 @@ button {
 }
 
 .related-grid .card-media {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 5;
 }
 
 .related-grid .article-card h3 {
@@ -1480,15 +1480,18 @@ button {
 /* Category hub illustrative tiles */
 .hub-card .hub-illustration {
   aspect-ratio: 3 / 2;
+  background-color: var(--color-cream);
   border-radius: var(--radius-lg);
   display: block;
   margin-bottom: var(--space-sm);
   overflow: hidden;
+  padding: var(--space-xs);
   position: relative;
   transition: transform 320ms ease, box-shadow 320ms ease;
 }
 
 .hub-card .hub-illustration img {
+  border-radius: var(--radius-md);
   display: block;
   height: 100%;
   object-fit: cover;
@@ -1804,7 +1807,7 @@ h3 {
 }
 
 .related-grid .card-media {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 5;
   border-radius: 0;
   margin-bottom: 0;
 }
