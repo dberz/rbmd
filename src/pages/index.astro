@@ -17,9 +17,15 @@ const pressLogos = [
 <BaseLayout
   title="Robin Berzin - Health optimization + Chronic disease resolution"
   description="Robin Berzin MD is a leading voice in women's functional medicine, longevity, and root-cause health."
+  bodyClass="home-page"
 >
   <section class="hero">
-    <div class="shell two-column">
+    <picture class="hero-bg">
+      <source media="(min-width: 768px)" srcset="/images/robin/home.jpg" />
+      <img src="/images/robin/portrait-cream.jpg" alt="Robin Berzin MD" fetchpriority="high" decoding="async" />
+    </picture>
+    <div class="hero-scrim" aria-hidden="true"></div>
+    <div class="shell hero-inner">
       <div class="hero-copy">
         <span class="eyebrow">Robin Berzin, MD · Functional Medicine</span>
         <h1>Root-cause medicine <span class="accent">for women's longevity.</span></h1>
@@ -33,15 +39,11 @@ const pressLogos = [
           <a class="btn btn-secondary btn-lg" href="/articles/">Read the articles</a>
         </div>
       </div>
-      <div class="hero-image">
-        <img src="/images/robin/portrait-chair.jpg" alt="Robin Berzin MD" />
-      </div>
     </div>
   </section>
 
   <section class="proof-strip" aria-label="Press">
     <div class="shell">
-      <span class="proof-label">Featured in</span>
       <div class="press-logo-list">
         {pressLogos.map((logo) => (
           <span class="press-logo">

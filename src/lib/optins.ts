@@ -83,3 +83,46 @@ export function stripHeadingEmoji(html: string) {
   const re = /(<h[2-4][^>]*>(?:\s|<[^>]+>)*)(?:\p{Extended_Pictographic}(?:️|‍\p{Extended_Pictographic})*\s*)+/gu;
   return html.replace(re, "$1");
 }
+
+function slugifyHeading(text: string) {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-")
+    .slice(0, 60);
+}
+
+// Add stable id anchors to <h2> headings and return a table-of-contents list, so
+// long articles can offer jump links (UX + dwell time + potential search sitelinks).
+export function addHeadingAnchors(html: string) {
+  const toc: { id: string; text: string }[] = [];
+  const used = new Set<string>();
+  const out = html.replace(/<h2([^>]*)>([\s\S]*?)<\/h2>/gi, (match, attrs: string, inner: string) => {
+    const text = inner.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+    if (!text) return match;
+    let id = slugifyHeading(text) || `section-${toc.length + 1}`;
+    const baseId = id;
+    let n = 2;
+    while (used.has(id)) id = `${baseId}-${n++}`;
+    used.add(id);
+    toc.push({ id, text });
+    const attrsWithId = /\bid=/.test(attrs) ? attrs : `${attrs} id="${id}"`;
+    return `<h2${attrsWithId}>${inner}</h2>`;
+  });
+  return { html: out, toc };
+}
+
+// Split body HTML at the </p> nearest ~45% through, for a mid-article inline CTA.
+// Returns null when the article is too short to interrupt cleanly.
+export function splitForInlineCta(html: string) {
+  const closes = [...html.matchAll(/<\/p>/gi)];
+  if (closes.length < 6) return null;
+  const target = html.length * 0.45;
+  let best = closes[0];
+  for (const m of closes) {
+    if (Math.abs(m.index! + 4 - target) < Math.abs(best.index! + 4 - target)) best = m;
+  }
+  const idx = best.index! + 4;
+  return { before: html.slice(0, idx), after: html.slice(idx) };
+}

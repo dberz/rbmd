@@ -1,5 +1,6 @@
 import type { APIRoute } from "astro";
 import { isEmail, jsonResponse, readString } from "@lib/forms";
+import { alertOps } from "@lib/alert";
 
 export const prerender = false;
 
@@ -56,6 +57,11 @@ export const POST: APIRoute = async ({ request }) => {
   if (!response.ok) {
     const body = await response.text();
     console.error("Inquiry email failed", response.status, body);
+    await alertOps({
+      subject: "Inquiry delivery failed",
+      body: `A ${inquiryType} inquiry from ${name} <${email}> could not be emailed (HTTP ${response.status}). Reach out to them directly.`,
+      context: { name, email, inquiryType, organization, message, status: response.status },
+    });
     return jsonResponse({ ok: false, message: "Inquiry failed. Please try again." }, 502);
   }
 

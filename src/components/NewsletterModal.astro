@@ -1,0 +1,25 @@
+---
+// Exit-intent (desktop) / scroll-depth (mobile) capture. Behavior, frequency cap,
+// and suppression-once-subscribed live in scripts/forms.ts (initModal). Markup is
+// hidden by default and shown via the .is-open class.
+---
+<div class="newsletter-modal" data-newsletter-modal hidden aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" type="button" aria-label="Close" data-modal-close>&times;</button>
+    <span class="eyebrow">Free protocol</span>
+    <h2 id="modal-title">Get My Ultimate Female Longevity Supplement Stack</h2>
+    <p>Evidence-based protocols for women's longevity, hormones, and metabolism — plus Robin's free supplement stack. Join 50,000+ readers.</p>
+    <form class="subscribe-form" data-subscribe-form>
+      <input type="text" name="company" tabindex="-1" autocomplete="off" hidden />
+      <input type="hidden" name="placement" value="exit-intent-modal" />
+      <input type="hidden" name="leadMagnet" value="female-longevity-supplement-stack" />
+      <label>
+        <span>Email</span>
+        <input type="email" name="email" autocomplete="email" required placeholder="you@email.com" />
+      </label>
+      <button class="btn btn-primary" type="submit">Get the free protocol</button>
+      <p class="form-status" data-form-status aria-live="polite"></p>
+    </form>
+    <button class="modal-dismiss" type="button" data-modal-close>No thanks</button>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import NewsletterModal from "@components/NewsletterModal.astro";
 
 type JsonLd = Record<string, unknown>;
 
@@ -30,9 +31,17 @@ const siteOrigin = Astro.site?.toString().replace(/\/$/, "") ?? "https://robinbe
 const canonicalUrl = canonical ?? new URL(Astro.url.pathname, `${siteOrigin}/`).toString();
 const ogImageUrl = new URL(ogImage, `${siteOrigin}/`).toString();
 
+const SAME_AS = [
+  "https://www.parsleyhealth.com/",
+  "https://www.instagram.com/robinberzinmd",
+  "https://www.linkedin.com/in/robin-berzin-md",
+  "https://www.facebook.com/RobinBerzinMD",
+];
+
 const personSchema: JsonLd = {
   "@context": "https://schema.org",
-  "@type": "Person",
+  "@type": ["Person", "Physician"],
+  "@id": `${siteOrigin}/#robin`,
   name: "Robin Berzin, MD",
   honorificSuffix: "MD",
   jobTitle: "Founder & CEO, Parsley Health",
@@ -41,23 +50,49 @@ const personSchema: JsonLd = {
   gender: "Female",
   description:
     "Columbia-trained physician and leading voice in women's functional medicine, longevity, and root-cause health.",
+  knowsAbout: [
+    "Functional medicine",
+    "Women's health",
+    "Longevity",
+    "Perimenopause and menopause",
+    "Hormone therapy",
+    "Metabolic health",
+    "GLP-1 medications",
+    "Root-cause medicine",
+  ],
   alumniOf: [
     { "@type": "CollegeOrUniversity", name: "Columbia University" },
     { "@type": "Hospital", name: "Mount Sinai Hospital" },
   ],
   worksFor: { "@type": "Organization", name: "Parsley Health", url: "https://www.parsleyhealth.com/" },
-  sameAs: ["https://www.parsleyhealth.com/"],
+  sameAs: SAME_AS,
+};
+
+const organizationSchema: JsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${siteOrigin}/#org`,
+  name: "Robin Berzin MD",
+  url: `${siteOrigin}/`,
+  logo: {
+    "@type": "ImageObject",
+    url: new URL("/logo/RobinBerzin-Logo-DarkBrown.png", `${siteOrigin}/`).toString(),
+  },
+  founder: { "@id": `${siteOrigin}/#robin` },
+  sameAs: SAME_AS,
 };
 
 const websiteSchema: JsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${siteOrigin}/#website`,
   name: "Robin Berzin MD",
   url: `${siteOrigin}/`,
+  publisher: { "@id": `${siteOrigin}/#org` },
 };
 
 const pageSchemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
-const schemas = [personSchema, websiteSchema, ...pageSchemas];
+const schemas = [personSchema, organizationSchema, websiteSchema, ...pageSchemas];
 
 const navItems = [
   { href: "/about/", label: "About" },
@@ -88,7 +123,11 @@ const isActive = (href: string) =>
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
-    <link rel="icon" href="/logo/RobinBerzin-Logo-Terracotta.png" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#6F2E0F" />
     {schemas.map((schema) => (
       <script type="application/ld+json" set:html={JSON.stringify(schema)} />
     ))}
@@ -182,8 +221,10 @@ const isActive = (href: string) =>
         <span>&copy; {new Date().getFullYear()} Robin Berzin MD</span>
         <a href="/terms-of-use/">Terms of Use</a>
         <a href="/disclaimer/">Disclaimer</a>
+        <a href="https://nicesalt.com/" target="_blank" rel="noopener noreferrer">Site by NiceSalt</a>
       </div>
     </footer>
+    <NewsletterModal />
     <script>
       import "../scripts/forms";
     </script>
