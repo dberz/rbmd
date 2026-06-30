@@ -7,11 +7,11 @@ import { getFeaturedArticles, getPrimaryCategories } from "@lib/content";
 const articles = await getFeaturedArticles(6);
 const categories = await getPrimaryCategories();
 const pressLogos = [
-  { name: "Fast Company", src: "/images/press/BerzinMedia-01.svg" },
   { name: "Vogue", src: "/images/press/BerzinMedia-02.svg" },
   { name: "Women's Health", src: "/images/press/BerzinMedia-03.svg" },
   { name: "The New York Times", src: "/images/press/BerzinMedia-04.svg" },
   { name: "Goop", src: "/images/press/BerzinMedia-05.svg" },
+  { name: "Fast Company", src: "/images/press/BerzinMedia-01.svg" },
 ];
 ---
 <BaseLayout
