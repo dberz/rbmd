@@ -104,19 +104,21 @@ export const hubContent: Record<string, HubContent> = {
   "fertility-parenting-robin-berzin-md": {
     metaTitle: "Fertility & Parenting | Robin Berzin, MD",
     metaDescription:
-      "Root-cause fertility and maternal health — egg quality, preconception, MTHFR, and thriving through motherhood, from Robin Berzin, MD.",
-    lede: "Root-cause fertility, preconception health, and thriving through motherhood.",
+      "Root-cause fertility and maternal health — egg quality, metabolic health, toxin exposure, nervous system regulation, MTHFR, and thriving through motherhood, from Robin Berzin, MD.",
+    lede: "Root-cause fertility, preconception health, and the whole-body systems that shape egg quality.",
     intro:
-      "<p>Fertility is a vital sign. The same systems that govern whether you conceive easily — metabolic health, thyroid function, nutrient status, inflammation, and stress — are the systems that shape lifelong health for both mother and baby. Functional medicine treats the months before conception as one of the highest-leverage windows in a woman's life.</p>" +
-      "<p>This hub covers evidence-based ways to optimize fertility and egg quality, the genetics and nutrients (like MTHFR and methylfolate) that quietly affect conception, and how to protect your own health and energy through pregnancy and the demanding early years of parenting.</p>" +
+      "<p>Fertility is a vital sign. The same systems that govern whether you conceive easily — metabolic health, thyroid function, nutrient status, inflammation, toxin exposure, and stress physiology — are the systems that shape lifelong health for both mother and baby. Functional medicine treats the months before conception as one of the highest-leverage windows in a woman's life.</p>" +
+      "<p>This hub is organized around the fertility terrain most conventional workups miss: blood sugar and insulin, endocrine-disrupting chemicals, nervous system regulation, egg quality after 35, and genetics like MTHFR and methylfolate. The throughline is simple: age matters, but the environment around the egg matters too.</p>" +
       AUTHOR_LINE,
-    featured: ["fertility-over-35-protocol", "mthfr"],
+    featured: ["fertility-over-35-protocol", "blood-sugar-fertility", "chemicals-in-your-home-fertility", "nervous-system-fertility-organ", "mthfr"],
     faqs: [
       { q: "Can you improve egg quality after 35?", a: "You can't make new eggs, but egg quality is influenced by the metabolic environment over the roughly 90 days before ovulation. Blood-sugar control, sleep, targeted nutrients, and lowering inflammation can meaningfully support it." },
+      { q: "Can blood sugar affect fertility even if my cycle is regular?", a: "Yes. Insulin resistance can disrupt ovulation, androgen balance, egg maturation, and implantation before a standard fertility workup flags a problem. Fasting insulin, HbA1c, fructosamine, and sometimes CGM data give a clearer picture than fasting glucose alone." },
+      { q: "Do household chemicals really affect fertility?", a: "They can. PFAS, phthalates, BPA, and heavy metals are endocrine disruptors that can interfere with hormone signaling, mitochondrial function, and egg quality. The highest-impact first steps are food-storage swaps, filtered water, cleaner personal-care products, and reducing non-stick cookware exposure." },
+      { q: "How does stress affect conception?", a: "Chronic stress is biological, not just emotional. Elevated cortisol can blunt the GnRH and LH signaling needed for ovulation, lower progesterone support, and disrupt sleep and melatonin, which protect the follicular environment." },
       { q: "What is MTHFR and does it affect fertility?", a: "MTHFR is a common gene variant that reduces how well you convert folic acid into its active form, methylfolate — important for ovulation, implantation, and preventing neural-tube defects. Many people carry a variant and benefit from methylated folate." },
       { q: "How far in advance should I prepare for pregnancy?", a: "Ideally about three months. Eggs and sperm mature over roughly 90 days, so the preconception window is when nutrition, blood sugar, thyroid, and nutrient status have the most influence on outcomes." },
-      { q: "What labs matter most before trying to conceive?", a: "Beyond standard prenatal labs: thyroid (including antibodies), ferritin, vitamin D, B12 and folate, fasting insulin and glucose, and a check for nutrient deficiencies — all of which affect conception and a healthy pregnancy." },
-      { q: "How can mothers protect their own health postpartum?", a: "Postpartum depletion is real. Replenishing iron, vitamin D, omega-3s, and protein, prioritizing sleep where possible, and screening for thyroid and mood changes all help mothers recover energy rather than running on empty." },
+      { q: "What labs matter most before trying to conceive?", a: "Beyond standard prenatal labs: thyroid with antibodies, ferritin, vitamin D, B12 and folate, fasting insulin and glucose, hs-CRP, omega-3 status, and targeted toxin or nutrient testing when history suggests it." },
     ],
     leadMagnet: "female-longevity-supplement-stack",
   },

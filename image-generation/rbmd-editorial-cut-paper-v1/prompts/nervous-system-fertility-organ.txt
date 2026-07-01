@@ -1,0 +1,14 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image, generated at 1080x1350 for 4:5 Instagram posts, mobile article cards, and article hero display
+Article title: Your Nervous System Is a Fertility Organ
+Article excerpt: Stress does not just make conception harder. It changes the hormonal environment your egg needs to mature.
+Category: Fertility & Parenting
+Tags: Mental Health, Hormones, Sleep, Exercise, Supplements, Women's Health
+Article body signals: HPA axis, HPO axis, cortisol, stress response, ovulation, sleep, yoga nidra, NSDR, box breathing, restoration, anxiety, progesterone, luteal phase.
+Primary visual metaphor: a calm branching nervous-system tree where fine root-like neural pathways descend into a soft abstract uterus-shaped vessel, with wide breathing-wave bands crossing behind it. The idea is "nervous system regulation changes fertility signals" rather than a literal egg.
+Differentiation requirement: Do not use egg shapes, follicle rings, target diagrams, glucose curves, household objects, or central circular ovary motifs. This image should be recognizable from a distance as nervous-system regulation and stress downshifting first.
+Composition: tall vertical neural tree/branch form on the left third; flowing lilac breathing wave bands through the middle; abstract vessel or hormonal signal arc on the lower left/middle; large quiet off-white area at bottom right for the signature. Use fewer small dots than prior fertility images.
+Style system: RBMD Editorial Cut-Paper Collage v1. Sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery. Calmer, premium, medically credible, witty but not cute. Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows. Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, with one restrained lilac #DBC7F1 accent.
+Avoid: large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, dense all-over dot networks, generic medical symbols, text, letters, words, numbers, logos, and watermarks.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

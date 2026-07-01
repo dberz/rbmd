@@ -1,0 +1,14 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image, generated at 1080x1350 for 4:5 Instagram posts, mobile article cards, and article hero display
+Article title: Is Your Blood Sugar Killing Your Fertility?
+Article excerpt: Your metabolism and your ovaries are in constant conversation, and most women have no idea.
+Category: Fertility & Parenting
+Tags: Blood Sugar & Metabolism, Hormones, Lab Testing, Women's Health
+Article body signals: insulin resistance, glucose spikes, fasting insulin, HbA1c, CGM, protein-first meals, walking after meals, ovulation, implantation, metabolic fertility reset.
+Primary visual metaphor: a bold terracotta glucose curve moving through the image like a landscape ridge, paired with a simple cream CGM sensor patch and a lilac signal line that resolves into a single small seedling/bud. The idea is "metabolism affects fertility" without showing a literal egg.
+Differentiation requirement: Do not use egg shapes, follicle rings, circular target diagrams, moon-phase fertility rings, or a central ovary/egg motif. This image should be recognizable from a distance as blood sugar and metabolic rhythm first.
+Composition: dominant sweeping glucose curve from lower left to upper right; CGM sensor patch or lab-meter silhouette in the upper third; protein-block tile shapes and tiny glucose beads as secondary details only; generous off-white negative space; lower-right signature zone must stay quiet.
+Style system: RBMD Editorial Cut-Paper Collage v1. Sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery. Calmer, premium, medically credible, witty but not cute. Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows. Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, with one restrained lilac #DBC7F1 accent.
+Avoid: large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, dense all-over dot networks, generic medical symbols, text, letters, words, numbers, logos, and watermarks.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

@@ -7,6 +7,8 @@
 //   3. Related posts — always surfaces the gated supplement-stack post as a
 //      recurring lead driver.
 
+import { decodeHtmlEntities } from "./content";
+
 export type PostCta = {
   eyebrow?: string;
   title?: string;
@@ -99,7 +101,7 @@ export function addHeadingAnchors(html: string) {
   const toc: { id: string; text: string }[] = [];
   const used = new Set<string>();
   const out = html.replace(/<h2([^>]*)>([\s\S]*?)<\/h2>/gi, (match, attrs: string, inner: string) => {
-    const text = inner.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+    const text = decodeHtmlEntities(inner.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim());
     if (!text) return match;
     let id = slugifyHeading(text) || `section-${toc.length + 1}`;
     const baseId = id;

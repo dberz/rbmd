@@ -382,6 +382,28 @@ button {
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.82fr);
 }
 
+.newsletter-section .two-column {
+  align-items: start;
+  gap: clamp(var(--space-lg), 5vw, var(--space-xl));
+  grid-template-columns: minmax(280px, 0.78fr) minmax(420px, 1fr);
+}
+
+.newsletter-intro {
+  max-width: 560px;
+  padding-top: var(--space-sm);
+}
+
+.newsletter-intro h2 {
+  max-width: 20ch;
+}
+
+.newsletter-intro p {
+  color: var(--text-primary);
+  font-size: var(--text-md);
+  line-height: 1.55;
+  max-width: 34rem;
+}
+
 /* Full-bleed hero: edge-to-edge image with overlaid copy.
    Mobile = portrait crop, copy anchored bottom; desktop = landscape crop,
    copy anchored left (see media queries below). */
@@ -548,7 +570,8 @@ button {
   text-decoration: none;
 }
 
-.article-card > .tag {
+.article-card > .tag,
+.media-item > .tag {
   display: flex;
   margin-bottom: 12px;
   width: fit-content;
@@ -635,26 +658,121 @@ button {
   background: var(--bg-subtle);
   border: 1px solid color-mix(in srgb, var(--color-beige) 60%, transparent);
   border-radius: var(--radius-lg);
+  display: grid;
+  gap: var(--space-md);
   margin: var(--space-xl) 0;
   padding: var(--space-lg);
 }
 
 .cta-block p {
   color: var(--text-muted);
+  margin-bottom: 0;
 }
 
 .cta-block h2 {
   font-size: clamp(22px, 2.2vw, 28px);
   line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.cta-block-header {
+  align-items: start;
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.cta-block-header .eyebrow {
+  margin-bottom: var(--space-xs);
+}
+
+.cut-paper-mark {
+  display: block;
+  height: auto;
+  overflow: visible;
+  width: clamp(86px, 14vw, 132px);
+}
+
+.cta-block--female-longevity-supplement-stack .cut-paper-mark {
+  width: clamp(178px, 24vw, 260px);
+}
+
+.cut-paper-mark .cut-paper-stack {
+  filter: drop-shadow(0 3px 3px color-mix(in srgb, var(--color-dark-brown) 16%, transparent));
+}
+
+.cut-paper-mark .paper {
+  stroke: color-mix(in srgb, var(--color-dark-brown) 10%, transparent);
+  stroke-width: 1.2;
+}
+
+.cut-paper-mark .cream {
+  fill: var(--color-off-white);
+}
+
+.cut-paper-mark .beige {
+  fill: var(--color-beige);
+}
+
+.cut-paper-mark .terracotta {
+  fill: var(--color-dark-terracotta);
+}
+
+.cut-paper-mark .lilac {
+  fill: var(--color-lilac);
+}
+
+.cut-paper-mark .leaf {
+  fill: var(--color-medium-brown);
 }
 
 .cta-block .subscribe-form {
   grid-template-columns: 1fr;
   max-width: 440px;
+  margin-top: var(--space-xs);
 }
 
 .cta-block .subscribe-form button {
   width: 100%;
+}
+
+.two-column .cta-block {
+  margin: 0;
+}
+
+.newsletter-section .cta-block {
+  background: color-mix(in srgb, var(--color-off-white) 34%, var(--bg-subtle));
+  gap: var(--space-lg);
+  justify-self: end;
+  max-width: 600px;
+  padding: clamp(var(--space-md), 4vw, var(--space-lg));
+  width: 100%;
+}
+
+.newsletter-section .cta-block-header {
+  align-items: center;
+  gap: var(--space-lg);
+  grid-template-columns: minmax(210px, 0.94fr) minmax(128px, 0.54fr);
+}
+
+.newsletter-section .cta-block h2 {
+  font-size: clamp(28px, 3vw, 38px);
+  line-height: 1.12;
+}
+
+.newsletter-section .cta-block p {
+  font-size: var(--text-md);
+  line-height: 1.55;
+  max-width: 36rem;
+}
+
+.newsletter-section .cta-block--female-longevity-supplement-stack .cut-paper-mark {
+  justify-self: end;
+  width: clamp(170px, 17vw, 240px);
+}
+
+.newsletter-section .cta-block .subscribe-form {
+  max-width: none;
 }
 
 .subscribe-form,
@@ -862,8 +980,36 @@ button {
 }
 
 .article-body .key-takeaways h3 {
+  align-items: center;
+  display: flex;
   font-size: var(--text-lg);
+  gap: var(--space-sm);
   margin: 0 0 var(--space-md);
+}
+
+.article-body .key-takeaways h3::before,
+.article-body .rbmd-momgevity h2::before,
+.article-body .rbmd-one-more h2::before,
+.article-body .rbmd-faq > h2::before,
+.article-body .rbmd-references > h2::before {
+  background:
+    radial-gradient(circle at 68% 34%, var(--color-lilac) 0 9px, transparent 10px),
+    radial-gradient(circle at 35% 62%, var(--color-dark-terracotta) 0 8px, transparent 9px),
+    var(--color-off-white);
+  border: 1px solid color-mix(in srgb, var(--color-beige) 60%, transparent);
+  border-radius: 999px;
+  box-shadow: 0 3px 8px color-mix(in srgb, var(--color-dark-brown) 13%, transparent);
+  content: "";
+  flex: 0 0 auto;
+  height: 38px;
+  width: 48px;
+}
+
+.article-body .key-takeaways h3::before {
+  background:
+    linear-gradient(135deg, transparent 0 43%, var(--color-beige) 44% 56%, transparent 57%),
+    radial-gradient(circle at 34% 45%, var(--color-lilac) 0 8px, transparent 9px),
+    var(--color-off-white);
 }
 
 .article-body .key-takeaways ul {
@@ -919,6 +1065,14 @@ button {
   padding: var(--space-md);
 }
 
+.article-aside .cut-paper-mark {
+  width: 78px;
+}
+
+.article-aside .cta-block--female-longevity-supplement-stack .cut-paper-mark {
+  width: 96px;
+}
+
 .article-aside .cta-block h2 {
   font-size: var(--text-lg);
   line-height: 1.25;
@@ -946,6 +1100,14 @@ button {
   justify-content: space-between;
   margin-bottom: var(--space-lg);
   margin-top: var(--space-lg);
+}
+
+.section-heading {
+  margin-bottom: var(--space-lg);
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
 }
 
 .legacy-content {
@@ -1030,22 +1192,59 @@ button {
 
 .media-list {
   display: grid;
-  gap: var(--space-md);
+  gap: var(--space-lg) var(--space-md);
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.media-featured-grid,
+.media-booking-grid {
+  align-items: start;
+}
+
+.media-featured-copy p {
+  color: var(--text-muted);
+  max-width: 34rem;
+}
+
+.media-section-heading {
+  max-width: 680px;
 }
 
 .media-item {
   border-top: 1px solid var(--color-beige);
+  display: flex;
+  flex-direction: column;
+  min-height: 230px;
   padding-top: var(--space-md);
+}
+
+.media-item h3 {
+  margin-bottom: var(--space-xs);
 }
 
 .media-item p {
   color: var(--text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.media-item a {
+  color: var(--color-dark-terracotta);
+  font-size: var(--text-sm);
+  margin-top: auto;
+  text-decoration: none;
+}
+
+.media-item a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
 .embed-frame {
   aspect-ratio: 16 / 9;
   background: var(--color-dark-brown);
+  border: 1px solid color-mix(in srgb, var(--color-beige) 56%, transparent);
+  border-radius: var(--radius-md);
+  overflow: hidden;
   width: 100%;
 }
 
@@ -1096,6 +1295,14 @@ button {
 
 .bio-copy p {
   font-size: var(--text-md);
+}
+
+.bio-section {
+  align-items: start;
+}
+
+.bio-portrait {
+  align-self: start;
 }
 
 .bio-portrait img {
@@ -1526,12 +1733,76 @@ button {
 }
 
 .article-body .rbmd-momgevity h2 {
+  align-items: center;
+  display: flex;
   font-size: var(--text-lg);
+  gap: var(--space-sm);
   margin-top: 0;
+}
+
+.article-body .rbmd-momgevity h2::before {
+  background:
+    radial-gradient(circle at 50% 46%, var(--color-dark-terracotta) 0 8px, transparent 9px),
+    radial-gradient(circle at 42% 42%, var(--color-lilac) 0 16px, transparent 17px),
+    var(--color-off-white);
+  border-radius: 48% 48% 52% 52%;
 }
 
 .article-body .rbmd-momgevity > *:last-child {
   margin-bottom: 0;
+}
+
+.article-body .rbmd-one-more,
+.article-body .rbmd-faq,
+.article-body .rbmd-references {
+  border-top: 1px solid color-mix(in srgb, var(--color-beige) 48%, transparent);
+  margin: var(--space-xl) 0;
+  padding-top: var(--space-md);
+}
+
+.article-body .medical-disclaimer {
+  border-top: 1px solid color-mix(in srgb, var(--color-beige) 48%, transparent);
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  margin: var(--space-xl) 0 0;
+  padding-top: var(--space-md);
+}
+
+.article-body .medical-disclaimer p {
+  margin-bottom: 0;
+}
+
+.article-body .rbmd-one-more h2,
+.article-body .rbmd-faq > h2,
+.article-body .rbmd-references > h2 {
+  align-items: center;
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: 0;
+}
+
+.article-body .rbmd-one-more h2::before {
+  background:
+    linear-gradient(135deg, transparent 0 42%, var(--color-dark-terracotta) 43% 59%, transparent 60%),
+    radial-gradient(circle at 64% 36%, var(--color-lilac) 0 8px, transparent 9px),
+    var(--color-off-white);
+}
+
+.article-body .rbmd-faq > h2::before {
+  background:
+    radial-gradient(circle at 48% 50%, var(--color-lilac) 0 13px, transparent 14px),
+    radial-gradient(circle at 70% 70%, var(--color-dark-terracotta) 0 5px, transparent 6px),
+    var(--color-off-white);
+}
+
+.article-body .rbmd-references > h2::before {
+  background:
+    linear-gradient(90deg, var(--color-beige) 0 4px, transparent 5px),
+    linear-gradient(var(--color-lilac) 0 6px, transparent 7px),
+    var(--color-off-white);
+  background-position: 14px 12px, 23px 16px, 0 0;
+  background-repeat: no-repeat;
+  background-size: 4px 19px, 16px 6px, auto;
 }
 
 /* Related posts — compact tiles */
@@ -1956,6 +2227,26 @@ h3 {
   padding: var(--space-md) 0;
 }
 
+.hub-faq > .eyebrow + h2 {
+  align-items: center;
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.hub-faq > .eyebrow + h2::before {
+  background:
+    radial-gradient(circle at 48% 50%, var(--color-lilac) 0 14px, transparent 15px),
+    radial-gradient(circle at 70% 70%, var(--color-dark-terracotta) 0 5px, transparent 6px),
+    var(--color-off-white);
+  border: 1px solid color-mix(in srgb, var(--color-beige) 60%, transparent);
+  border-radius: 999px;
+  box-shadow: 0 3px 8px color-mix(in srgb, var(--color-dark-brown) 13%, transparent);
+  content: "";
+  flex: 0 0 auto;
+  height: 38px;
+  width: 48px;
+}
+
 .faq-q::-webkit-details-marker {
   display: none;
 }
@@ -2070,6 +2361,34 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .two-column:has(.cta-block) {
+    align-items: start;
+    gap: var(--space-lg);
+  }
+
+  .newsletter-section .two-column {
+    gap: var(--space-lg);
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-intro {
+    max-width: 680px;
+    padding-top: 0;
+  }
+
+  .newsletter-intro h2 {
+    max-width: 14ch;
+  }
+
+  .newsletter-section .cta-block {
+    justify-self: stretch;
+    max-width: none;
+  }
+
+  .newsletter-section .cta-block-header {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
   .article-main,
   .article-aside {
     grid-column: auto;
@@ -2168,6 +2487,31 @@ h3 {
 
   .cta-block {
     padding: var(--space-md);
+  }
+
+  .two-column:has(.cta-block) {
+    gap: var(--space-md);
+  }
+
+  .newsletter-section .cta-block-header {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-section .cta-block--female-longevity-supplement-stack .cut-paper-mark {
+    justify-self: start;
+    width: 156px;
+  }
+
+  .cta-block-header {
+    gap: var(--space-sm);
+  }
+
+  .cta-block .cut-paper-mark {
+    width: 86px;
+  }
+
+  .cta-block--female-longevity-supplement-stack .cut-paper-mark {
+    width: 144px;
   }
 
   .retailer-grid {
