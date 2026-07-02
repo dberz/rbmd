@@ -1,76 +1,118 @@
-# RBMD Dual-Format Generation Prompt (v2)
+# RBMD Dual-Format Prompt Spec
 
-One generation run per article now produces TWO independent compositions of the
-same concept — never crop one from the other:
+This document describes the prompt contract used by
+`scripts/rbmd-article-images.mjs`. The script is the executable source of truth;
+this file is the human-readable spec for Codex work and the future API app.
 
-| Format | Generate at | Final crop | Used for |
-|---|---|---|---|
-| Portrait 4:5 | 1024x1536 | 1080x1350 | Instagram feed post, on-site cards + article hero |
-| Landscape 1.91:1 | 1536x1024 | 1200x630 | og:image / Twitter card, Beehiiv email header |
+Each article gets two independent image generations:
 
-Landscape finals belong in `public/images/articles/rbmd-cut-paper-v1/<slug>.webp`
-— the article template automatically serves them as og:image when present.
+| Format | Generate at | Final asset | Used for |
+| --- | --- | --- | --- |
+| Portrait 4:5 | `1024x1536` | `1080x1350` | Instagram feed, on-site cards, article hero |
+| Landscape 1.91:1 | `1536x1024` | `1200x630` | `og:image`, Twitter/X card, Beehiiv email header |
 
----
+Do not crop one final from the other. Generate portrait and landscape as native
+compositions of the same concept.
 
-## Prompt template
+## Shared Style Block
 
-Replace `{{...}}` fields from the article JSON (same fields `images:plan` already extracts).
+The generated prompt must include this art direction for both formats:
 
-### Shared style block (identical for both formats)
-
-```
+```text
 Style system: RBMD Editorial Cut-Paper Collage v1.
 Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
 The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
 Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
-Use one central visual metaphor supported by 3-6 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Use one dominant topic-specific visual metaphor supported by no more than 1-2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Maintain the focused simplicity of the approved portrait set: one large readable object family, bold paper silhouettes, sparse details, and generous cream/off-white negative space.
+Use the visual brief as a menu of possible motifs, not a checklist. Choose the single strongest metaphor and leave out the rest.
+Avoid filling the frame. Do not create busy symbol fields, scattered confetti, dense bead paths, or many small objects.
+Keep the lower-right signature zone visually quiet.
 Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
-Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, text, letters, words, numbers, logos, and watermarks.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
 Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.
+```
 
+The image model must not generate the `Robin Berzin MD` mark. The deterministic
+post-processor overlays it from `public/logo/RobinBerzin-Logo-DarkBrown-T.png`.
+
+## Article Inputs
+
+Replace these fields from article JSON or the hosted app form:
+
+```text
 Article title: {{title}}
 Article excerpt: {{excerpt}}
 Category: {{category}}
-Visual brief: {{visual_brief}}
+Tags: {{tags}}
+Article body signals: {{body_signals}}
+Visual brief: Build the image around {{visual_brief}}.
 ```
 
-### Format block A — portrait (append for the 1024x1536 run)
+`visual_brief` is intentionally broad. The generation prompt must instruct the
+model to choose one strong metaphor, not illustrate every motif.
 
-```
-Format: vertical 4:5 Instagram feed illustration, generated at 1024x1536 and cropped to 1080x1350.
-Composition: stack the concept vertically — one bold central metaphor in the middle third, secondary symbols radiating above and below it.
+## Portrait Format Block
+
+Append this for portrait generation:
+
+```text
+Format: vertical 4:5 Instagram feed illustration, generated at 1024x1536 and cropped to 1080x1350 for Instagram feed posts, on-site cards, and article hero display.
+Composition: stack the concept vertically with one bold central topic metaphor in the middle third and secondary symbols radiating above and below it.
 The image must read instantly at phone-feed size: bold silhouettes, high figure-ground contrast, generous margins on all four edges.
-Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area (deterministic RBMD logo overlay).
-Safe area: keep all key elements inside the central 1080x1350 region — nothing critical in the top or bottom 8% of the canvas.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Safe area: keep all key elements inside the central 1080x1350 region; nothing critical in the top or bottom 8% of the canvas.
 ```
 
-### Format block B — landscape (append for the 1536x1024 run)
+## Landscape Format Block
 
+Append this for landscape generation:
+
+```text
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same simple central metaphor as a native wide scene. Use one large hero object or object group offset left or right of center, plus only 1-2 small supporting shapes.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+Keep the approved portrait-set simplicity: broad shapes, large quiet background fields, minimal detail, and immediate readability from a distance.
+Do not spread many symbols across the width just because the canvas is wide.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
 ```
-Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews and email headers.
-Composition: re-stage the SAME central metaphor and supporting symbols as a wide scene — central metaphor offset left or right of center, secondary symbols distributed horizontally, asymmetric balance.
-Do not simply widen the portrait composition; design natively for the wide frame.
-The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band — nothing critical in the top or bottom 11% of the canvas.
-Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area.
-Bold thumbnail readability at 500px wide (how it appears in an iMessage/Slack/X link card).
+
+## Consistency Guidance
+
+Best result:
+
+1. Generate the portrait first.
+2. Use the approved portrait as a visual reference for landscape.
+3. Ask for a native landscape re-stage of the same simple concept, not a widened
+   crop.
+
+Fallback when reference-image generation is unavailable:
+
+1. Use the same title, excerpt, category, tags, and visual brief.
+2. Preserve the same primary metaphor.
+3. Reduce supporting elements further for landscape if the output gets busy.
+
+## Post-Processing Contract
+
+Portrait:
+
+```text
+crop/resize to 1080x1350
+overlay Robin Berzin MD wordmark
+write WebP to public/images/articles/rbmd-instagram-cut-paper-v1/<slug>.webp
 ```
 
----
+Landscape:
 
-## Consistency tip
+```text
+center-crop/resize to 1200x630
+overlay Robin Berzin MD wordmark
+write WebP to public/images/articles/rbmd-cut-paper-v1/<slug>.webp
+```
 
-Generate the portrait first, then pass it as the reference image for the
-landscape run ("Recreate this exact cut-paper collage concept, palette, and
-paper texture as a native landscape composition") — GPT Images holds the
-concept across formats far better with a visual anchor than with text alone.
+The article template uses landscape files as `og:image` when present and declares
+them as `1200x630`.
 
-## Post-processing
-
-Portrait: existing pipeline (crop 1080x1350, logo overlay, webp) →
-`public/images/articles/rbmd-instagram-cut-paper-v1/<slug>.webp`
-
-Landscape: center-crop 1536x806 → resize 1200x630, logo overlay, webp →
-`public/images/articles/rbmd-cut-paper-v1/<slug>.webp`
-(For OG we keep the full 1536x1024 file in that directory today; a 1200x630
-derivative is also acceptable — anything ≥1200px wide at ~1.91:1 works.)
