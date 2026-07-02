@@ -223,7 +223,7 @@ async function writeCourses() {
 async function writeRedirects() {
   await resetGeneratedDir(collections.redirects);
   const redirects = [
-    { source: "/newsletter", destination: "/articles/", permanent: true },
+    // NOTE: /newsletter is a real page on the new site — do not redirect it.
     { source: "/p/every-woman-should-start-vaginal-estrogen-by-50-here-s-the-case", destination: "/vaginal-estrogen-prevention-longevity/", permanent: true },
     { source: "/p/your-labs-came-back-normal-so-why-are-you-exhausted", destination: "/normal-labs-fatigue-root-causes/", permanent: true },
     { source: "/p/not-all-protein-powders-are-created-equal-here-s-how-to-choose", destination: "/protein-powder-guide-complete-protein/", permanent: true },

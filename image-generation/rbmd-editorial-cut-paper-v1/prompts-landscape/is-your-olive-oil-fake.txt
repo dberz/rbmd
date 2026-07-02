@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: Are you using the right EVOO?
+Article excerpt: I treat EVOO like a supplement. But if your olive oil is fake, you’re missing out on key health benefits. Here’s what to know.
+Category: Toxins, Nutrition & Modern Exposures
+Tags: Blood Sugar & Metabolism, Nutrition, Toxins & Environment
+Article body signals: Robin’s Short Version | The controversy over fake olive oil | The health benefits of olive oil | What I’m doing for my own body when it comes to EVOO | What I recommend for you | Keep Reading | Is your olive oil fake? Robin’s Short Version Widespread Label Fraud: In a 2015 test, 6 of 11 major grocery store EVOO brands failed International Olive Council quality standards. Lost Health Benefits: Degraded or diluted olive oil loses oleocanthal and antioxidants responsible for its heart, brain, and cancer-protective effects. Daily Supplement Dose: Robin aims for at least one tablespoon of high-quality EVOO daily—drunk straight, blended into smoothies, or added to food. I’ve been doubling down on my EVOO consumption (that’s extra virgin olive oil for those of you who spend less time grocery shopping than I do!) lately. The brain health and heart health benefits of olive oil are tremendous and well-documented. And more recent research has further convinced me that having at least one tablespoon of high-quality olive oil daily is possibly the most important supplement I’m taking. But as it turns out, not all EVOO is created equal. Recently, I posted a story on IG about my love for olive oil, while holding a big tin of Whole Foods 365 brand in my hand. The reaction took me a bit by surprise: this community went nuts calling me out for my low EVOO standards, other EVOO brands sent me reports busting competitors (with requests for anonymity) for their low quality products, and my DMs were flooded with people debating the purity of their favorite popular brands. I now call this episode “Oil Gate.” Apparently you are all very passionate about this topic! As you should be. Given all th...
+Visual brief: Build the image around filtered droplet shapes, caution triangles abstracted into soft paper, food-source icons, and detox pathway lines; whole-food silhouettes, ingredient tiles, bowl and scoop forms, and nutrition label motifs without text; glucose bead paths, metabolic curves, mitochondria ovals, and appetite-signal rings.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

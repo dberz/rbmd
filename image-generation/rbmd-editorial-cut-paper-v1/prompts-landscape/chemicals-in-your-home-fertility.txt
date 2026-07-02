@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: The Chemicals in Your Home Are Affecting Your Fertility
+Article excerpt: PFAS, phthalates, and BPA are measurable in most of our bodies — and they directly impair egg quality.
+Category: Fertility & Parenting
+Tags: Toxins & Environment, Hormones, Women's Health
+Article body signals: Forward this protocol | What to know: your home environment is a fertility factor | How these chemicals disrupt fertility | Heavy metals and egg quality | PFAS and the pregnancy data | What to do: reduce your body burden | 1️⃣ Audit your kitchen first — it's the highest-impact swap. | 2️⃣ Filter your water. | 3️⃣ Clean up your beauty routine. | 4️⃣ Add sauna — it works. | PFAS, phthalates, and BPA aren't just environmental buzzwords — they're measurable, they're in most of our bodies, and they directly impair egg quality. I switched out every piece of non-stick cookware in my home years ago. I also green’ed my cleaning products. Ditched my plastic food containers. Even updated my makeup. People thought I was being a little extreme. Then I started running toxin panels on patients trying to conceive — and seeing what was actually in their bodies. PFAS. Phthalates. Heavy metals. In nearly everyone. Including women eating well, exercising, doing everything right. At least 97% of Americans have detectable PFAS — the "forever chemicals" — in their blood. And higher PFAS exposure is associated with up to a 40% reduction in the likelihood of clinical pregnancy and live birth. That's not a small signal. That's a real fertility disruptor hiding in plain sight. Forward this protocol You can't eliminate all toxin exposure. But you can dramatically reduce your body burden — and the research shows it moves the needle on fertility outcomes. The Fertility Toxin Audit (start today): Swap all plastic food storage for glass or stainless steel Replace non-stick cookware with cast iron or ceramic Filter your drinking water (reverse osmosis or solid carbon block) Check your makeup and skincare...
+Visual brief: Build the image around hormone cycle rings, endocrine signal dots, moon-phase arcs, and soft botanical seed forms; filtered droplet shapes, caution triangles abstracted into soft paper, food-source icons, and detox pathway lines.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

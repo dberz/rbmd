@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: Testosterone Therapy Is Trending—But Is It Right For You?
+Article excerpt: Most women benefit from testosterone therapy as part of a thoughtful HRT plan. It benefits mood, libido, energy, muscle, and bone health.
+Category: Women’s Health & Hormones
+Tags: Hormones, Lab Testing, Longevity, Women's Health
+Article body signals: Robin’s Short Version | Is testosterone therapy the holy grail for midlife energy and libido—or just another biohacking fad? | What to know: Testosterone is an essential longevity hormone for both women and men. | Testosterone declines with age | Testosterone Is Still Missing from Most HRT Plans | ️ Side Effects usually mean you’re overdosed | Who Should Avoid Testosterone Therapy | What to do: Start testing in your 30’s and dose for balance, not biohacking. | Step 1: Test—Don’t Guess | ️ Step 2: Dose for Balance, Not Biohacking | Plus, what your hair tells you about your hormone levels. Robin’s Short Version Free T Is What Counts: Only 1–3% of testosterone is biologically active; oral birth control and low-protein diets raise SHBG, trapping even more of it. Side Effects Signal Overdose: Acne, hair loss, and mood swings from testosterone therapy aren’t inherent risks—they mean the dose needs to come down. Standard HRT Has a Gap: Most women receive only estrogen and progesterone, leaving testosterone—which protects libido, muscle, and bone—completely unaddressed. Is testosterone therapy the holy grail for midlife energy and libido—or just another biohacking fad? Last week, the New York Times finally covered testosterone therapy for women . I was glad to see it. A decade ago, when I was first training in functional medicine at a high-end anti-aging clinic, testosterone was prescribed to men all the time. But for women? Almost never. Even in “forward-thinking” clinics, testosterone for women was rare. That gender bias stuck with me. Now, the pendulum is swinging in the other direction. Women are finally getting access to testosterone, which is a major step forward. The probl...
+Visual brief: Build the image around hormone cycle rings, endocrine signal dots, moon-phase arcs, and soft botanical seed forms; lab-vial silhouettes, diagnostic rings, scan-window shapes, and precise measurement ticks without numbers; cellular age rings, mitochondria, renewal arrows, immune-cell dots, and longevity tree-ring forms; protein blocks, muscle-fiber ribbons, strength arcs, and movement lines.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

@@ -1,4 +1,6 @@
 ---
+import CutPaperMark from "@components/CutPaperMark.astro";
+
 type Props = {
   eyebrow?: string;
   title?: string;
@@ -20,12 +22,19 @@ const {
   articleSlug = "",
   category = "",
 } = Astro.props;
+const leadMagnetClass = leadMagnet.replace(/[^a-z0-9-]/gi, "-");
 ---
-<aside class="cta-block" aria-label={title}>
-  <span class="eyebrow">{eyebrow}</span>
-  <h2>{title}</h2>
+<aside class={`cta-block cta-block--${leadMagnetClass}`} aria-label={title}>
+  <div class="cta-block-header">
+    <div>
+      <span class="eyebrow">{eyebrow}</span>
+      <h2>{title}</h2>
+    </div>
+    <CutPaperMark variant={leadMagnet} />
+  </div>
   <p>{description}</p>
   <form class="subscribe-form" data-subscribe-form>
+    <input type="text" name="company" tabindex="-1" autocomplete="off" hidden />
     <input type="hidden" name="placement" value={placement} />
     <input type="hidden" name="leadMagnet" value={leadMagnet} />
     <input type="hidden" name="articleSlug" value={articleSlug} />

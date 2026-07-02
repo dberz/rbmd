@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: My inside/outside skincare protocol
+Article excerpt: We tend to think of aging skin as surface-level. It’s not. Here’s the inside-meets-outside skincare protocol that changed my face.
+Category: Women’s Health & Hormones
+Tags: Personal Story, Skin & Beauty, Supplements, Women's Health
+Article body signals: Robin’s Short Version | I haven’t gotten botox in two years. | What to know: Skin ages due to internal and external stressors we can influence. | Preserving fibroblasts preserves collagen | ️ Protecting against UV slows skin damage | Strengthening the skin barrier blocks pollution damage | Preventing blood sugar spikes prevents sagging & wrinkles | ️ Slowing estrogen loss slows aging | Gut health = skin health | What to Do: Target inflammation and hormonal shifts and treat topical damage | Plus, hot baths and why eating bread feels better in Europe. Robin’s Short Version Fibroblasts Are Central: UV damage, estrogen loss, and Vitamin A deficiency all harm fibroblasts—the cells that produce collagen, elastin, and hyaluronic acid. Menopause Accelerates Collagen Loss: Women can lose up to 30% of dermal collagen in just five years post-menopause, but topical or systemic estrogen therapy can meaningfully slow that decline. Sugar Stiffens Skin: High-glycemic foods trigger glycation, which stiffens collagen and elastin; pairing carbs with protein and fiber prevents the blood sugar spikes that cause sagging and wrinkles. I haven’t gotten botox in two years. I used to get it 1-2 times every year until I couldn’t ignore that nagging “this feels off” feeling. Yes, it works. But Botox is a band-aid. Botox paralyzes targeted muscles. Over time, others compensate and grow, which can shift the architecture of your face. And while I’m not worried about the toxin itself (it breaks down quickly and stays local), the technology already feels outdated. So I stopped. And thanks to my inside/outside regenerative skin protocol? I haven’t missed it. What to know: Skin ages due to internal and ext...
+Visual brief: Build the image around cellular age rings, mitochondria, renewal arrows, immune-cell dots, and longevity tree-ring forms; hormone cycle rings, endocrine signal dots, moon-phase arcs, and soft botanical seed forms; glucose bead paths, metabolic curves, mitochondria ovals, and appetite-signal rings; brain contour shapes, neural pathways, calm signal waves, and sleep-rhythm arcs.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

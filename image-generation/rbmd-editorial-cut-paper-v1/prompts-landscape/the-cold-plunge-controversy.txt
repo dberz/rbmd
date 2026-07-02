@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: The cold plunge controversy
+Article excerpt: It’s summer and it feels like everyone is installing a cold plunge in their backyard or basement spa
+Category: Longevity & Metabolic Health
+Tags: Exercise, Longevity, Supplements
+Article body signals: Robin’s Short Version | What about cold plunge for women? | What I’m Reading This Week | #1 Time to go keto? | #2 A proven way to build bone mass | How to be Healthier Than Ever This Week | Keep Reading | Plus, a new reason to try a keto diet and my favorite at-home HIIT workouts. Robin’s Short Version Mood Boost Timeline: Just 5 minutes of cold immersion reduces nervousness and distress, with stress-lowering effects lasting up to 12 hours. Shiver for More: Reaching shivering thermogenesis burns extra glucose through rapid muscle contractions, increasing caloric expenditure beyond cold exposure alone. Women, Take Note: Research showing cold plunge blunts muscle growth was conducted almost entirely in men and may not apply to women’s physiology. It’s summer and it feels like everyone is installing a cold plunge in their backyard or basement spa. As someone who is obsessed with my in-home sauna but despises being cold, I usually feel a mild sense of personal failure when I can’t bring myself to do the plunge. When we go to Bathhouse in NYC and everyone dutifully wades into the icy waters, I just keep walking. Rather than continue to feel badly about this, I thought it was time to dive into the science behind the hype. Are cold plunges going to go the way of the NordicTrak and wind up as very expensive coat racks in five years? Or is it time to jump in with everyone else? The fixation on cold therapy is based on emerging science (some of it really compelling, some not so much) and anecdotal reports. The TL;DR: we need more information to recommend effective cold therapy protocols—especially for women. But the research is promising. A high-quality meta-analysis of cold plunge...
+Visual brief: Build the image around protein blocks, muscle-fiber ribbons, strength arcs, and movement lines; glucose bead paths, metabolic curves, mitochondria ovals, and appetite-signal rings; cellular age rings, mitochondria, renewal arrows, immune-cell dots, and longevity tree-ring forms; bone-density lattice shapes, mineral dots, collagen ribbons, and gut-bone connection arcs.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

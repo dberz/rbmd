@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: Perimenopause Symptoms: What the Research Shows
+Article excerpt: I’ve been dealing with hormonal acne at 45. Here’s what I’ve learned treating perimenopause for a decade — and what the 2025 research changes.
+Category: Women’s Health & Hormones
+Tags: Hormones, Lab Testing, Women's Health
+Article body signals: Robin’s Short Version | What to know: Your period is the last thing to change — not the first. | One hormone test won’t tell you much. | It might not be perimenopause at all. Or not only perimenopause. | What to do: Assess the whole picture — then treat what’s actually there. | Step 1: Know which symptoms point most clearly to perimenopause | Step 2: Get the right labs — and watch for trends | Step 3: Optimize foundations before reaching for hormones | Step 4: Consider targeted supplements — and hormones when indicated | The Momgevity Files | I’ve been dealing with hormonal acne lately. At 45. Robin’s Short Version A landmark study analyzed 5,500+ women aged 40–69 and found that hot flashes and vaginal dryness can emerge well before cycles become irregular — a regular period does not rule out perimenopause. More than half of women ages 30–35 were already experiencing moderate to severe perimenopausal symptoms — but most didn’t seek treatment until decades later. Perimenopause can last anywhere from five years to fifteen years — the earlier you catch it, the more options you have. I hadn’t had it in years. Then stress hit differently — and suddenly I’m breaking out along my jaw like I’m in my twenties again. Only this time, it’s not just stress. It’s stress interacting with hormones that are quietly shifting. That’s perimenopause. Not a dramatic announcement. Not a missed period. Just… things feel a little off, and you can’t quite explain why. I’ve been treating women in perimenopause for over a decade. And the social media conversation, while well-intentioned, leaves a lot of women confused — every symptom blamed on hormones, every solution pointing to HRT. The reality is...
+Visual brief: Build the image around hormone cycle rings, endocrine signal dots, moon-phase arcs, and soft botanical seed forms; lab-vial silhouettes, diagnostic rings, scan-window shapes, and precise measurement ticks without numbers.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

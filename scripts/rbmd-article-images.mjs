@@ -9,15 +9,26 @@ const ROOT = path.resolve(__dirname, "..");
 const ARTICLES_DIR = path.join(ROOT, "src/content/articles");
 const WORKFLOW_DIR = path.join(ROOT, "image-generation/rbmd-editorial-cut-paper-v1");
 const PROMPTS_DIR = path.join(WORKFLOW_DIR, "prompts");
+const LANDSCAPE_PROMPTS_DIR = path.join(WORKFLOW_DIR, "prompts-landscape");
 const RAW_DIR = path.join(WORKFLOW_DIR, "raw");
+const LANDSCAPE_RAW_DIR = path.join(WORKFLOW_DIR, "raw-landscape");
 const DEFAULT_MANIFEST = path.join(WORKFLOW_DIR, "manifest.json");
-const DEFAULT_OUT_DIR = path.join(ROOT, "public/images/articles/rbmd-instagram-cut-paper-v1");
-const DEFAULT_WEB_DIR = "/images/articles/rbmd-instagram-cut-paper-v1";
-const WIDTH = 1080;
-const HEIGHT = 1350;
+const DEFAULT_PORTRAIT_OUT_DIR = path.join(ROOT, "public/images/articles/rbmd-instagram-cut-paper-v1");
+const DEFAULT_PORTRAIT_WEB_DIR = "/images/articles/rbmd-instagram-cut-paper-v1";
+const DEFAULT_LANDSCAPE_OUT_DIR = path.join(ROOT, "public/images/articles/rbmd-cut-paper-v1");
+const DEFAULT_LANDSCAPE_WEB_DIR = "/images/articles/rbmd-cut-paper-v1";
+const PORTRAIT_WIDTH = 1080;
+const PORTRAIT_HEIGHT = 1350;
+const PORTRAIT_GENERATE_SIZE = "1024x1536";
+const LANDSCAPE_WIDTH = 1200;
+const LANDSCAPE_HEIGHT = 630;
+const LANDSCAPE_GENERATE_SIZE = "1536x1024";
 const LOGO_WIDTH = 220;
 const LOGO_RIGHT_MARGIN = 54;
 const LOGO_BOTTOM_SAFE_MARGIN = 118;
+const LANDSCAPE_LOGO_WIDTH = 190;
+const LANDSCAPE_LOGO_RIGHT_MARGIN = 48;
+const LANDSCAPE_LOGO_BOTTOM_SAFE_MARGIN = 56;
 
 const SAMPLE_SLUGS = [
   "protein-powder-guide-complete-protein",
@@ -48,8 +59,9 @@ Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photo
 function usage() {
   console.log(`Usage:
   npm run images:plan -- [--slugs a,b,c] [--limit 12] [--all]
-  npm run images:generate -- [--slugs a,b,c] [--limit 3]
-  npm run images:process -- --slug article-slug --input /path/to/generated.png
+  npm run images:generate -- [--slugs a,b,c] [--limit 3] [--format portrait|landscape|both]
+  npm run images:process -- --slug article-slug --format portrait --input /path/to/generated.png
+  npm run images:process -- --slug article-slug --format landscape --input /path/to/generated.png
   npm run images:sheet
   npm run images:approve -- --slugs a,b,c
   npm run images:apply -- [--status approved]
@@ -57,7 +69,7 @@ function usage() {
 Environment for generate:
   OPENAI_API_KEY required
   OPENAI_IMAGE_MODEL optional, default gpt-image-2
-  OPENAI_IMAGE_SIZE optional, default 1080x1350
+  OPENAI_IMAGE_SIZE optional, default ${PORTRAIT_GENERATE_SIZE} for portrait and ${LANDSCAPE_GENERATE_SIZE} for landscape
 `);
 }
 
@@ -82,8 +94,11 @@ function parseArgs(argv) {
 async function ensureDirs() {
   await fs.mkdir(WORKFLOW_DIR, { recursive: true });
   await fs.mkdir(PROMPTS_DIR, { recursive: true });
+  await fs.mkdir(LANDSCAPE_PROMPTS_DIR, { recursive: true });
   await fs.mkdir(RAW_DIR, { recursive: true });
-  await fs.mkdir(DEFAULT_OUT_DIR, { recursive: true });
+  await fs.mkdir(LANDSCAPE_RAW_DIR, { recursive: true });
+  await fs.mkdir(DEFAULT_PORTRAIT_OUT_DIR, { recursive: true });
+  await fs.mkdir(DEFAULT_LANDSCAPE_OUT_DIR, { recursive: true });
 }
 
 function splitSlugs(value) {
@@ -223,28 +238,53 @@ function compactText(value, limit) {
   return text.length > limit ? `${text.slice(0, limit).trim()}...` : text;
 }
 
+function buildFormatPrompt({ article, category, tags, bodySignals, visualBrief, format }) {
+  const shared = `Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: ${article.title}
+Article excerpt: ${article.excerpt || ""}
+Category: ${category}
+Tags: ${tags.join(", ")}
+Article body signals: ${bodySignals}
+Visual brief: Build the image around ${visualBrief}.
+Style system: ${STYLE_PROMPT}`;
+
+  if (format === "landscape") {
+    return `${shared}
+Format: horizontal editorial illustration, generated at ${LANDSCAPE_GENERATE_SIZE} and cropped to ${LANDSCAPE_WIDTH}x${LANDSCAPE_HEIGHT} for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.`;
+  }
+
+  return `${shared}
+Format: vertical 4:5 Instagram feed illustration, generated at ${PORTRAIT_GENERATE_SIZE} and cropped to ${PORTRAIT_WIDTH}x${PORTRAIT_HEIGHT} for Instagram feed posts, on-site cards, and article hero display.
+Composition: stack the concept vertically with one bold central topic metaphor in the middle third and secondary symbols radiating above and below it.
+The image must read instantly at phone-feed size: bold silhouettes, high figure-ground contrast, generous margins on all four edges.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Safe area: keep all key elements inside the central ${PORTRAIT_WIDTH}x${PORTRAIT_HEIGHT} region; nothing critical in the top or bottom 8% of the canvas.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.`;
+}
+
 function buildPrompt(article) {
   const headings = extractHeadings(article.contentHtml || "");
   const bodyText = htmlToText(article.contentHtml || "");
   const category = article.categories?.[0]?.name || "Uncategorized";
   const tags = (article.tags || []).map((tag) => tag.name);
   const visualBrief = buildVisualBrief(article, headings, bodyText);
-  const prompt = `Use case: stylized-concept
-Asset type: Robin Berzin MD article image, generated at 1080x1350 for 4:5 Instagram posts, mobile article cards, and article hero display
-Article title: ${article.title}
-Article excerpt: ${article.excerpt || ""}
-Category: ${category}
-Tags: ${tags.join(", ")}
-Article body signals: ${compactText([...headings, bodyText].join(" | "), 1700)}
-Visual brief: Build the image around ${visualBrief}.
-Style system: ${STYLE_PROMPT}
-Composition: one bold central topic metaphor, asymmetric balance, strong thumbnail readability, generous margins, quiet lower-right signature zone, no important detail in the bottom-right 22% x 12% area. Avoid generic repeated medical patterning; make the main shape unmistakably tied to this article.
-Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.`;
+  const bodySignals = compactText([...headings, bodyText].join(" | "), 1700);
+  const portraitPrompt = buildFormatPrompt({ article, category, tags, bodySignals, visualBrief, format: "portrait" });
+  const landscapePrompt = buildFormatPrompt({ article, category, tags, bodySignals, visualBrief, format: "landscape" });
 
   return {
-    prompt,
+    prompt: portraitPrompt,
+    portraitPrompt,
+    landscapePrompt,
     headings,
-    bodySignals: compactText([...headings, bodyText].join(" | "), 1700),
+    bodySignals,
     visualBrief,
   };
 }
@@ -276,7 +316,19 @@ async function readManifest(manifestPath = DEFAULT_MANIFEST) {
     if (error.code === "ENOENT") {
       return {
         styleVersion: "rbmd-editorial-cut-paper-v1",
-        imageSize: { width: WIDTH, height: HEIGHT },
+        imageSize: { width: PORTRAIT_WIDTH, height: PORTRAIT_HEIGHT },
+        formats: {
+          portrait: {
+            generateSize: PORTRAIT_GENERATE_SIZE,
+            finalSize: { width: PORTRAIT_WIDTH, height: PORTRAIT_HEIGHT },
+            webDir: DEFAULT_PORTRAIT_WEB_DIR,
+          },
+          landscape: {
+            generateSize: LANDSCAPE_GENERATE_SIZE,
+            finalSize: { width: LANDSCAPE_WIDTH, height: LANDSCAPE_HEIGHT },
+            webDir: DEFAULT_LANDSCAPE_WEB_DIR,
+          },
+        },
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
         items: [],
@@ -303,9 +355,25 @@ function mergeItems(existingItems, newItems) {
 async function plan(args) {
   await ensureDirs();
   const manifestPath = path.resolve(ROOT, args.manifest || DEFAULT_MANIFEST);
-  const outDir = path.resolve(ROOT, args["out-dir"] || DEFAULT_OUT_DIR);
-  const webDir = args["web-dir"] || DEFAULT_WEB_DIR;
+  const portraitOutDir = path.resolve(ROOT, args["portrait-out-dir"] || args["out-dir"] || DEFAULT_PORTRAIT_OUT_DIR);
+  const portraitWebDir = args["portrait-web-dir"] || args["web-dir"] || DEFAULT_PORTRAIT_WEB_DIR;
+  const landscapeOutDir = path.resolve(ROOT, args["landscape-out-dir"] || DEFAULT_LANDSCAPE_OUT_DIR);
+  const landscapeWebDir = args["landscape-web-dir"] || DEFAULT_LANDSCAPE_WEB_DIR;
   const manifest = await readManifest(manifestPath);
+  manifest.styleVersion = "rbmd-editorial-cut-paper-v1";
+  manifest.imageSize = { width: PORTRAIT_WIDTH, height: PORTRAIT_HEIGHT };
+  manifest.formats = {
+    portrait: {
+      generateSize: PORTRAIT_GENERATE_SIZE,
+      finalSize: { width: PORTRAIT_WIDTH, height: PORTRAIT_HEIGHT },
+      webDir: portraitWebDir,
+    },
+    landscape: {
+      generateSize: LANDSCAPE_GENERATE_SIZE,
+      finalSize: { width: LANDSCAPE_WIDTH, height: LANDSCAPE_HEIGHT },
+      webDir: landscapeWebDir,
+    },
+  };
   const articles = selectArticles(await readArticles(), args);
 
   const items = [];
@@ -313,7 +381,11 @@ async function plan(args) {
     const built = buildPrompt(article.data);
     const slug = article.data.slug;
     const promptPath = path.join(PROMPTS_DIR, `${slug}.txt`);
-    await fs.writeFile(promptPath, `${built.prompt}\n`);
+    const landscapePromptPath = path.join(LANDSCAPE_PROMPTS_DIR, `${slug}.txt`);
+    await fs.writeFile(promptPath, `${built.portraitPrompt}\n`);
+    await fs.writeFile(landscapePromptPath, `${built.landscapePrompt}\n`);
+    const portraitFinalImage = path.relative(ROOT, path.join(portraitOutDir, `${slug}.webp`));
+    const landscapeFinalImage = path.relative(ROOT, path.join(landscapeOutDir, `${slug}.webp`));
     items.push({
       slug,
       title: article.data.title,
@@ -326,19 +398,42 @@ async function plan(args) {
       status: "planned",
       promptPath: path.relative(ROOT, promptPath),
       rawImage: null,
-      finalImage: path.relative(ROOT, path.join(outDir, `${slug}.webp`)),
-      finalWebPath: `${webDir}/${slug}.webp`,
+      finalImage: portraitFinalImage,
+      finalWebPath: `${portraitWebDir}/${slug}.webp`,
+      formats: {
+        portrait: {
+          status: "planned",
+          promptPath: path.relative(ROOT, promptPath),
+          rawImage: null,
+          finalImage: portraitFinalImage,
+          finalWebPath: `${portraitWebDir}/${slug}.webp`,
+          generateSize: PORTRAIT_GENERATE_SIZE,
+          finalSize: { width: PORTRAIT_WIDTH, height: PORTRAIT_HEIGHT },
+          prompt: built.portraitPrompt,
+        },
+        landscape: {
+          status: "planned",
+          promptPath: path.relative(ROOT, landscapePromptPath),
+          rawImage: null,
+          finalImage: landscapeFinalImage,
+          finalWebPath: `${landscapeWebDir}/${slug}.webp`,
+          generateSize: LANDSCAPE_GENERATE_SIZE,
+          finalSize: { width: LANDSCAPE_WIDTH, height: LANDSCAPE_HEIGHT },
+          prompt: built.landscapePrompt,
+        },
+      },
       visualBrief: built.visualBrief,
       bodySignals: built.bodySignals,
-      prompt: built.prompt,
+      prompt: built.portraitPrompt,
     });
   }
 
   manifest.items = mergeItems(manifest.items, items);
   await writeManifest(manifest, manifestPath);
-  console.log(`Planned ${items.length} article image prompts.`);
+  console.log(`Planned ${items.length} article image prompt set(s): portrait + landscape.`);
   console.log(`Manifest: ${path.relative(ROOT, manifestPath)}`);
-  console.log(`Prompts: ${path.relative(ROOT, PROMPTS_DIR)}`);
+  console.log(`Portrait prompts: ${path.relative(ROOT, PROMPTS_DIR)}`);
+  console.log(`Landscape prompts: ${path.relative(ROOT, LANDSCAPE_PROMPTS_DIR)}`);
 }
 
 function filterManifestItems(manifest, args, allowedStatuses = null) {
@@ -357,14 +452,73 @@ function filterManifestItems(manifest, args, allowedStatuses = null) {
   return items;
 }
 
-async function callImagesApi(prompt, args) {
+function normalizeFormat(value) {
+  const format = String(value || "portrait").toLowerCase();
+  if (format !== "portrait" && format !== "landscape") {
+    throw new Error(`Unknown image format: ${value}. Use portrait or landscape.`);
+  }
+  return format;
+}
+
+function selectedFormats(args) {
+  const raw = String(args.format || args.formats || "both").toLowerCase();
+  if (raw === "both" || raw === "all") return ["portrait", "landscape"];
+  return [normalizeFormat(raw)];
+}
+
+function formatConfig(format) {
+  if (format === "landscape") {
+    return {
+      width: LANDSCAPE_WIDTH,
+      height: LANDSCAPE_HEIGHT,
+      generateSize: LANDSCAPE_GENERATE_SIZE,
+      rawDir: LANDSCAPE_RAW_DIR,
+      logoWidth: LANDSCAPE_LOGO_WIDTH,
+      logoRightMargin: LANDSCAPE_LOGO_RIGHT_MARGIN,
+      logoBottomSafeMargin: LANDSCAPE_LOGO_BOTTOM_SAFE_MARGIN,
+    };
+  }
+
+  return {
+    width: PORTRAIT_WIDTH,
+    height: PORTRAIT_HEIGHT,
+    generateSize: PORTRAIT_GENERATE_SIZE,
+    rawDir: RAW_DIR,
+    logoWidth: LOGO_WIDTH,
+    logoRightMargin: LOGO_RIGHT_MARGIN,
+    logoBottomSafeMargin: LOGO_BOTTOM_SAFE_MARGIN,
+  };
+}
+
+function ensureFormatItem(item, format) {
+  item.formats ||= {};
+  if (!item.formats[format]) {
+    const config = formatConfig(format);
+    const finalWebDir = format === "landscape" ? DEFAULT_LANDSCAPE_WEB_DIR : DEFAULT_PORTRAIT_WEB_DIR;
+    const finalOutDir = format === "landscape" ? DEFAULT_LANDSCAPE_OUT_DIR : DEFAULT_PORTRAIT_OUT_DIR;
+    item.formats[format] = {
+      status: item.status || "planned",
+      promptPath: format === "landscape" ? null : item.promptPath,
+      rawImage: format === "landscape" ? null : item.rawImage,
+      finalImage: format === "landscape" ? path.relative(ROOT, path.join(finalOutDir, `${item.slug}.webp`)) : item.finalImage,
+      finalWebPath: format === "landscape" ? `${finalWebDir}/${item.slug}.webp` : item.finalWebPath,
+      generateSize: config.generateSize,
+      finalSize: { width: config.width, height: config.height },
+      prompt: format === "landscape" ? null : item.prompt,
+    };
+  }
+  return item.formats[format];
+}
+
+async function callImagesApi(prompt, args, format = "portrait") {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) throw new Error("OPENAI_API_KEY is required for npm run images:generate.");
+  const config = formatConfig(format);
 
   const body = {
     model: args.model || process.env.OPENAI_IMAGE_MODEL || "gpt-image-2",
     prompt,
-    size: args.size || process.env.OPENAI_IMAGE_SIZE || `${WIDTH}x${HEIGHT}`,
+    size: args.size || process.env.OPENAI_IMAGE_SIZE || config.generateSize,
     response_format: "b64_json",
   };
 
@@ -415,24 +569,25 @@ async function logoBuffer(sharp, width = LOGO_WIDTH) {
   return sharp(logoPath).resize({ width }).png().toBuffer();
 }
 
-async function processImage({ inputPath, outputPath, withLogo = true }) {
+async function processImage({ inputPath, outputPath, format = "portrait", withLogo = true }) {
   const sharp = await loadSharp();
+  const config = formatConfig(format);
   await fs.mkdir(path.dirname(outputPath), { recursive: true });
 
-  let image = sharp(inputPath).resize(WIDTH, HEIGHT, {
+  let image = sharp(inputPath).resize(config.width, config.height, {
     fit: "cover",
     position: "center",
   });
 
   if (withLogo) {
-    const logo = await logoBuffer(sharp);
+    const logo = await logoBuffer(sharp, config.logoWidth);
     const logoMeta = await sharp(logo).metadata();
     image = image.composite([
       {
         input: logo,
         gravity: "southeast",
-        left: WIDTH - LOGO_WIDTH - LOGO_RIGHT_MARGIN,
-        top: HEIGHT - (logoMeta.height || 0) - LOGO_BOTTOM_SAFE_MARGIN,
+        left: config.width - config.logoWidth - config.logoRightMargin,
+        top: config.height - (logoMeta.height || 0) - config.logoBottomSafeMargin,
       },
     ]);
   }
@@ -444,7 +599,9 @@ async function generate(args) {
   await ensureDirs();
   const manifestPath = path.resolve(ROOT, args.manifest || DEFAULT_MANIFEST);
   const manifest = await readManifest(manifestPath);
-  const items = filterManifestItems(manifest, args, ["planned", "failed"]);
+  const formats = selectedFormats(args);
+  const requestedSlugs = splitSlugs(args.slugs || args.slug);
+  const items = filterManifestItems(manifest, args);
 
   if (items.length === 0) {
     console.log("No planned images to generate.");
@@ -452,25 +609,60 @@ async function generate(args) {
   }
 
   for (const item of items) {
-    console.log(`Generating ${item.slug}...`);
-    try {
-      const imageBuffer = await callImagesApi(item.prompt, args);
-      const rawPath = path.join(RAW_DIR, `${item.slug}.png`);
-      await fs.writeFile(rawPath, imageBuffer);
-      item.rawImage = path.relative(ROOT, rawPath);
-      item.status = "raw-generated";
+    for (const format of formats) {
+      const formatItem = ensureFormatItem(item, format);
+      if (formatItem.status === "generated" && !args.force) {
+        console.log(`Skipping ${item.slug} ${format}; already generated. Use --force to regenerate.`);
+        continue;
+      }
+      if (!formatItem.prompt && formatItem.promptPath) {
+        try {
+          formatItem.prompt = await fs.readFile(path.join(ROOT, formatItem.promptPath), "utf8");
+        } catch {
+          // Fall through to the explicit missing-prompt message below.
+        }
+      }
+      if (!formatItem.prompt) {
+        const message = `${item.slug} is missing a ${format} prompt. Run images:plan for this slug first.`;
+        if (requestedSlugs.length === 0) {
+          console.log(`Skipping ${message}`);
+          continue;
+        }
+        throw new Error(message);
+      }
+      console.log(`Generating ${item.slug} (${format})...`);
+      try {
+        const imageBuffer = await callImagesApi(formatItem.prompt, args, format);
+        const rawPath = path.join(formatConfig(format).rawDir, `${item.slug}.png`);
+        await fs.writeFile(rawPath, imageBuffer);
+        formatItem.rawImage = path.relative(ROOT, rawPath);
+        formatItem.status = "raw-generated";
 
-      const outputPath = path.join(ROOT, item.finalImage);
-      await processImage({ inputPath: rawPath, outputPath, withLogo: !args["no-logo"] });
-      item.status = "generated";
-      item.generatedAt = new Date().toISOString();
-      console.log(`Generated ${item.finalImage}`);
-      await writeManifest(manifest, manifestPath);
-    } catch (error) {
-      item.status = "failed";
-      item.error = error.message;
-      await writeManifest(manifest, manifestPath);
-      throw error;
+        const outputPath = path.join(ROOT, formatItem.finalImage);
+        await processImage({ inputPath: rawPath, outputPath, format, withLogo: !args["no-logo"] });
+        formatItem.status = "generated";
+        formatItem.generatedAt = new Date().toISOString();
+
+        if (format === "portrait") {
+          item.rawImage = formatItem.rawImage;
+          item.finalImage = formatItem.finalImage;
+          item.finalWebPath = formatItem.finalWebPath;
+          item.prompt = formatItem.prompt;
+        }
+
+        const generatedFormats = Object.values(item.formats || {}).filter((entry) => entry.status === "generated").length;
+        item.status = generatedFormats >= 2 ? "generated" : formatItem.status;
+        item.generatedAt = new Date().toISOString();
+        console.log(`Generated ${formatItem.finalImage}`);
+        await writeManifest(manifest, manifestPath);
+      } catch (error) {
+        formatItem.status = "failed";
+        formatItem.error = error.message;
+        item.status = "failed";
+        item.error = error.message;
+        await writeManifest(manifest, manifestPath);
+        throw error;
+      }
     }
   }
 }
@@ -480,23 +672,36 @@ async function processLocal(args) {
   const slug = args.slug;
   const input = args.input;
   if (!slug || !input) throw new Error("images:process requires --slug and --input.");
+  const format = normalizeFormat(args.format || "portrait");
+  const config = formatConfig(format);
 
   const manifestPath = path.resolve(ROOT, args.manifest || DEFAULT_MANIFEST);
   const manifest = await readManifest(manifestPath);
   const item = manifest.items.find((entry) => entry.slug === slug);
   if (!item) throw new Error(`No manifest item for slug: ${slug}. Run images:plan first.`);
+  const formatItem = ensureFormatItem(item, format);
 
   const inputPath = path.resolve(ROOT, input);
-  const rawPath = path.join(RAW_DIR, `${slug}.png`);
+  const rawPath = path.join(config.rawDir, `${slug}.png`);
   await fs.copyFile(inputPath, rawPath);
-  item.rawImage = path.relative(ROOT, rawPath);
+  formatItem.rawImage = path.relative(ROOT, rawPath);
 
-  const outputPath = path.join(ROOT, item.finalImage);
-  await processImage({ inputPath: rawPath, outputPath, withLogo: !args["no-logo"] });
-  item.status = "generated";
+  const outputPath = path.join(ROOT, formatItem.finalImage);
+  await processImage({ inputPath: rawPath, outputPath, format, withLogo: !args["no-logo"] });
+  formatItem.status = "generated";
+  formatItem.generatedAt = new Date().toISOString();
+
+  if (format === "portrait") {
+    item.rawImage = formatItem.rawImage;
+    item.finalImage = formatItem.finalImage;
+    item.finalWebPath = formatItem.finalWebPath;
+  }
+
+  const generatedFormats = Object.values(item.formats || {}).filter((entry) => entry.status === "generated").length;
+  item.status = generatedFormats >= 2 ? "generated" : formatItem.status;
   item.generatedAt = new Date().toISOString();
   await writeManifest(manifest, manifestPath);
-  console.log(`Processed ${path.relative(ROOT, inputPath)} -> ${item.finalImage}`);
+  console.log(`Processed ${path.relative(ROOT, inputPath)} -> ${formatItem.finalImage}`);
 }
 
 async function approve(args) {
@@ -519,9 +724,23 @@ async function contactSheet(args) {
   const items = filterManifestItems(manifest, args);
   const cards = items
     .map((item) => {
-      const imagePath = item.finalImage ? path.relative(WORKFLOW_DIR, path.join(ROOT, item.finalImage)) : "";
+      const portrait = ensureFormatItem(item, "portrait");
+      const landscape = ensureFormatItem(item, "landscape");
+      const portraitPath = portrait.finalImage ? path.relative(WORKFLOW_DIR, path.join(ROOT, portrait.finalImage)) : "";
+      const landscapePath = landscape.finalImage ? path.relative(WORKFLOW_DIR, path.join(ROOT, landscape.finalImage)) : "";
       return `<article>
-  <div class="media">${imagePath ? `<img src="${imagePath}" alt="">` : ""}</div>
+  <div class="formats">
+    <div>
+      <h3>Portrait</h3>
+      <div class="media media-portrait">${portraitPath ? `<img src="${portraitPath}" alt="">` : ""}</div>
+      <span>${portrait.status || item.status}</span>
+    </div>
+    <div>
+      <h3>Landscape</h3>
+      <div class="media media-landscape">${landscapePath ? `<img src="${landscapePath}" alt="">` : ""}</div>
+      <span>${landscape.status || item.status}</span>
+    </div>
+  </div>
   <span>${item.status}</span>
   <h2>${escapeHtml(item.title)}</h2>
   <p>${escapeHtml(item.category)}</p>
@@ -540,9 +759,13 @@ async function contactSheet(args) {
   body { margin: 0; background: #FAF7F7; color: #3C1A18; font-family: Helvetica, Arial, sans-serif; }
   main { padding: 32px; }
   h1 { font-family: Georgia, serif; font-size: 34px; font-weight: 400; margin: 0 0 24px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 24px; }
   article { background: #EEE8E7; padding: 12px; }
-  .media { aspect-ratio: 4 / 5; background: #BE9F90; overflow: hidden; margin-bottom: 12px; }
+  .formats { display: grid; grid-template-columns: 0.72fr 1fr; gap: 12px; align-items: start; }
+  .formats h3 { font-size: 11px; letter-spacing: .12em; margin: 0 0 6px; text-transform: uppercase; }
+  .media { background: #BE9F90; overflow: hidden; margin-bottom: 8px; }
+  .media-portrait { aspect-ratio: 4 / 5; }
+  .media-landscape { aspect-ratio: 120 / 63; }
   .media img { width: 100%; height: 100%; object-fit: cover; display: block; }
   span { display: inline-block; background: #DBC7F1; border-radius: 999px; font-size: 11px; padding: 4px 8px; text-transform: uppercase; }
   h2 { font-family: Georgia, serif; font-size: 19px; font-weight: 400; line-height: 1.2; margin: 10px 0 6px; }
@@ -590,8 +813,8 @@ async function applyApproved(args) {
     article.data.image = {
       src: item.finalWebPath,
       alt: article.data.image?.alt || `${article.data.title} editorial cut-paper collage illustration`,
-      width: WIDTH,
-      height: HEIGHT,
+      width: PORTRAIT_WIDTH,
+      height: PORTRAIT_HEIGHT,
     };
     await fs.writeFile(article.fullPath, `${JSON.stringify(article.data, null, 2)}\n`);
     item.appliedAt = new Date().toISOString();

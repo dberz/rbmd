@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: Plant medicine can be a tool, but it’s not a cure.
+Article excerpt: Plant medicine should be used in therapeutic or guided ceremonial settings run by well-trained and experienced facilitators.
+Category: Brain, Mood & Nervous System
+Tags: Brain Health, Mental Health, Personal Story
+Article body signals: Robin’s Short Version | The research says | Ketamine | Psilocybin | MDMA | Less well-known and well-studied psychedelics | What I’m doing for my own body | What I recommend for you | The #1 thing I recommend if you’re curious about the benefits of plant medicine is to deepen (or start) your meditation practice. | Second, consult your medical provider about whether or not these treatments might be right for you. | One of my intentions for 2025 is to use plant medicine work selectively with the help of expert guided facilitators to expand my clarity and consciousness, so that I can achieve my highest purpose and impact. Whenever I share this, I get a lot of questions and a few raised eyebrows, so let’s dive in. Robin’s Short Version Foundation Matters: Dr. Berzin pairs plant medicine with 15 years of meditation and ongoing therapy, never using it as a standalone fix. Serious Risks Exist: Psychedelics can trigger psychotic or manic episodes, making experienced facilitation a medical necessity, not a preference. Clinical Evidence Building: Johns Hopkins, NYU, and MGH are researching psychedelics for treatment-resistant depression, PTSD, and chronic pain. The term “plant medicine” could describe any number of therapeutic drugs and traditional remedies derived from plants but it most often refers to psychoactive drugs. These include psilocybin, ayahuasca and MDMA, the latter of which is synthesized in a lab but has plant-based roots. I’m also going to talk about ketamine, which is a purely synthetic psychedelic. These drugs have been used in healing and spiritual practices for centuries and have recently seen a resurgence of interest in conventional medicine. Major research ins...
+Visual brief: Build the image around brain contour shapes, neural pathways, calm signal waves, and sleep-rhythm arcs; filtered droplet shapes, caution triangles abstracted into soft paper, food-source icons, and detox pathway lines.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

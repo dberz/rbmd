@@ -255,6 +255,8 @@ function initModal() {
   const modal = getModal();
   if (!modal || modalArmed) return;
   if (hasSubscribed()) return; // never nag a known subscriber
+  // Never interrupt pages whose whole point is the signup form.
+  if (/^\/(newsletter|contact)\//.test(window.location.pathname)) return;
   modalArmed = true;
 
   modal.querySelectorAll("[data-modal-close]").forEach((el) =>
@@ -265,6 +267,22 @@ function initModal() {
   });
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") closeModal();
+    // Minimal focus trap while the dialog is open.
+    if (event.key === "Tab" && modal.classList.contains("is-open")) {
+      const focusables = modal.querySelectorAll<HTMLElement>(
+        'button, input, a[href], [tabindex]:not([tabindex="-1"])'
+      );
+      if (!focusables.length) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
   });
 
   // Desktop: exit intent (cursor leaves toward the top/address bar).

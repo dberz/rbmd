@@ -1,0 +1,24 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: Your Nervous System Is a Fertility Organ
+Article excerpt: Stress does not just make conception harder. It changes the hormonal environment your egg needs to mature.
+Category: Fertility & Parenting
+Tags: Mental Health, Hormones, Sleep, Exercise, Supplements, Women's Health
+Article body signals: Forward this protocol | What to know: cortisol is an anti-fertility hormone | What elevated cortisol actually does to ovulation | Depression, anxiety, and time to conception | Sleep is a reproductive hormone signal | What to do: regulate your nervous system as a fertility intervention | 1️⃣ Make 30 minutes of daily restoration non-negotiable. | 2️⃣ Address anxiety and depression up front — not as an afterthought. | 3️⃣ Reframe your exercise — more intense isn't better right now. | 4️⃣ Support the HPA axis with targeted supplements. | Stress doesn't just make conception harder. It changes the hormonal environment your egg needs to mature. I've had patients get pregnant the month they stopped trying. The month they left a stressful job. After a vacation. After starting therapy. And I used to dismiss this as coincidence. Now I know the science. The HPA axis — the stress response system — and the HPO axis — the hormonal control center for ovulation — are deeply interconnected. Chronic stress doesn't just feel bad. It literally suppresses the hormonal cascade that drives ovulation, implantation, and the luteal phase support a pregnancy needs to stick. This is one of the most under-addressed drivers of unexplained infertility I see. And the most personal. Forward this protocol Chronic stress elevates cortisol, which suppresses LH, progesterone, and the entire hormonal cascade that makes conception possible. The intervention isn't "relax more." It's specific, physiological down-regulation. The Nervous System Fertility Protocol: 30 minutes of awake restoration daily — yoga nidra, NSDR, box breathing, or restorative yoga (not scrolling, not Netflix — true rest) Phosphatidylserine...
+Visual brief: Build the image around hormone cycle rings, endocrine signal dots, moon-phase arcs, and soft botanical seed forms; brain contour shapes, neural pathways, calm signal waves, and sleep-rhythm arcs; protein blocks, muscle-fiber ribbons, strength arcs, and movement lines.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: vertical 4:5 Instagram feed illustration, generated at 1024x1536 and cropped to 1080x1350 for Instagram feed posts, on-site cards, and article hero display.
+Composition: stack the concept vertically with one bold central topic metaphor in the middle third and secondary symbols radiating above and below it.
+The image must read instantly at phone-feed size: bold silhouettes, high figure-ground contrast, generous margins on all four edges.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Safe area: keep all key elements inside the central 1080x1350 region; nothing critical in the top or bottom 8% of the canvas.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

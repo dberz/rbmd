@@ -11,9 +11,9 @@ const podcasts = (await getCollection("podcasts")).sort((a, b) => Number(b.data.
     title="Book Robin for serious health, wellness, and longevity conversations."
     description="Robin speaks on women's functional medicine, longevity, hormones, GLP-1s, root-cause medicine, and the future of healthcare."
   />
-  <section class="section">
-    <div class="shell two-column">
-      <div>
+  <section class="section media-featured-section">
+    <div class="shell two-column media-featured-grid">
+      <div class="media-featured-copy">
         <span class="eyebrow">Featured appearance</span>
         <h2>The Rich Roll Podcast</h2>
         <p>
@@ -26,6 +26,7 @@ const podcasts = (await getCollection("podcasts")).sort((a, b) => Number(b.data.
         <iframe
           src="https://www.youtube.com/embed/P28Pqr9BSWw"
           title="Robin Berzin on The Rich Roll Podcast"
+          loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
@@ -34,21 +35,24 @@ const podcasts = (await getCollection("podcasts")).sort((a, b) => Number(b.data.
   </section>
   <section class="section section-subtle">
     <div class="shell">
-      <span class="eyebrow">Selected appearances</span>
+      <div class="section-heading media-section-heading">
+        <span class="eyebrow">Selected appearances</span>
+        <h2>Podcast examples</h2>
+      </div>
       <div class="media-list">
         {podcasts.map((item) => (
           <article class="media-item">
             <span class="tag">{item.data.outlet}</span>
             <h3>{item.data.title}</h3>
             <p>{item.data.summary}</p>
-            <a href={item.data.url}>Listen or watch -></a>
+            <a href={item.data.url}>Listen or watch &rarr;</a>
           </article>
         ))}
       </div>
     </div>
   </section>
   <section class="section">
-    <div class="shell two-column">
+    <div class="shell two-column media-booking-grid">
       <div>
         <span class="eyebrow">Booking</span>
         <h2>Invite Robin to your podcast, stage, or advisory conversation.</h2>

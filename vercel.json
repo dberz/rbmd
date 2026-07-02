@@ -65,6 +65,42 @@
       "source": "/p/:path*",
       "destination": "https://newsletter.robinberzinmd.com/p/:path*",
       "permanent": true
+    },
+    {
+      "source": "/wp-content/uploads/:path*",
+      "destination": "/images/legacy/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/feed",
+      "destination": "/newsletter/",
+      "permanent": true
+    },
+    {
+      "source": "/feed/",
+      "destination": "/newsletter/",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap_index.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(fonts|logo|images)/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
     }
   ]
 }

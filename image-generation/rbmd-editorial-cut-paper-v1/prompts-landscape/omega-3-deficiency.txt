@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: Omega-3 deficiency is as harmful as smoking
+Article excerpt: Supplementing with omega-3s is one of the most powerful things you can do for longevity, heart health, and slowing biological aging.
+Category: Toxins, Nutrition & Modern Exposures
+Tags: Blood Sugar & Metabolism, Brain Health, Nutrition, Supplements
+Article body signals: Robin’s Short Version | The research says | What I’m doing for my own body | Eat foods rich in ALA. | Optimizing my omega-6 to omega-3 ratio. | Protect omega-3s with antioxidants. | What I recommend for you | Test your omega-3 index. | Optimize your nutrient intake. | Add a high-quality omega-3 supplement. | In all the conversations I have with friends, patients, and colleagues about longevity, one nutrient continually comes up: omega-3s. Robin’s Short Version Mortality Risk Matches Smoking: Per the Framingham Heart Study, higher EPA and DHA levels in red blood cells predicted reduced all-cause mortality as strongly as not smoking. Cellular Aging Slows: Higher omega-3 levels link to longer telomeres and lower cortisol during stress, meaning supplementation may literally slow how fast your cells age. Deficiency Is the Norm: 80–90% of Americans are omega-3 deficient, making EPA and DHA supplementation one of the highest-impact longevity interventions most people aren’t taking. Omega-3s are polyunsaturated fatty-acids (PUFAs) which are essential for human health. They are a vital part of every cell in your body, acting as a structural component in cell membranes and regulating everything from intercellular communication, to inflammation, to hormone production. The body does not produce omega-3s on its own—we have to get them through dietary sources. The most bioavailable forms of omega-3 are found mostly in seafood: eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA). Alpha-linoleic acid (ALA), an omega-3 precursor, is also a common plant-based dietary source. Omega-3s support literally every system in the body. Major impacts include: Heart health: EPA and DHA lower t...
+Visual brief: Build the image around lab-vial silhouettes, diagnostic rings, scan-window shapes, and precise measurement ticks without numbers; whole-food silhouettes, ingredient tiles, bowl and scoop forms, and nutrition label motifs without text; cellular age rings, mitochondria, renewal arrows, immune-cell dots, and longevity tree-ring forms; glucose bead paths, metabolic curves, mitochondria ovals, and appetite-signal rings.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

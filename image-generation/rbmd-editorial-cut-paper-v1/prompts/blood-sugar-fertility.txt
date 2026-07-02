@@ -1,0 +1,24 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: Is Your Blood Sugar Killing Your Fertility?
+Article excerpt: Your metabolism and your ovaries are in constant conversation — and most women have no idea.
+Category: Fertility & Parenting
+Tags: Blood Sugar & Metabolism, Hormones, Lab Testing, Women's Health
+Article body signals: Forward this protocol | What to know: insulin resistance is a fertility issue, not just a weight issue | How insulin hijacks your hormones | What this does to egg quality | Blood sugar and implantation | What to do: stabilize glucose, restore healthy ovulation | 1️⃣ Get the right labs — not just the standard ones. | 2️⃣ Prioritize protein at every meal — especially your first. | 3️⃣ Cut the sugar — including the sneaky sources. | 4️⃣ Move after meals. | Your metabolism and your ovaries are in constant conversation — and most women have no idea. I see this all the time in my practice. A woman comes in with unexplained infertility. Her FSH looks fine. Her AMH is decent. Her OB says everything looks normal. But her fasting insulin is 18. Her HbA1c is 5.6. And nobody has connected the dots. Metabolic dysfunction is one of the most common — and most correctable — drivers of impaired fertility I see. And most conventional fertility workups don't even test for it. Here's what the research actually shows. Forward this protocol Insulin resistance silently disrupts ovulation, egg quality, and implantation — often before any cycle irregularity appears. The Metabolic Fertility Reset: Eat protein first at every meal (25–35g) to blunt glucose spikes Cut all added sugar to under 25g/day — including "healthy" sweeteners Do a 10-minute walk after your largest meal to lower postprandial glucose Get a 2-week CGM (continuous glucose monitor) to see your real-time blood sugar response Forward this to a friend who's been told her fertility workup is "normal" — but nobody checked her metabolic health. What to know: insulin resistance is a fertility issue, not just a weight issue The old assumpt...
+Visual brief: Build the image around glucose bead paths, metabolic curves, mitochondria ovals, and appetite-signal rings; hormone cycle rings, endocrine signal dots, moon-phase arcs, and soft botanical seed forms; lab-vial silhouettes, diagnostic rings, scan-window shapes, and precise measurement ticks without numbers; protein blocks, muscle-fiber ribbons, strength arcs, and movement lines.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: vertical 4:5 Instagram feed illustration, generated at 1024x1536 and cropped to 1080x1350 for Instagram feed posts, on-site cards, and article hero display.
+Composition: stack the concept vertically with one bold central topic metaphor in the middle third and secondary symbols radiating above and below it.
+The image must read instantly at phone-feed size: bold silhouettes, high figure-ground contrast, generous margins on all four edges.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Safe area: keep all key elements inside the central 1080x1350 region; nothing critical in the top or bottom 8% of the canvas.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

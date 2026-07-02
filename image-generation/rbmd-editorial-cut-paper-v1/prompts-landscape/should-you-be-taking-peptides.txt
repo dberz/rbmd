@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: Should you be taking peptides?
+Article excerpt: Peptides are everywhere in longevity circles right now. I’ve dug into the research — here’s what I actually think works, what’s overhyped, and what I’m
+Category: Longevity & Metabolic Health
+Tags: Longevity, Personal Story, Supplements
+Article body signals: Robin’s Short Version | What are peptides and what do they do? | Some peptides are readily available as supplements . | Other peptides are available as drug therapies . | Then there are the experimental peptides. | Why did the FDA ban some peptides? | My POV: I’ve rarely seen a shortcut work in the long run. | What I’m doing for my own body when it comes to peptides. | What I recommend for you: | Keep Reading | If you’re following the longevity trend, you’ve probably seen peptides making the news a lot lately, either touted as the future of regenerative medicine, promising to turn the tide on aging, or banned by the FDA. Robin’s Short Version Already In Use: Collagen and creatine are both peptides, meaning many people use them daily without realizing it. FDA Drew a Line: 17 peptides including BPC-157 were banned from compounding pharmacies over unresolved safety concerns. Thin Evidence Base: Even the most-cited human peptide trials are tiny — a key wrinkle study enrolled only 55 women. My patients and friends are pinging me and asking, what gives? I even had an investor reach out and ask if I would advise their investment thesis in the space. Everyone wants to know: Should I be using peptides? Are they safe? And, if so, which peptides have the most promise? Honestly, I found myself asking the same question. No one at Columbia or Mount Sinai trained me on peptides as the fountain of youth—but no one at Columbia or Mount Sinai trained me to spot the root cause drivers of acne or anxiety either. Our current medical education system has its limits. I am in my “ brains, bones, booty ” phase of life—post-babies and pre-menopause—I’m looking to optimize the aspects of my health...
+Visual brief: Build the image around cellular age rings, mitochondria, renewal arrows, immune-cell dots, and longevity tree-ring forms; glucose bead paths, metabolic curves, mitochondria ovals, and appetite-signal rings; brain contour shapes, neural pathways, calm signal waves, and sleep-rhythm arcs; lab-vial silhouettes, diagnostic rings, scan-window shapes, and precise measurement ticks without numbers.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

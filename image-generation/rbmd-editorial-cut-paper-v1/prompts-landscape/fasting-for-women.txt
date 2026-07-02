@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: 4 fasting for women strategies to optimize longevity
+Article excerpt: The internet loves to argue: “Is fasting bad for women’s hormones?” But that’s the wrong question. We should ask: what type of fasting for women?
+Category: Women’s Health & Hormones
+Tags: Blood Sugar & Metabolism, Hormones, Longevity, Women's Health
+Article body signals: Robin’s Short Version | Fasting for women is a powerful longevity tool—if you get the strategy right. | What to know: Fasting triggers the magic of autophagy. | Brain Health | Potential Cancer Prevention | Lower Inflammation | ️ Cardiovascular Health | Metabolic Health | Stem Cell Activation | ️ Why Women Need a Different Fasting Strategy | Plus, estrogen for longevity and cod bars. Robin’s Short Version The 16-Hour Threshold: Fasting past 16 hours switches on autophagy, clearing Alzheimer’s-linked proteins and eliminating precancerous cells. Break Fast Right: Ending your fast with 30g of high-quality protein hits the leucine threshold needed to trigger muscle protein synthesis and prevent muscle loss. Annual Deep Reset: A once-yearly 5-day fast drives deeper autophagy than daily fasting and can regenerate both immune and gut stem cells. Fasting for women is a powerful longevity tool—if you get the strategy right. Last month I wrapped up my annual 5-day fast (this year, a fasting-mimicking diet—more on that below). Not for weight loss. Not to “detox.” But because fasting done right can be one of the most effective ways to: Induce cellular repair Reset metabolic health Lower inflammation Rebalance hormones Reduce chronic disease risk Fasting is also one of the most misunderstood tools for women. The internet loves to argue: “Is fasting bad for women’s hormones?” But that’s the wrong question. The right one is: What kind of fasting, for which woman, and when? Let’s break it down. What to know: Fasting triggers the magic of autophagy. For weight loss, fasting is less studied than calorie restriction. But for longevity , we know that fasting for 16+ hours can switch on autoph...
+Visual brief: Build the image around cellular age rings, mitochondria, renewal arrows, immune-cell dots, and longevity tree-ring forms; hormone cycle rings, endocrine signal dots, moon-phase arcs, and soft botanical seed forms; whole-food silhouettes, ingredient tiles, bowl and scoop forms, and nutrition label motifs without text; glucose bead paths, metabolic curves, mitochondria ovals, and appetite-signal rings.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

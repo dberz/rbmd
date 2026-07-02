@@ -1,0 +1,100 @@
+---
+type Variant =
+  | "female-longevity-supplement-stack"
+  | "clean-meat-cheat-sheet"
+  | "newsletter"
+  | "short-version"
+  | "momgevity"
+  | "one-more"
+  | "faq"
+  | "references";
+
+type Props = {
+  variant?: Variant | string;
+  class?: string;
+};
+
+const { variant = "newsletter", class: className = "" } = Astro.props;
+const safeVariant = String(variant);
+---
+<svg
+  class={`cut-paper-mark cut-paper-mark--${safeVariant} ${className}`}
+  viewBox="0 0 180 140"
+  aria-hidden="true"
+  focusable="false"
+>
+  <g class="cut-paper-stack">
+    {
+      safeVariant === "clean-meat-cheat-sheet" ? (
+        <>
+          <path class="paper cream" d="M35 45c22-18 57-21 93-4 21 10 28 27 19 42-12 20-45 24-75 13-32-12-50-31-37-51Z" />
+          <path class="paper terracotta" d="M62 58c18-12 46-12 65 0 11 7 13 19 4 27-12 11-42 10-61-1-16-9-20-19-8-26Z" />
+          <path class="paper lilac" d="M27 91c27-12 55-8 82 10 17 11 31 12 47 1-18 24-47 26-75 8-21-13-36-15-54-19Z" />
+          <path class="paper leaf" d="M105 33c9-17 25-23 42-21-5 18-18 29-42 21Z" />
+        </>
+      ) : safeVariant === "short-version" ? (
+        <>
+          <path class="paper cream" d="M42 24h91c14 0 24 10 24 24v57H42V24Z" />
+          <path class="paper beige" d="M42 24h91c-13 7-19 18-19 34H42V24Z" />
+          <path class="paper terracotta" d="M59 70h64v9H59zM59 91h47v9H59z" />
+          <circle class="paper lilac" cx="132" cy="83" r="18" />
+        </>
+      ) : safeVariant === "momgevity" ? (
+        <>
+          <path class="paper cream" d="M44 92c6-34 26-58 54-72 24 15 38 39 38 72H44Z" />
+          <path class="paper lilac" d="M58 92c8-19 20-30 39-36 18 7 29 18 34 36H58Z" />
+          <path class="paper terracotta" d="M87 78c-13-12-19-23-14-34 4-9 15-11 23-3 8-8 19-6 23 3 5 11-1 22-14 34l-9 8-9-8Z" />
+          <circle class="paper beige" cx="96" cy="34" r="15" />
+        </>
+      ) : safeVariant === "one-more" ? (
+        <>
+          <path class="paper cream" d="M90 15 109 61l49 7-38 32 10 48-40-26-41 26 10-48-38-32 49-7 20-46Z" />
+          <path class="paper terracotta" d="M90 42 101 70l30 4-23 19 6 29-24-16-25 16 6-29-23-19 30-4 12-28Z" />
+          <path class="paper lilac" d="M24 31c22 7 38 22 49 46-28-8-44-23-49-46Z" />
+        </>
+      ) : safeVariant === "faq" ? (
+        <>
+          <path class="paper cream" d="M30 37c0-14 11-25 25-25h74c14 0 25 11 25 25v42c0 14-11 25-25 25H83l-34 24 8-24h-2c-14 0-25-11-25-25V37Z" />
+          <path class="paper lilac" d="M55 48c13-18 45-21 61-5 12 12 8 31-9 38-10 4-14 9-14 20H76c0-17 7-27 22-34 8-4 9-11 3-16-8-7-24-4-33 8L55 48Z" />
+          <circle class="paper terracotta" cx="84" cy="116" r="8" />
+        </>
+      ) : safeVariant === "references" ? (
+        <>
+          <path class="paper cream" d="M45 16h73l24 24v84H45V16Z" />
+          <path class="paper beige" d="M118 16v25h24l-24-25Z" />
+          <path class="paper lilac" d="M62 58h53v9H62zM62 80h62v9H62zM62 102h45v9H62z" />
+          <circle class="paper terracotta" cx="126" cy="96" r="22" />
+          <path class="paper cream" d="M139 112l20 18-8 8-20-19 8-7Z" />
+        </>
+      ) : safeVariant === "female-longevity-supplement-stack" ? (
+        <>
+          <path class="paper cream" d="M22 18h72c8 0 14 6 14 14v86H22V18Z" />
+          <path class="paper beige" d="M94 18v22h22L94 18Z" />
+          <path class="paper lilac" d="M38 44h16v10H38zM38 68h16v10H38zM38 92h16v10H38z" />
+          <path class="paper terracotta" d="M64 45h31v7H64zM64 69h28v7H64zM64 93h34v7H64z" />
+          <path class="paper beige" d="M105 96h55c7 0 12 5 12 12v20H93v-20c0-7 5-12 12-12Z" />
+          <path class="paper cream" d="M101 108h17v14h-17zM121 108h17v14h-17zM141 108h17v14h-17z" />
+          <path class="paper lilac" d="M124 108h14v14h-14z" />
+          <path class="paper terracotta" d="M118 55h30c6 0 11 5 11 11v48h-52V66c0-6 5-11 11-11Z" />
+          <path class="paper cream" d="M116 40h34c6 0 11 5 11 11v12h-56V51c0-6 5-11 11-11Z" />
+          <path class="paper beige" d="M135 29h27c6 0 11 5 11 11v74h-49V40c0-6 5-11 11-11Z" />
+          <path class="paper cream" d="M133 15h31c6 0 11 5 11 11v13h-53V26c0-6 5-11 11-11Z" />
+          <path class="paper lilac" d="M78 124c12-16 31-22 51-14-8 18-27 25-51 14Z" />
+          <path class="paper cream" d="M82 124c10-7 22-10 36-9-8 9-20 12-36 9Z" />
+          <path class="paper lilac" d="M126 78c18-7 36-5 51 8-15 9-34 8-51-8Z" />
+          <path class="paper cream" d="M132 79c12-2 23-1 34 5-11 3-22 2-34-5Z" />
+          <circle class="paper beige" cx="103" cy="132" r="6" />
+          <circle class="paper terracotta" cx="122" cy="133" r="7" />
+          <circle class="paper lilac" cx="142" cy="130" r="7" />
+        </>
+      ) : (
+        <>
+          <path class="paper cream" d="M89 18c31 15 48 43 43 78-27 11-57 4-77-17-18-20-21-45-7-67 13 8 27 10 41 6Z" />
+          <path class="paper terracotta" d="M42 91c26-12 47-30 63-55 13 22 14 47 2 72-22 3-44-3-65-17Z" />
+          <path class="paper lilac" d="M69 49c16 7 27 18 34 34-21-3-35-14-34-34Z" />
+          <path class="paper leaf" d="M115 30c8-15 21-20 38-19-4 17-17 24-38 19Z" />
+        </>
+      )
+    }
+  </g>
+</svg>

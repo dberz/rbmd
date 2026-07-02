@@ -5,11 +5,13 @@ editorial cut-paper collage, inspired by topic-led newsletter art but calmer, mo
 
 ## Style Lock
 
-- Format: `1536x1024`, usable as both a 4:3 card crop and 3:2 article hero crop.
+- Portrait format: generate at `1024x1536`, crop/process to `1080x1350`.
+- Landscape format: generate at `1536x1024`, center-crop/process to `1200x630`.
+- Never crop one final from the other. Create two native compositions from the same concept.
 - Medium: flat layered cut-paper collage with deckled edges, matte fibers, subtle offset, and shallow paper shadows.
 - Tone: witty and topic-led, but medically credible, calm, adult, and premium.
 - Palette: off-white, cream, beige, medium brown, dark brown, dark terracotta, and restrained lilac accent.
-- Composition: one central visual metaphor plus 3-6 supporting medical, botanical, nutrition, metabolic, or lifestyle symbols.
+- Composition: keep the current RBMD cut-paper aesthetic: one strong topic-specific metaphor, restrained supporting symbols, generous negative space, and a quiet lower-right signature zone.
 - Signature zone: keep the lower-right quiet so the deterministic RBMD logo overlay stays legible.
 
 ## Hard Rules
@@ -30,17 +32,27 @@ npm run images:plan -- --slugs metabolism-mental-health-protocol,mold-symptoms
 npm run images:plan -- --all
 ```
 
+`images:plan` now writes two independent prompts per article:
+
+- Portrait prompt: `image-generation/rbmd-editorial-cut-paper-v1/prompts/<slug>.txt`
+- Landscape prompt: `image-generation/rbmd-editorial-cut-paper-v1/prompts-landscape/<slug>.txt`
+
 Generate programmatically through the OpenAI Images API:
 
 ```bash
 OPENAI_API_KEY=... npm run images:generate -- --limit 5
 OPENAI_API_KEY=... OPENAI_IMAGE_MODEL=gpt-image-2 npm run images:generate -- --slugs metabolism-mental-health-protocol
+OPENAI_API_KEY=... npm run images:generate -- --slugs metabolism-mental-health-protocol --format portrait
+OPENAI_API_KEY=... npm run images:generate -- --slugs metabolism-mental-health-protocol --format landscape
 ```
+
+Default generation format is `both`. The script generates portrait and landscape as separate native compositions from the same article concept.
 
 Process a Codex-generated image into the same final asset format:
 
 ```bash
-npm run images:process -- --slug metabolism-mental-health-protocol --input /absolute/path/to/generated.png
+npm run images:process -- --slug metabolism-mental-health-protocol --format portrait --input /absolute/path/to/generated-portrait.png
+npm run images:process -- --slug metabolism-mental-health-protocol --format landscape --input /absolute/path/to/generated-landscape.png
 ```
 
 Create a local review sheet:
@@ -65,8 +77,11 @@ npm run images:apply
 ## Output Paths
 
 - Prompt manifest: `image-generation/rbmd-editorial-cut-paper-v1/manifest.json`
-- Prompt files: `image-generation/rbmd-editorial-cut-paper-v1/prompts/*.txt`
-- Raw generated files: `image-generation/rbmd-editorial-cut-paper-v1/raw/*.png`
-- Preview final files: `public/images/articles/generated-preview/rbmd-cut-paper-v1/*.webp`
+- Portrait prompt files: `image-generation/rbmd-editorial-cut-paper-v1/prompts/*.txt`
+- Landscape prompt files: `image-generation/rbmd-editorial-cut-paper-v1/prompts-landscape/*.txt`
+- Portrait raw files: `image-generation/rbmd-editorial-cut-paper-v1/raw/*.png`
+- Landscape raw files: `image-generation/rbmd-editorial-cut-paper-v1/raw-landscape/*.png`
+- Portrait final files: `public/images/articles/rbmd-instagram-cut-paper-v1/*.webp`
+- Landscape final files: `public/images/articles/rbmd-cut-paper-v1/*.webp`
 
-The preview output directory is intentionally separate from production article image paths.
+The article template uses the portrait image for on-site cards/heroes. When a matching landscape file exists in `public/images/articles/rbmd-cut-paper-v1/`, it is used for `og:image` and Twitter card metadata.
