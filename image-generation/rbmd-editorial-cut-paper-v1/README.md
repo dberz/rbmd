@@ -11,7 +11,8 @@ editorial cut-paper collage, inspired by topic-led newsletter art but calmer, mo
 - Medium: flat layered cut-paper collage with deckled edges, matte fibers, subtle offset, and shallow paper shadows.
 - Tone: witty and topic-led, but medically credible, calm, adult, and premium.
 - Palette: off-white, cream, beige, medium brown, dark brown, dark terracotta, and restrained lilac accent.
-- Composition: keep the current RBMD cut-paper aesthetic: one strong topic-specific metaphor, restrained supporting symbols, generous negative space, and a quiet lower-right signature zone.
+- Composition: keep the current approved portrait-set simplicity: one strong topic-specific metaphor, 1-2 restrained supporting symbols at most, broad paper silhouettes, generous cream/off-white negative space, and a quiet lower-right signature zone.
+- Landscape compositions must not become busier just because the canvas is wider. Re-stage the same simple metaphor natively for 1.91:1 with one large hero object or object group and sparse supporting detail.
 - Signature zone: keep the lower-right quiet so the deterministic RBMD logo overlay stays legible.
 
 ## Hard Rules

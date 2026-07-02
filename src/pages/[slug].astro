@@ -94,13 +94,13 @@ const moreInHub = category
 
 const siteOrigin = Astro.site?.toString().replace(/\/$/, "") ?? "https://robinberzinmd.com";
 const pageUrl = `${siteOrigin}${articleUrl(article.data.slug)}`;
-// og:image prefers the landscape (1536x1024) editorial cut-paper art when it
-// exists — link previews expect ~1.91:1 and crop the 4:5 portrait set badly.
+// og:image prefers the landscape editorial cut-paper art when it exists.
+// Link previews expect ~1.91:1 and crop the 4:5 portrait set badly.
 // The portrait art remains the on-site featured/card image.
 const landscapeOg = `/images/articles/rbmd-cut-paper-v1/${slug}.webp`;
 const hasLandscapeOg = existsSync(join(process.cwd(), "public", landscapeOg));
 const ogImage = hasLandscapeOg ? landscapeOg : article.data.image?.src;
-const [ogWidth, ogHeight] = hasLandscapeOg ? [1536, 1024] : [1080, 1350];
+const [ogWidth, ogHeight] = hasLandscapeOg ? [1200, 630] : [1080, 1350];
 const ogImageAbsolute = ogImage ? new URL(ogImage, `${siteOrigin}/`).toString() : undefined;
 
 // Extract FAQ pairs from the article body for FAQPage schema (defensive).

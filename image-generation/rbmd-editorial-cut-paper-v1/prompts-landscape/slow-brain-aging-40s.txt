@@ -11,14 +11,19 @@ Create sophisticated paper-cut editorial collage art for Robin Berzin MD article
 The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
 Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
 Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
-Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Use one dominant topic-specific visual metaphor supported by no more than 1-2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
 Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
-Use generous negative space and keep the lower-right signature zone visually quiet.
+Maintain the focused simplicity of the approved portrait set: one large readable object family, bold paper silhouettes, sparse details, and generous cream/off-white negative space.
+Use the visual brief as a menu of possible motifs, not a checklist. Choose the single strongest metaphor and leave out the rest.
+Avoid filling the frame. Do not create busy symbol fields, scattered confetti, dense bead paths, or many small objects.
+Keep the lower-right signature zone visually quiet.
 Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
 Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
 Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
-Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Composition: re-stage the same simple central metaphor as a native wide scene. Use one large hero object or object group offset left or right of center, plus only 1-2 small supporting shapes.
 Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+Keep the approved portrait-set simplicity: broad shapes, large quiet background fields, minimal detail, and immediate readability from a distance.
+Do not spread many symbols across the width just because the canvas is wide.
 The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
 Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
 Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
