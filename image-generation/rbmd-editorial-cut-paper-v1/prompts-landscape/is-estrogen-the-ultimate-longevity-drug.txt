@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: Is estrogen the ultimate longevity drug?
+Article excerpt: What if one hormone could slash your risk of heart disease, stroke, breast cancer, and Alzheimer’s? That’s the potential of estrogen therapy.
+Category: Women’s Health & Hormones
+Tags: Hormones, Lab Testing, Longevity, Women's Health
+Article body signals: Robin’s Short Version | What if one hormone could slash your risk of heart disease, stroke, breast cancer, and Alzheimer’s by 60%? | What to know: Estrogen is the master regulator of women’s longevity. | Benefits of estrogen: | Why did estrogen become the villain? | Why estrogen matters after 35 | Hormone therapy: What we know now | What to do: Track hormones after 35, work with a hormone-literate provider, start HRT within 10 years of menopause. | Step 1: Start tracking hormone levels at 35. | Step 2: Use a wearable to track symptoms. | Plus, the sport that can add 10 years to your life. Robin’s Short Version Timing Is Everything: Starting estrogen in perimenopause—not after—is linked to a 60% lower risk of breast cancer, heart attack, and stroke. The WHI Got It Wrong: The study used synthetic hormones on women 10+ years post-menopause—the wrong drug, wrong formulation, and wrong window of time. Decline Starts at 35: Estrogen begins dropping in your late 30s and falls 85–90% at menopause, raising risk for Alzheimer’s, bone loss, and heart disease. What if one hormone could slash your risk of heart disease, stroke, breast cancer, and Alzheimer’s by 60%? That’s the potential of estrogen therapy done right, according to emerging research presented last month at the annual meeting of The Menopause Society. Estrogen isn’t just about hot flashes and menopause. It’s the master regulator of female longevity; when started at the right time, it can literally slow biological aging. Yet only 5% of women are currently using HRT ( JAMA Health Forum , 2024). Why? Two decades ago, estrogen’s reputation was destroyed overnight. A misreading of the Women’s Health Initiative (WHI) study in...
+Visual brief: Build the image around hormone cycle rings, endocrine signal dots, moon-phase arcs, and soft botanical seed forms; lab-vial silhouettes, diagnostic rings, scan-window shapes, and precise measurement ticks without numbers; cellular age rings, mitochondria, renewal arrows, immune-cell dots, and longevity tree-ring forms.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

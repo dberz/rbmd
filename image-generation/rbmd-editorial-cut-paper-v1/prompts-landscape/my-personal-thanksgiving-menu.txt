@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: My personal Thanksgiving menu
+Article excerpt: I don’t buy into the idea that you have to choose between enjoyment and health — especially at Thanksgiving. Here’s my actual menu and how I make it work
+Category: Toxins, Nutrition & Modern Exposures
+Tags: Gut Health, Nutrition, Personal Story
+Article body signals: Robin’s Short Version | My personal Thanksgiving protocol is to follow what I call the 2:1 plan: I balance every high-carb, high-sugar, or calorie-dense dish with two healthy foods (like fiber-rich veggies, lean protein, and healthy fats with omega-3s). | What I’m doing for my own body | Follow the 2:1 rule | Eat a veggie starter | Make healthy alternatives a sport | Fast and sweat | What I recommend for you | Keep Reading | I don’t buy into the message that it’s either pleasure or health—especially when it comes to my Thanksgiving menu. Robin’s Short Version The 2:1 Rule: Pair every indulgent dish with two foods high in fiber, protein, or healthy fat to blunt blood sugar spikes. Veggie-First Strategy: Eating vegetables before carbs delays stomach emptying, lowering post-meal glucose and insulin levels. Holiday Calorie Reality: A single Thanksgiving meal can reach 3,000 calories—50% more than a full day’s recommended intake. This time of year is full of health fear-mongering—which isn’t totally unreasonable. The majority of the weight the average American gains over the course of a year happens during the holidays . And it starts this week; aThanksgiving feast can easily total 3,000 calories —50% more than the average person should be consuming in an entire day. I don’t say this to shame you into gnawing on celery sticks this week. The road to longevity is built on habits that will last decades, not days, and that means allowing yourself the occasional indulgence. If you look forward to your Aunt’s pumpkin pie all year, have it. My personal Thanksgiving protocol is to follow what I call the 2:1 plan: I balance every high-carb, high-sugar, or calorie-dense dish with two he...
+Visual brief: Build the image around gut-loop ribbons, microbiome dots, fiber strands, and inflammation sparks softened into paper shapes; whole-food silhouettes, ingredient tiles, bowl and scoop forms, and nutrition label motifs without text; filtered droplet shapes, caution triangles abstracted into soft paper, food-source icons, and detox pathway lines; protein blocks, muscle-fiber ribbons, strength arcs, and movement lines.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: Why GLP-1s Underperform Without Estrogen
+Article excerpt: I had a patient gain 50 lbs in 6 months. GLP-1 alone did nothing. Adding HRT changed everything. Here’s the science behind why estrogen makes GLP-1s work.
+Category: Women’s Health & Hormones
+Tags: Blood Sugar & Metabolism, Hormones, Supplements, Women's Health
+Article body signals: Robin’s Short Version | ️ Forward this protocol | What to know: Estrogen may be what makes GLP-1s actually work | What to do: Treat these as coordinated strategy, not separate decisions. | Step 1: Test your hormone levels | Step 2: If you’re starting HRT, earlier is better | Step 3: If you’re on a GLP-1 and underperforming — look at your hormones | Step 4: Protect your muscle regardless | The Momgevity Files | ️ One last thing… | A patient came to see me in her mid-40s. In six months, she’d gained 50 pounds. Not gradually. Rapidly. Like her metabolism had just stopped. Robin’s Short Version The Gap Is Real: Women combining HRT with tirzepatide lost 17% body weight vs. 14% alone — and were 2.5x more likely to hit ≥20% loss. Estrogen Amplifies the Drug: Estrogen upregulates GLP-1 receptors and boosts your body’s own GLP-1 production, so menopause directly weakens the drug’s effect. Test Before You Start: Check estrogen, progesterone, testosterone, LH, and FSH before beginning a GLP-1 — optimizing hormones may be what makes the treatment work. We checked thyroid. Lowered inflammation. Optimized diet and exercise. Even added a low-dose GLP-1. Nothing moved. What finally worked was HRT and semaglutide — together. Within months, she was losing weight for the first time in over a year. I thought about her when I saw new data on the combination of GLP-1s and HRT published in February 2026. What happened in her case is not coincidence. It’s biology. This week, I’m digging into why — and what it means for any woman in midlife who isn’t getting the metabolic results she expected. ️ Forward this protocol If you’re a woman in mid-life on a GLP-1 — or considering one — here’s where to...
+Visual brief: Build the image around glucose bead paths, metabolic curves, mitochondria ovals, and appetite-signal rings; hormone cycle rings, endocrine signal dots, moon-phase arcs, and soft botanical seed forms; protein blocks, muscle-fiber ribbons, strength arcs, and movement lines; lab-vial silhouettes, diagnostic rings, scan-window shapes, and precise measurement ticks without numbers.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

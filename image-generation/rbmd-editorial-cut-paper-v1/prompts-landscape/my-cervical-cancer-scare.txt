@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: My cervical cancer scare
+Article excerpt: Does the cure for UTIs, HPV, and BV lie in the microbiome? In my 20s, a routine pap test diagnosed abnormal cells. That led to a biopsy of my cervix called
+Category: Women’s Health & Hormones
+Tags: Lab Testing, Personal Story, Women's Health
+Article body signals: Does the cure for UTIs, HPV, and BV lie in the microbiome? | Robin’s Short Version | The research says | The microbiome and UTIs | The microbiome and BV | The microbiome and HPV | What I’m doing for my own body | Screening | Optimizing my diet | What I recommend for you | Does the cure for UTIs, HPV, and BV lie in the microbiome? In my 20s, a routine pap test diagnosed abnormal cells. That led to a biopsy of my cervix called a colposcopy, which revealed I had CIN3 , or “severely abnormal” precancerous cells. I was lucky to catch it while I was still asymptomatic and before the abnormal cells morphed into advanced cervical cancer. Robin’s Short Version Vaccines Have Limits: Gardasil 9 is nearly 100% effective, yet cancer-causing HPV strains can still break through. Gut-Immune Link: 70–80% of immune cells live in the gut, making microbiome health a key defense against HPV and cervical disease. Vaginal Flora Matters: Lactobacillus-dominant vaginal bacteria create an acidic environment that actively blocks pathogen growth and infection. Cervical cancer is primarily caused by the human papillomavirus (HPV). There are approximately 13 potentially cancer-causing strains of HPV, though 70% of cervical cancers are caused by just two : HPV 16 and HPV 18. HPV, which is contracted through sexual activity, it doesn’t just cause cervical cancer. At least one strain of HPV can cause cancers of the penis, anus, vulva, vagina, and even head and neck cancers. The HPV vaccine was a huge step forward in preventing these cancers—the most recent version, Gardasil 9, is nearly 100% effective at preventing cervical, vulvar, and vaginal infections and pre-cancers. But no vaccine is 100% effective...
+Visual brief: Build the image around lab-vial silhouettes, diagnostic rings, scan-window shapes, and precise measurement ticks without numbers; gut-loop ribbons, microbiome dots, fiber strands, and inflammation sparks softened into paper shapes; hormone cycle rings, endocrine signal dots, moon-phase arcs, and soft botanical seed forms; whole-food silhouettes, ingredient tiles, bowl and scoop forms, and nutrition label motifs without text.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

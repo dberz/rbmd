@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: Mold Symptoms: Are Mycotoxins Behind Your Illness?
+Article excerpt: Is mold exposure making you sick? Here’s why mold symptoms can be so hard to identify and how we treat biotoxin illness at Parsley.
+Category: Toxins, Nutrition & Modern Exposures
+Tags: Brain Health, Gut Health, Toxins & Environment
+Article body signals: Robin’s Short Version | When did everyone become so afraid of mold? | What to know: Mold is ancient but modern bodies are struggling with it. | What is mold illness? | ️ What mold does to your body | Could mold be behind your symptoms? | What to do: Test, remove, repair, reset. | Step 1: Test (the right way) | Step 2: Remove the source | Step 3: Start mast cell stabilization | Plus, the optimal eating window and broccoli for cold symptoms. Robin’s Short Version Genetic Vulnerability: 25% of people carry an HLA-DR variant that triggers chronic inflammation even at mold levels others tolerate without issue. Modern Toxic Load: PFAS, microplastics, and pesticides already overwhelm detox pathways, making mold the tipping point that pushes the body into CIRS. Smarter Testing: ERMI or HERTSMI-2 dust tests outperform air samples; pair them with a urine mycotoxin panel to pinpoint species and exposure load. When did everyone become so afraid of mold? I​​f you run your hand over your desk right now, I hate to break it to you but…there’s mold. Mold comes in hundreds of thousands of species and has been on Earth forever . But lately, it feels like everyone’s panicking about it. So what changed? It’s not the mold, it’s us . Most mold exposure isn’t a problem. Some people can clean out a moldy attic, inhale lungfuls of Aspergillus, and be totally fine. Others experience a form of biotoxin illness where mold exposure causes a chronic inflammatory response (CIRS) and wreaks havoc, leading to everything from unexplained weight gain, to chronic fatigue, to bloating and digestive issues, to headaches to an impaired immune response. At Parsley, we’ve spent a decade treating mold illness and...
+Visual brief: Build the image around filtered droplet shapes, caution triangles abstracted into soft paper, food-source icons, and detox pathway lines; brain contour shapes, neural pathways, calm signal waves, and sleep-rhythm arcs; gut-loop ribbons, microbiome dots, fiber strands, and inflammation sparks softened into paper shapes; lab-vial silhouettes, diagnostic rings, scan-window shapes, and precise measurement ticks without numbers.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

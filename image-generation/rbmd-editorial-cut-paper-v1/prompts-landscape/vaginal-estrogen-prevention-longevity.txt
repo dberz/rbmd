@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: Vaginal Estrogen: Prevention, Not Last Resort
+Article excerpt: My grandmother didn’t have to suffer through chronic UTIs and sepsis. A $20/month cream could have changed everything — and the research now proves it.
+Category: Women’s Health & Hormones
+Tags: Hormones, Longevity, Women's Health
+Article body signals: Robin’s Short Version | What to know: vaginal estrogen is for symptoms, prevention, and longevity. | Why menopause destroys the urogenital ecosystem | Vaginal DHEA vs. estradiol | What to do: don’t wait for symptoms. | 1️⃣ Start tracking your genitourinary health now. | 2️⃣ Get your hormones tested twice a year in perimenopause. | 3️⃣ Ask your doctor about vaginal estrogen. | 4️⃣ Start proactively — not reactively. | The Momgevity Files | Not just for dryness or for sex. For survival. I’ve been thinking about my grandmother a lot lately. She lived to 95, but the last years of her life were defined by something entirely preventable: chronic UTIs. Constant pain. Antibiotics on rotation that wrecked her gut and caused yeast infections. At some point, she needed a diaper. She didn’t have to be there. Robin’s Short Version New research shows a 73% reduction in mortality from UTI-related sepsis in postmenopausal women on vaginal estrogen vs. those who aren’t. Vaginal estrogen has negligible systemic absorption, no demonstrated risk of cancer or blood clots, and prevents the tissue decline that leads to UTIs, incontinence, and — at its worst — sepsis and death. Waiting for tissue to atrophy before treating it is like waiting for a fracture before doing bone density work. The routine application of vaginal estrogen cream — $20–$30 a month at a compounding pharmacy — may have changed everything. New research shows a 73% reduction in mortality from UTI-related sepsis in postmenopausal women on vaginal estrogen vs. those who aren’t [1] . From a cream. Twice a week. I believe every woman should start vaginal estrogen by 50 at the latest and take it for life. Not just when something g...
+Visual brief: Build the image around hormone cycle rings, endocrine signal dots, moon-phase arcs, and soft botanical seed forms; cellular age rings, mitochondria, renewal arrows, immune-cell dots, and longevity tree-ring forms; lab-vial silhouettes, diagnostic rings, scan-window shapes, and precise measurement ticks without numbers.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

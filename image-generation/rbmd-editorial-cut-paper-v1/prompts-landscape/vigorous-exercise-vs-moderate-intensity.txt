@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: How Much Does Vigorous Exercise Really Matter?
+Article excerpt: Just 10 minutes of vigorous exercise may provide equal—or better—longevity benefits than an hour of low-intensity exercise.
+Category: Longevity & Metabolic Health
+Tags: Blood Sugar & Metabolism, Exercise, Longevity
+Article body signals: Robin’s Short Version | 1 minute of vigorous exercise = ~ 6 minutes of moderate effort. | Forward this protocol | What to know: Intensity matters more than we thought. | The new reality: 1 minute of vigorous effort = 6.6 minutes of moderate exercise. | Zone 2 is valuable—but inefficient for risk reduction | ️ Short “micro-bursts” count—and they count a lot | Ideally, you get both moderate and high intensity exercise | What to do: Prioritize high intensity exercise but keep a foundation of moderate effort. | Step 1: Prioritize vigorous exercise (2–3x per week) | Is 10 minutes of hard effort better than an hour of moderate intensity exercise? Robin’s Short Version New Conversion Rate: Wearables data shows 1 minute of vigorous effort equals 6.6 minutes of moderate exercise for reducing disease risk—not the 2:1 ratio public health guidelines used for years. The VILPA Protocol: Just 3–6 bursts of 30–90 seconds of vigorous movement daily cuts mortality risk, but only if you’re too breathless to hold a conversation. Zone 2’s Blind Spot: Moderate exercise builds mitochondrial health and fat oxidation, but requires far more time to match the disease protection delivered by short, intense effort. 1 minute of vigorous exercise = ~ 6 minutes of moderate effort. Back in 2004, I ran a marathon. I clocked a solid 4-hour finish…and promptly swore off long-distance cardio forever. Since then, I’ve leaned into yoga, pilates, and (my recent favorite) HIIT walking hoping that was enough exercise to deliver me to the longevity promised land. Last year, my WHOOP gave me a little reality check: My biological age came back two years older than my actual age mostly due to my lack of strength trai...
+Visual brief: Build the image around protein blocks, muscle-fiber ribbons, strength arcs, and movement lines; cellular age rings, mitochondria, renewal arrows, immune-cell dots, and longevity tree-ring forms; glucose bead paths, metabolic curves, mitochondria ovals, and appetite-signal rings.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

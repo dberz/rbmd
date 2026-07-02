@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: How to boost your immune system before it fails
+Article excerpt: Can you really boost your immune system with diet and exercise? Here’s what I’m doing to fortify myself for cold and flu season.
+Category: Longevity & Metabolic Health
+Tags: Gut Health, Longevity, Nutrition, Supplements
+Article body signals: Robin’s Short Version | The research says | What I’m doing for my own body | That starts with prioritizing gut health given 70% of your immune system lies in your gut. | During cold and flu season, I also pay special attention to eating foods linked to immune function. | For most of us getting enough sleep is a struggle. But it’s a pillar of immune function. | Finally, I prioritize exercising at least three (ideally five) days per week. | What I recommend for you | Keep Reading | I avoid illness at all costs. No one likes being sick (obviously) but I’m entering a particularly busy season—prepping for my first live course launching October 23 , hitting the road to deliver a big keynote speech this fall, running things at Parsley Health, and managing back-to-school craziness with my three kids. I often feel like I can’t afford to get sick. And who can, really? Between our family responsibilities, work schedules, passion projects, health goals, and whatever else keeps you busy, getting benched with a cold or the flu isn’t just annoying, it’s stressful. In this season of life, I want to do everything I can to help you boost your immune system. Robin’s Short Version Hand Hygiene Works: Regular handwashing alone can reduce your risk of catching a cold by up to 21%. Gut Runs Defense: 70% of your immune system lives in your gut, meaning diet directly shapes your white blood cell count and infection response. Sugar Has a Limit: Staying under 25g of sugar daily helps prevent dysbiosis, which weakens the gut lining and lets toxins enter the bloodstream. With cold and flu season officially underway, I’m amping up my handwashing (which reduces your risk of getting a cold by up to 21%)...
+Visual brief: Build the image around cellular age rings, mitochondria, renewal arrows, immune-cell dots, and longevity tree-ring forms; whole-food silhouettes, ingredient tiles, bowl and scoop forms, and nutrition label motifs without text; gut-loop ribbons, microbiome dots, fiber strands, and inflammation sparks softened into paper shapes; protein blocks, muscle-fiber ribbons, strength arcs, and movement lines.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

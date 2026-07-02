@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: How Much Protein Should You Really Be Eating?
+Article excerpt: How much protein should I really eat? And practically speaking, how on earth do you eat that much protein in a day even if you want to?
+Category: Toxins, Nutrition & Modern Exposures
+Tags: Blood Sugar & Metabolism, Exercise, Nutrition, Women's Health
+Article body signals: How much protein should you really be eating? | Robin’s Short Version | The power of protein | The research says: | The link between muscle and lifespan | Our ability to build muscle depends on our dietary protein intake | How much protein do you really need? | How to actually eat enough protein | The takeaway | Keep Reading | How much protein should you really be eating? Earlier this month, I went to a talk on muscle building and longevity where my friend Max Lugavere, a well-known podcaster, interviewed Dr. Gabrielle Lyon , a functional medicine doctor whose focus is on bodybuilding and longevity. The talk was about how much protein we need to build muscle and the benefits of building and maintaining muscle as we age. Both are proponents of eating a lot more protein than today’s RDA (recommended daily allowance) from the FDA. Robin’s Short Version RDA Is a Floor: The 0.8g/kg recommendation prevents deficiency but isn’t optimized to build or maintain muscle mass. Minimum Dose Matters: It takes at least 25–30g of protein per meal to trigger muscle synthesis, so total daily intake isn’t enough—each sitting counts. Muscle Predicts Longevity: A 2020 BMJ meta-analysis found a dose-dependent link between protein intake and lifespan, especially from plant sources. A few people came up to me after the talk. Are they right? How much protein should I really eat? And practically speaking, how on earth do you eat that much protein in a day even if you want to? The power of protein Lately it seems like everyone is talking about muscle building and protein intake, which I love, because it means we are taking the longevity movement past the hypothetical and into the practical. For me,...
+Visual brief: Build the image around protein blocks, muscle-fiber ribbons, strength arcs, and movement lines; whole-food silhouettes, ingredient tiles, bowl and scoop forms, and nutrition label motifs without text; glucose bead paths, metabolic curves, mitochondria ovals, and appetite-signal rings; filtered droplet shapes, caution triangles abstracted into soft paper, food-source icons, and detox pathway lines.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: The best diet for brain health?
+Article excerpt: To have the healthiest mind, growing evidence shows the best diet for brain health is the Mediterranean diet.
+Category: Brain, Mood & Nervous System
+Tags: Brain Health, Gut Health, Longevity, Nutrition
+Article body signals: Robin’s Short Version | The research says | The Takeaway | Keep Reading | New science on the impact of ultra-processed foods on our brains has been in the news a lot lately, so I’ve been thinking about the the best diet for brain health and the connection between food, mood, and the brain. Spoiler alert: your brain and your mood are directly impacted by your food choices (both now and in the future). Robin’s Short Version Balance Beats Restriction: Among 180,000 people studied, those eating a balanced mix of plants, nuts, seeds, fiber, and fish had the lowest rates of depression and anxiety. Animal Protein Risk: High animal protein, low-fiber diets were linked to the worst mental health outcomes, including elevated anxiety, depression, and stroke rates. 30-Day Reset: Eliminating gluten and processed foods for just 30 days can lift chronic brain fog that many people don’t realize is affecting their daily function. It has also officially been six months since I relaunched my newsletter! My goal is to break down complex topics and offer ways to easily build healthy habits into your life. I’m loving writing these posts for you. Health doesn’t have to be hard: it can be easy with the right guidance (from my personal lived experience and the experience of over 40,000 patients who have seen amazing results working with the team at Parsley Health). Together we can live our healthiest, most abundant lives. Please send me your feedback, questions, and topic requests—I’m listening. And if you know anyone who would benefit from my posts, please pass on this subscription link . Back to the best diet for brain health and how the foods we can eat impact our minds. In my experience, food...
+Visual brief: Build the image around brain contour shapes, neural pathways, calm signal waves, and sleep-rhythm arcs; whole-food silhouettes, ingredient tiles, bowl and scoop forms, and nutrition label motifs without text; gut-loop ribbons, microbiome dots, fiber strands, and inflammation sparks softened into paper shapes; cellular age rings, mitochondria, renewal arrows, immune-cell dots, and longevity tree-ring forms.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

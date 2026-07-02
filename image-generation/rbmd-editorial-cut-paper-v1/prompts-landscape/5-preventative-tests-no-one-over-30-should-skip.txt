@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: 5 Preventative Tests No One Over 30 Should Skip
+Article excerpt: If the system isn’t coming to save us — and it’s not — you have two choices: be the worried well, or be the worried sick. Here’s why I chose proactive a
+Category: Longevity & Metabolic Health
+Tags: Lab Testing, Longevity, Personal Story
+Article body signals: Robin’s Short Version | Are you one of the worried well ? Or a wellness warrior? Depends on who you ask. | What to do: Drive your own preventive health journey. Starting now. | Full body MRI. | Preventative functional longevity labs. | Cologuard or early colonoscopy. | Full body dexa scan. | Genetic testing. | What to know: The “worried well” is a badge of honor. | Let’s banish the term “worried well” | Plus, my thoughts on Tylenol and Autism. Robin’s Short Version Labs Leave Gaps: Standard panels test only ~19 biomarkers; a functional longevity panel covers 100+, including ApoB, Lp(a), and fasting insulin. Colon Cancer Is Younger: Rates are rising fastest in adults under 50—screen before 45 if you have family history, smoke, or eat a diet high in ultra-processed foods. Bone Loss Starts Early: Women can lose up to 20% of bone mass in their 40s and 50s, making early DEXA scanning critical for protecting muscle and bone health. Are you one of the worried well ? Or a wellness warrior? Depends on who you ask. My friend Chrissy Farr—healthcare journalist, investor, and author of Second Opinion —recently interviewed me about why we should retire the term “worried well.” I agreed at first, but the more I’ve thought about it, the more I think we should embrace it. If the system isn’t coming to save us (and it’s not), you’re either the worried well —or the worried sick . I was reminded of this last week when I cried after a patient visit. I’ve known this woman for years. She came to Parsley Health to get ahead of midlife shifts—weight gain, hormone changes, and a family history of high cholesterol. She’s my favorite kind of patient: proactive, curious, and committed to the idea th...
+Visual brief: Build the image around lab-vial silhouettes, diagnostic rings, scan-window shapes, and precise measurement ticks without numbers; cellular age rings, mitochondria, renewal arrows, immune-cell dots, and longevity tree-ring forms; glucose bead paths, metabolic curves, mitochondria ovals, and appetite-signal rings.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

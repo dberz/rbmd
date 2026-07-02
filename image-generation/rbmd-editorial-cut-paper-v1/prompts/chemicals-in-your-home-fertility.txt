@@ -1,14 +1,24 @@
 Use case: stylized-concept
-Asset type: Robin Berzin MD article image, generated at 1080x1350 for 4:5 Instagram posts, mobile article cards, and article hero display
+Asset type: Robin Berzin MD article image
 Article title: The Chemicals in Your Home Are Affecting Your Fertility
-Article excerpt: PFAS, phthalates, and BPA are measurable in most of our bodies, and they directly impair egg quality.
+Article excerpt: PFAS, phthalates, and BPA are measurable in most of our bodies — and they directly impair egg quality.
 Category: Fertility & Parenting
 Tags: Toxins & Environment, Hormones, Women's Health
-Article body signals: PFAS, phthalates, BPA, cookware swaps, plastic food storage, water filtration, beauty products, cleaning products, heavy metals, toxin audit, body burden.
-Primary visual metaphor: a simplified cut-paper home cross-section as the hero shape, with an oversized water-filter droplet and kitchen/beauty/toxin-audit objects arranged like a calm checklist. The idea is "home environment as fertility factor" without showing a literal egg.
-Differentiation requirement: Do not use egg shapes, follicle rings, target diagrams, central ovary forms, or hormone-cycle rings. This image should be recognizable from a distance as household exposures and detox swaps first.
-Composition: large house silhouette occupying the top half; underneath it, three chunky object families: a cookware pan, a glass jar replacing plastic, and a cosmetic/cleaning bottle group. Use a translucent shield/filter shape or droplet pathway through the center. Keep the lower-right signature zone visually quiet.
-Style system: RBMD Editorial Cut-Paper Collage v1. Sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery. Calmer, premium, medically credible, witty but not cute. Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows. Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
-Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, with one restrained lilac #DBC7F1 accent.
-Avoid: large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, dense all-over dot networks, generic medical symbols, text, letters, words, numbers, logos, and watermarks.
+Article body signals: Forward this protocol | What to know: your home environment is a fertility factor | How these chemicals disrupt fertility | Heavy metals and egg quality | PFAS and the pregnancy data | What to do: reduce your body burden | 1️⃣ Audit your kitchen first — it's the highest-impact swap. | 2️⃣ Filter your water. | 3️⃣ Clean up your beauty routine. | 4️⃣ Add sauna — it works. | PFAS, phthalates, and BPA aren't just environmental buzzwords — they're measurable, they're in most of our bodies, and they directly impair egg quality. I switched out every piece of non-stick cookware in my home years ago. I also green’ed my cleaning products. Ditched my plastic food containers. Even updated my makeup. People thought I was being a little extreme. Then I started running toxin panels on patients trying to conceive — and seeing what was actually in their bodies. PFAS. Phthalates. Heavy metals. In nearly everyone. Including women eating well, exercising, doing everything right. At least 97% of Americans have detectable PFAS — the "forever chemicals" — in their blood. And higher PFAS exposure is associated with up to a 40% reduction in the likelihood of clinical pregnancy and live birth. That's not a small signal. That's a real fertility disruptor hiding in plain sight. Forward this protocol You can't eliminate all toxin exposure. But you can dramatically reduce your body burden — and the research shows it moves the needle on fertility outcomes. The Fertility Toxin Audit (start today): Swap all plastic food storage for glass or stainless steel Replace non-stick cookware with cast iron or ceramic Filter your drinking water (reverse osmosis or solid carbon block) Check your makeup and skincare...
+Visual brief: Build the image around hormone cycle rings, endocrine signal dots, moon-phase arcs, and soft botanical seed forms; filtered droplet shapes, caution triangles abstracted into soft paper, food-source icons, and detox pathway lines.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: vertical 4:5 Instagram feed illustration, generated at 1024x1536 and cropped to 1080x1350 for Instagram feed posts, on-site cards, and article hero display.
+Composition: stack the concept vertically with one bold central topic metaphor in the middle third and secondary symbols radiating above and below it.
+The image must read instantly at phone-feed size: bold silhouettes, high figure-ground contrast, generous margins on all four edges.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Safe area: keep all key elements inside the central 1080x1350 region; nothing critical in the top or bottom 8% of the canvas.
 Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.

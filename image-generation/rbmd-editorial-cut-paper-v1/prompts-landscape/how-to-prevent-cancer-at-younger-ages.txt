@@ -1,0 +1,25 @@
+Use case: stylized-concept
+Asset type: Robin Berzin MD article image
+Article title: How to prevent cancer at younger ages
+Article excerpt: The alarming rise of cancer rates in younger populations is occupying a lot of space in my head these days. Today, I talk about why that is, what we can do
+Category: Longevity & Metabolic Health
+Tags: Lab Testing, Longevity, Toxins & Environment
+Article body signals: Robin’s Short Version | Keep Reading | Hi everyone – Robin’s Short Version Prediabetes Raises Risk: Nearly 40% of U.S. adults have prediabetes, which raises cancer risk by 10% and cancer death risk by 14%. Ultraprocessed Foods Matter: Every 10% rise in ultraprocessed food consumption increases both cancer rates and cancer deaths, per a 2023 Lancet study. Cancer Is Preventable: Up to 50% of cancers are preventable, with diet, inactivity, and metabolic disease alone driving 42% of all cases. The alarming rise of cancer rates in younger populations is occupying a lot of space in my head these days. Today, I talk about why that is, what we can do to prevent it and how to reverse course. The Wall Street Journal reported last week that in the US, despite an overall decrease in cancer deaths—primarily due to reduced lung cancer rates from lower smoking rates—other cancer types like colorectal, breast, and melanoma are increasingly affecting those under 50 . The American Cancer Society notes a particular increase in colorectal cancer in people born after 1950, with 20% of cases now diagnosed under 50, up from 11% in the 1990s. A report from the British Medical Journal last fall revealed a stark reality: a 79.1% increase in early-onset cancers (diagnosed before age 50) and nearly a 30% rise in related deaths from 1990 to 2019. My journey into medicine began with my grandmother, who died unnecessarily young from colon cancer. This could have been prevented but she lacked good primary care and didn’t get a screening in time. She also smoked cigarettes and ate the Standard American Diet (also known as the SAD) for many years — two of the top risk factors for cancer. Despite the Natio...
+Visual brief: Build the image around cellular age rings, mitochondria, renewal arrows, immune-cell dots, and longevity tree-ring forms; glucose bead paths, metabolic curves, mitochondria ovals, and appetite-signal rings; filtered droplet shapes, caution triangles abstracted into soft paper, food-source icons, and detox pathway lines; lab-vial silhouettes, diagnostic rings, scan-window shapes, and precise measurement ticks without numbers.
+Style system: RBMD Editorial Cut-Paper Collage v1.
+Create sophisticated paper-cut editorial collage art for Robin Berzin MD article imagery.
+The art direction borrows the idea of witty, topic-led newsletter illustration, but the final tone must be calmer, more premium, and medically credible.
+Use flat layered cut-paper forms, deckled edges, matte paper fibers, subtle offset alignment, and soft shallow shadows.
+Keep the composition bold enough for a 4:5 Instagram feed post, mobile article card, and article hero.
+Use one dominant topic-specific visual metaphor supported by no more than 2 secondary medical, botanical, nutrition, metabolic, or lifestyle symbols.
+Make each image feel specific to its article: vary the main silhouette, scale, negative-space pattern, and object family from post to post.
+Use generous negative space and keep the lower-right signature zone visually quiet.
+Palette: off-white #FAF7F7, cream #EEE8E7, beige #BE9F90, medium brown #795A4A, dark brown #3C1A18, dark terracotta #6F2E0F, and one restrained lilac #DBC7F1 accent.
+Avoid large lilac backgrounds, bright colors, gradients, glossy rendering, photorealism, generic stock wellness imagery, people, faces, bodies, hands, cartoon mascots, gore, fear-based medical imagery, tiny repeated dot networks, dense all-over medical-symbol patterns, text, letters, words, numbers, logos, and watermarks.
+Format: horizontal editorial illustration, generated at 1536x1024 and cropped to 1200x630 for social link previews, og:image, Twitter cards, and Beehiiv email headers.
+Composition: re-stage the same central metaphor and supporting symbols as a wide scene. Offset the central metaphor left or right of center, distribute secondary symbols horizontally, and use asymmetric balance.
+Do not simply widen a portrait composition; design natively for the wide frame while keeping the same cut-paper collage concept, palette, paper texture, and topic metaphor.
+The image must survive a center crop to 1.91:1: keep every important element inside the central 1536x806 band, with nothing critical in the top or bottom 11% of the canvas.
+Bold thumbnail readability at 500px wide for iMessage, Slack, X, and email previews.
+Keep the lower-right signature zone visually quiet; no important detail in the bottom-right 20% x 14% area for deterministic RBMD logo overlay.
+Output: finished editorial illustration only, no text, no words, no numbers, no captions, no logo, no watermark.
