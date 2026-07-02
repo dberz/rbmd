@@ -34,6 +34,7 @@ const leadMagnetClass = leadMagnet.replace(/[^a-z0-9-]/gi, "-");
   </div>
   <p>{description}</p>
   <form class="subscribe-form" data-subscribe-form>
+    <input type="text" name="company" tabindex="-1" autocomplete="off" hidden />
     <input type="hidden" name="placement" value={placement} />
     <input type="hidden" name="leadMagnet" value={leadMagnet} />
     <input type="hidden" name="articleSlug" value={articleSlug} />

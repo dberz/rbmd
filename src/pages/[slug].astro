@@ -1,4 +1,6 @@
 ---
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import type { CollectionEntry } from "astro:content";
 import { getCollection, getEntry } from "astro:content";
 import SubscribeBlock from "@components/SubscribeBlock.astro";
@@ -92,7 +94,13 @@ const moreInHub = category
 
 const siteOrigin = Astro.site?.toString().replace(/\/$/, "") ?? "https://robinberzinmd.com";
 const pageUrl = `${siteOrigin}${articleUrl(article.data.slug)}`;
-const ogImage = article.data.image?.src;
+// og:image prefers the landscape (1536x1024) editorial cut-paper art when it
+// exists — link previews expect ~1.91:1 and crop the 4:5 portrait set badly.
+// The portrait art remains the on-site featured/card image.
+const landscapeOg = `/images/articles/rbmd-cut-paper-v1/${slug}.webp`;
+const hasLandscapeOg = existsSync(join(process.cwd(), "public", landscapeOg));
+const ogImage = hasLandscapeOg ? landscapeOg : article.data.image?.src;
+const [ogWidth, ogHeight] = hasLandscapeOg ? [1536, 1024] : [1080, 1350];
 const ogImageAbsolute = ogImage ? new URL(ogImage, `${siteOrigin}/`).toString() : undefined;
 
 // Extract FAQ pairs from the article body for FAQPage schema (defensive).
@@ -178,6 +186,9 @@ const jsonLd = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [
   canonical={`https://robinberzinmd.com${articleUrl(article.data.slug)}`}
   ogType="article"
   ogImage={ogImageAbsolute ?? "/images/robin/home.jpg"}
+  ogImageWidth={ogImageAbsolute ? ogWidth : undefined}
+  ogImageHeight={ogImageAbsolute ? ogHeight : undefined}
+  ogImageAlt={article.data.image?.alt ?? article.data.title}
   jsonLd={jsonLd}
 >
   <article>
@@ -187,7 +198,7 @@ const jsonLd = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [
         <h1>{article.data.title}</h1>
         {article.data.excerpt && <p class="article-standfirst">{article.data.excerpt}</p>}
         <div class="article-byline">
-          <img class="byline-avatar" src="/images/robin/home.jpg" alt="Robin Berzin MD" width="40" height="40" loading="eager" />
+          <img class="byline-avatar" src="/images/robin/robin-avatar.jpg" alt="Robin Berzin MD" width="40" height="40" loading="eager" />
           <span class="byline-text">By <a href="/about/">{article.data.author}</a><span class="byline-sep">·</span>{formatDate(article.data.date)}{reviewedDate && <><span class="byline-sep">·</span>Reviewed {formatDate(reviewedDate)}</>}<span class="byline-sep">·</span>{readingMinutes} min read</span>
         </div>
       </div>
@@ -275,7 +286,7 @@ const jsonLd = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [
           />
         )}
         <aside class="author-bio">
-          <img src="/images/robin/home.jpg" alt="Robin Berzin MD" width="72" height="72" loading="lazy" />
+          <img src="/images/robin/robin-avatar.jpg" alt="Robin Berzin MD" width="72" height="72" loading="lazy" />
           <div class="author-bio-text">
             <span class="eyebrow">Written &amp; reviewed by</span>
             <h2><a href="/about/">Robin Berzin, MD</a></h2>

@@ -20,8 +20,9 @@ export type LeadMagnetConfig = {
   sendWelcome?: boolean;
 };
 
-// TODO(RBMD): replace the placeholder tag strings below with the exact tag names
-// configured in Beehiiv for each opt-in's lead-magnet automation.
+// Tag strings below are the CONFIRMED live Beehiiv tag names (verified 2026-07).
+// If a tag is ever renamed in Beehiiv, update it here in lockstep — otherwise
+// the matching lead-magnet automation silently stops firing.
 export const leadMagnetConfig: Record<string, LeadMagnetConfig> = {
   // Homepage hero/newsletter, default article CTAs, About, category pages,
   // and the gated supplement-stack post. Beehiiv segment: "Lead Magnet - Longevity Stack".

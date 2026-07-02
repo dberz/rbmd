@@ -11,6 +11,9 @@ type Props = {
   noindex?: boolean;
   bodyClass?: string;
   ogImage?: string;
+  ogImageWidth?: number;
+  ogImageHeight?: number;
+  ogImageAlt?: string;
   ogType?: string;
   jsonLd?: JsonLd | JsonLd[];
 };
@@ -22,6 +25,9 @@ const {
   noindex = false,
   bodyClass = "",
   ogImage = "/images/robin/home.jpg",
+  ogImageWidth = 1920,
+  ogImageHeight = 1080,
+  ogImageAlt = "Robin Berzin MD",
   ogType = "website",
   jsonLd,
 } = Astro.props;
@@ -118,11 +124,16 @@ const isActive = (href: string) =>
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content={String(ogImageWidth)} />
+    <meta property="og:image:height" content={String(ogImageHeight)} />
+    <meta property="og:image:alt" content={ogImageAlt} />
     <meta property="og:site_name" content="Robin Berzin MD" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
+    <link rel="preload" href="/fonts/Tobias-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/SuisseIntl-Regular.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
     <link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png" />
@@ -203,6 +214,7 @@ const isActive = (href: string) =>
           <h3>Newsletter</h3>
           <p>Get evidence-based protocols for women's longevity and functional medicine.</p>
           <form class="mini-form" data-subscribe-form>
+            <input type="text" name="company" tabindex="-1" autocomplete="off" hidden />
             <input type="hidden" name="placement" value="footer" />
             <input type="hidden" name="leadMagnet" value="newsletter" />
             <label>
